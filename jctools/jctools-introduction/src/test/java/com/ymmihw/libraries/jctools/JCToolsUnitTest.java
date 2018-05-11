@@ -44,9 +44,7 @@ public class JCToolsUnitTest {
     CountDownLatch awakeProducer = new CountDownLatch(1);
     AtomicReference<Throwable> error = new AtomicReference<>();
     Thread producer = new Thread(() -> {
-      IntStream.range(0, queue.capacity()).forEach(i -> {
-        assertThat(queue.offer(i)).isTrue();
-      });
+      IntStream.range(0, queue.capacity()).forEach(i -> assertThat(queue.offer(i)).isTrue());
       assertThat(queue.offer(queue.capacity())).isFalse();
       startConsuming.countDown();
       try {
