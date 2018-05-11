@@ -19,15 +19,11 @@ public class JCToolsUnitTest {
       throws InterruptedException {
     SpscArrayQueue<Integer> queue = new SpscArrayQueue<Integer>(2);
 
-    Thread producer1 = new Thread(() -> {
-      queue.offer(1);
-    });
+    Thread producer1 = new Thread(() -> queue.offer(1));
     producer1.start();
     producer1.join();
 
-    Thread producer2 = new Thread(() -> {
-      queue.offer(2);
-    });
+    Thread producer2 = new Thread(() -> queue.offer(2));
     producer2.start();
     producer2.join();
 
