@@ -53,7 +53,7 @@ public class EmbeddedChannelUnitTest {
 
     assertThatThrownBy(() -> {
       // send invalid HTTP request to server and expect and error
-      channel.pipeline().fireChannelRead(wrongHttpRequest);
+      channel.writeInbound(wrongHttpRequest);
       channel.checkException();
     }).isInstanceOf(UnsupportedOperationException.class).hasMessage("HTTP method not supported");
 
