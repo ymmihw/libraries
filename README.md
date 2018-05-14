@@ -6,3 +6,4 @@ jctools-introduction | [Java Concurrency Utility with JCTools](http://www.baeldu
 netty-introduction | [Introduction to Netty](http://www.baeldung.com/netty)
 netty-exception | [Exceptions in Netty](http://www.baeldung.com/netty-exception-handling)
 netty-embeddedchannel | [Testing Netty with EmbeddedChannel](http://www.baeldung.com/testing-netty-embedded-channel)
+easymock-introduction | [Introduction to EasyMock](http://www.baeldung.com/easymock)
