@@ -24,5 +24,6 @@
  </dependencies>
  <modules>
   <module>netty-introduction</module>
+  <module>netty-exception</module>
  </modules>
 </project>
