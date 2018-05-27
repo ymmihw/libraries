@@ -8,3 +8,4 @@ netty-exception | [Exceptions in Netty](http://www.baeldung.com/netty-exception-
 netty-embeddedchannel | [Testing Netty with EmbeddedChannel](http://www.baeldung.com/testing-netty-embedded-channel)
 easymock-introduction | [Introduction to EasyMock](http://www.baeldung.com/easymock)
 easymock-argument-matchers | [EasyMock Argument Matchers](http://www.baeldung.com/easymock-argument-matchers)
+logback-guide | [A Guide To Logback](http://www.baeldung.com/logback)
