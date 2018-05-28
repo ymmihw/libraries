@@ -9,3 +9,4 @@ netty-embeddedchannel | [Testing Netty with EmbeddedChannel](http://www.baeldung
 easymock-introduction | [Introduction to EasyMock](http://www.baeldung.com/easymock)
 easymock-argument-matchers | [EasyMock Argument Matchers](http://www.baeldung.com/easymock-argument-matchers)
 logback-guide | [A Guide To Logback](http://www.baeldung.com/logback)
+logback-custom-appender | [Creating a Custom Logback Appender](http://www.baeldung.com/custom-logback-appender)
