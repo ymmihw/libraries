@@ -1,0 +1,14 @@
+<configuration debug="true">
+ <statusListener class="ch.qos.logback.core.status.NopStatusListener" />
+
+ <appender name="map" class="com.ymmihw.libraries.logback.MapAppender">
+  <prefix>test</prefix>
+ </appender>
+
+ <appender name="badMap" class="com.ymmihw.libraries.logback.MapAppender" />
+
+ <root level="debug">
+  <appender-ref ref="map" />
+  <appender-ref ref="badMap" />
+ </root>
+</configuration>
