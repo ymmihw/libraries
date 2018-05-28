@@ -5,8 +5,17 @@
    <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
   </encoder>
  </appender>
+ <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+  <file>tests.log</file>
+  <append>true</append>
+  <encoder>
+   <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+  </encoder>
+ </appender>
  <logger name="com.baeldung.logback" level="INFO" />
- <logger name="com.baeldung.logback.tests" level="WARN" />
+ <logger name="com.baeldung.logback.tests" level="WARN">
+  <appender-ref ref="FILE" />
+ </logger>
  <root level="debug">
   <appender-ref ref="STDOUT" />
  </root>
