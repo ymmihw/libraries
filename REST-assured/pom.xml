@@ -35,5 +35,6 @@
  </dependencies>
  <modules>
   <module>REST-assured-introduction</module>
+  <module>REST-assured-parameter-header-cookie</module>
  </modules>
 </project>

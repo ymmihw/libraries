@@ -18,3 +18,4 @@ logback-custom-appender | [Creating a Custom Logback Appender](http://www.baeldu
 Module | Article
 --|--
 REST-assured-introduction | [A Guide to REST-assured](http://www.baeldung.com/rest-assured-tutorial)
+REST-assured-parameter-header-cookie | [Headers, Cookies and Parameters with REST-assured](http://www.baeldung.com/rest-assured-header-cookie-parameter)
