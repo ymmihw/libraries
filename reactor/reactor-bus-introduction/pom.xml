@@ -7,18 +7,28 @@
   <artifactId>reactor</artifactId>
   <version>0.0.1-SNAPSHOT</version>
  </parent>
- <groupId>com.ymmihw.libraries.reactor</groupId>
- <artifactId>reactor-core-introduction</artifactId>
+ <groupId>com.ymmihw.libraries</groupId>
+ <artifactId>reactor-bus-introduction</artifactId>
  <version>0.0.1-SNAPSHOT</version>
- <name>reactor-core-introduction</name>
+ <name>reactor-bus-introduction</name>
  <url>http://maven.apache.org</url>
  <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
  </properties>
  <dependencies>
   <dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-web</artifactId>
+  </dependency>
+  <dependency>
    <groupId>io.projectreactor</groupId>
    <artifactId>reactor-core</artifactId>
+   <version>2.0.8.RELEASE</version>
+  </dependency>
+  <dependency>
+   <groupId>io.projectreactor</groupId>
+   <artifactId>reactor-bus</artifactId>
+   <version>2.0.8.RELEASE</version>
   </dependency>
  </dependencies>
 </project>
