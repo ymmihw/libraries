@@ -21,5 +21,6 @@
  <modules>
   <module>reactor-core-introduction</module>
   <module>reactor-bus-introduction</module>
+  <module>reactor-combine-publisher</module>
  </modules>
 </project>
