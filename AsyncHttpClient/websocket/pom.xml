@@ -8,9 +8,9 @@
   <version>0.0.1-SNAPSHOT</version>
  </parent>
  <groupId>com.ymmihw.libraries</groupId>
- <artifactId>asynchronous-http</artifactId>
+ <artifactId>websocket</artifactId>
  <version>0.0.1-SNAPSHOT</version>
- <name>asynchronous-http</name>
+ <name>websocket</name>
  <url>http://maven.apache.org</url>
  <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
