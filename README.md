@@ -11,7 +11,7 @@ easymock-argument-matchers | [EasyMock Argument Matchers](http://www.baeldung.co
 logback-guide | [A Guide To Logback](http://www.baeldung.com/logback)
 logback-custom-appender | [Creating a Custom Logback Appender](http://www.baeldung.com/custom-logback-appender)
 infinispan-introduction | [A Guide to Infinispan in Java](http://www.baeldung.com/infinispan)
-
+JGroups-introduction | [Reliable Messaging with JGroups](http://www.baeldung.com/jgroups)
 
 #### REST-assured
 
