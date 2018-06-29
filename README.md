@@ -40,3 +40,8 @@ websocket | [WebSockets with AsyncHttpClient](http://www.baeldung.com/async-http
 Module | Article
 --|--
 assertj-custom-assertion | [Custom Assertions with AssertJ](http://www.baeldung.com/assertj-custom-assertion)
+
+#### Tomcat
+Module | Article
+--|--
+tomcat-programmatic-setup | [Programmatically Create, Configure and Run a Tomcat Server](http://www.baeldung.com/tomcat-programmatic-setup)
