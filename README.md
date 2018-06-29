@@ -35,3 +35,8 @@ Module | Article
 --|--
 asynchronous-http | [Asynchronous HTTP with async-http-client in Java](http://www.baeldung.com/async-http-client)
 websocket | [WebSockets with AsyncHttpClient](http://www.baeldung.com/async-http-client-websockets)
+
+#### AssertJ
+Module | Article
+--|--
+assertj-custom-assertion | [Custom Assertions with AssertJ](http://www.baeldung.com/assertj-custom-assertion)
