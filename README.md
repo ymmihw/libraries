@@ -45,3 +45,8 @@ assertj-custom-assertion | [Custom Assertions with AssertJ](http://www.baeldung.
 Module | Article
 --|--
 tomcat-programmatic-setup | [Programmatically Create, Configure and Run a Tomcat Server](http://www.baeldung.com/tomcat-programmatic-setup)
+
+#### Guava
+Module | Article
+--|--
+guava-memoization | [Introduction to Guava Memoizer](http://www.baeldung.com/guava-memoizer)
