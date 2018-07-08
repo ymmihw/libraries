@@ -159,7 +159,7 @@ public class LettuceIntegrationLiveTest {
     asyncCommands.sadd(countries, countryOne);
 
     RedisFuture<Set<String>> countriesSetFuture = asyncCommands.smembers(countries);
-    Assert.assertEquals(2, countriesSetFuture.get().size());
+    Assert.assertEquals(1, countriesSetFuture.get().size());
 
     asyncCommands.sadd(countries, countryTwo);
     countriesSetFuture = asyncCommands.smembers(countries);
@@ -266,6 +266,7 @@ public class LettuceIntegrationLiveTest {
 
     // Need a long wait for publish to complete, depending on system.
     result.get(15, TimeUnit.SECONDS);
+    TimeUnit.SECONDS.sleep(2);
     assertTrue(listener.getMessage().equals("hithere"));
 
   }
@@ -285,9 +286,7 @@ public class LettuceIntegrationLiveTest {
     }
 
     @Override
-    public void message(String pattern, String channel, String message) {
-
-    }
+    public void message(String pattern, String channel, String message) {}
 
     @Override
     public void subscribed(String channel, long count) {
