@@ -50,3 +50,8 @@ tomcat-programmatic-setup | [Programmatically Create, Configure and Run a Tomcat
 Module | Article
 --|--
 guava-memoization | [Introduction to Guava Memoizer](http://www.baeldung.com/guava-memoizer)
+
+#### Redis
+Module | Article
+--|--
+lettuce | [Introduction to Lettuce – the Java Redis Client](http://www.baeldung.com/java-redis-lettuce)
