@@ -12,6 +12,7 @@ logback-guide | [A Guide To Logback](http://www.baeldung.com/logback)
 logback-custom-appender | [Creating a Custom Logback Appender](http://www.baeldung.com/custom-logback-appender)
 infinispan-introduction | [A Guide to Infinispan in Java](http://www.baeldung.com/infinispan)
 JGroups-introduction | [Reliable Messaging with JGroups](http://www.baeldung.com/jgroups)
+TestContainers | [Docker Test Containers in Java Tests](https://www.baeldung.com/docker-test-containers)
 
 #### REST-assured
 
