@@ -62,3 +62,4 @@ lettuce | [Introduction to Lettuce – the Java Redis Client](http://www.baeldun
 Module | Article
 --|--
 jasypt-intro | [Intro to Jasypt](https://www.baeldung.com/jasypt)
+jasypt-spring-boot | [Spring Boot Configuration with Jasypt](https://www.baeldung.com/spring-boot-jasypt)
