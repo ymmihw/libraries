@@ -56,7 +56,7 @@ public class JasyptUnitTest {
   }
 
   @Test
-  @Ignore("should have installed local_policy.jar")
+  // @Ignore("should have installed local_policy.jar")
   public void givenTextPrivateData_whenDecrypt_thenCompareToEncryptedWithCustomAlgorithm() {
     // given
     StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
@@ -65,7 +65,7 @@ public class JasyptUnitTest {
     encryptor.setAlgorithm("PBEWithMD5AndTripleDES");
 
     // when
-    String encryptedText = encryptor.encrypt("secret-pass");
+    String encryptedText = encryptor.encrypt(privateData);
     assertNotSame(privateData, encryptedText);
 
     // then
@@ -74,7 +74,7 @@ public class JasyptUnitTest {
   }
 
   @Test
-  @Ignore("should have installed local_policy.jar")
+  // @Ignore("should have installed local_policy.jar")
   public void givenTextPrivateData_whenDecryptOnHighPerformance_thenDecrypt() {
     // given
     String privateData = "secret-data";
