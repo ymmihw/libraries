@@ -7,18 +7,22 @@ import org.apache.ignite.Ignition;
 import org.apache.ignite.cache.query.QueryCursor;
 import org.apache.ignite.cache.query.SqlFieldsQuery;
 import org.apache.ignite.configuration.IgniteConfiguration;
+import org.apache.ignite.logger.slf4j.Slf4jLogger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import com.ymmihw.libraries.ignite.model.Employee;
 
 public class IgniteCacheExample {
 
   public static void main(String[] args) {
 
-//    Ignite ignite = Ignition.ignite();
+    Logger impl = LoggerFactory.getLogger(IgniteCacheExample.class);
+    Slf4jLogger log = new Slf4jLogger(impl);
     IgniteConfiguration configuration = new IgniteConfiguration();
-    configuration.setLifecycleBeans(new CustomLifecycleBean());
+    configuration.setGridLogger(log);
     Ignite ignite = Ignition.start(configuration);
 
-    IgniteCache<Integer, String> cache = ignite.cache("baeldungCache");
+    IgniteCache<Integer, String> cache = ignite.getOrCreateCache("baeldungCache");
 
     cache.put(1, "baeldung cache value");
 
