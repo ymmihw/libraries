@@ -57,3 +57,8 @@ guava-memoization | [Introduction to Guava Memoizer](http://www.baeldung.com/gua
 Module | Article
 --|--
 lettuce | [Introduction to Lettuce – the Java Redis Client](http://www.baeldung.com/java-redis-lettuce)
+
+#### Jasypt
+Module | Article
+--|--
+jasypt-intro | [Intro to Jasypt](https://www.baeldung.com/jasypt)
