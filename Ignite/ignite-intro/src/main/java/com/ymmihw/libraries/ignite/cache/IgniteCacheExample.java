@@ -3,24 +3,22 @@ package com.ymmihw.libraries.ignite.cache;
 import java.util.List;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteCache;
+import org.apache.ignite.IgniteLogger;
 import org.apache.ignite.Ignition;
 import org.apache.ignite.cache.query.QueryCursor;
 import org.apache.ignite.cache.query.SqlFieldsQuery;
 import org.apache.ignite.configuration.IgniteConfiguration;
 import org.apache.ignite.logger.slf4j.Slf4jLogger;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import com.ymmihw.libraries.ignite.model.Employee;
 
 public class IgniteCacheExample {
 
   public static void main(String[] args) {
 
-    Logger impl = LoggerFactory.getLogger(IgniteCacheExample.class);
-    Slf4jLogger log = new Slf4jLogger(impl);
-    IgniteConfiguration configuration = new IgniteConfiguration();
-    configuration.setGridLogger(log);
-    Ignite ignite = Ignition.start(configuration);
+    IgniteConfiguration cfg = new IgniteConfiguration();
+    IgniteLogger log = new Slf4jLogger();
+    cfg.setGridLogger(log);
+    Ignite ignite = Ignition.start(cfg);
 
     IgniteCache<Integer, String> cache = ignite.getOrCreateCache("baeldungCache");
 
