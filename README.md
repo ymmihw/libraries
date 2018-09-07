@@ -68,3 +68,4 @@ jasypt-spring-boot | [Spring Boot Configuration with Jasypt](https://www.baeldun
 Module | Article
 --|--
 ignite-intro | [A Guide to Apache Ignite](https://www.baeldung.com/apache-ignite)
+ignite-spring-data | [Apache Ignite with Spring Data](https://www.baeldung.com/apache-ignite-spring-data)
