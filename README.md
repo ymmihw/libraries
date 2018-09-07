@@ -63,3 +63,8 @@ Module | Article
 --|--
 jasypt-intro | [Intro to Jasypt](https://www.baeldung.com/jasypt)
 jasypt-spring-boot | [Spring Boot Configuration with Jasypt](https://www.baeldung.com/spring-boot-jasypt)
+
+#### Ignite
+Module | Article
+--|--
+ignite-intro | [A Guide to Apache Ignite](https://www.baeldung.com/apache-ignite)
