@@ -3,7 +3,6 @@ package com.ymmihw.libraries.yarg;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
 import org.apache.commons.io.FileUtils;
 import com.haulmont.yarg.formatters.factory.DefaultFormatterFactory;
 import com.haulmont.yarg.loaders.factory.DefaultLoaderFactory;
@@ -34,7 +33,7 @@ public class App {
     Reporting reporting = new Reporting();
     reporting.setFormatterFactory(new DefaultFormatterFactory());
     reporting.setLoaderFactory(new DefaultLoaderFactory().setJsonDataLoader(new JsonDataLoader()));
-    OutputStream os = new FileOutputStream("1.docx");
-    reporting.runReport(new RunParams(report).param("param1", json), os);
+    reporting.runReport(new RunParams(report).param("param1", json),
+        new FileOutputStream("output.docx"));
   }
 }
