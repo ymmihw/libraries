@@ -3,23 +3,27 @@
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <modelVersion>4.0.0</modelVersion>
  <parent>
-  <groupId>com.ymmihw.libraries</groupId>
-  <artifactId>swagger</artifactId>
+  <groupId>com.ymmihw.libraries.swagger</groupId>
+  <artifactId>spring-boot-rest-client-swagger-codegen</artifactId>
   <version>0.0.1-SNAPSHOT</version>
  </parent>
  <groupId>com.ymmihw.libraries.swagger</groupId>
- <artifactId>spring-boot-rest-client-swagger-codegen</artifactId>
- <packaging>pom</packaging>
+ <artifactId>spring-swagger-codegen-app</artifactId>
  <version>0.0.1-SNAPSHOT</version>
- <name>spring-boot-rest-client-swagger-codegen</name>
+ <name>spring-swagger-codegen-app</name>
  <url>http://maven.apache.org</url>
  <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
  </properties>
  <dependencies>
+  <dependency>
+   <groupId>com.ymmihw</groupId>
+   <artifactId>spring-swagger-codegen-api-client</artifactId>
+   <version>0.0.1-SNAPSHOT</version>
+  </dependency>
+  <dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-web</artifactId>
+  </dependency>
  </dependencies>
- <modules>
-  <module>spring-swagger-codegen-api-client</module>
-  <module>spring-swagger-codegen-app</module>
- </modules>
 </project>
