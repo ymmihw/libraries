@@ -74,3 +74,8 @@ ignite-spring-data | [Apache Ignite with Spring Data](https://www.baeldung.com/a
 Module | Article
 --|--
 spring-boot-rest-client-swagger-codegen | [Generate Spring Boot REST Client with Swagger](https://www.baeldung.com/spring-boot-rest-client-swagger-codegen)
+
+#### Yarg
+Module | Article
+--|--
+Yarg | [Spring Yarg Integration](https://www.baeldung.com/spring-yarg)
