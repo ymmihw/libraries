@@ -69,3 +69,7 @@ Module | Article
 --|--
 ignite-intro | [A Guide to Apache Ignite](https://www.baeldung.com/apache-ignite)
 ignite-spring-data | [Apache Ignite with Spring Data](https://www.baeldung.com/apache-ignite-spring-data)
+
+#### Swagger
+Module | Article
+--|--
