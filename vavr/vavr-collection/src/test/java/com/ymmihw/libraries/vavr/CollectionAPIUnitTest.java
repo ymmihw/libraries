@@ -58,6 +58,11 @@ public class CollectionAPIUnitTest {
     List list8 = list.distinctBy((s1, s2) -> s1.startsWith(s2.charAt(0) + "") ? 0 : 1);
     assertEquals(list8.size(), 2);
 
+    String words =
+        List.of("Boys", "Girls").intersperse("and").reduce((s1, s2) -> s1.concat(" " + s2)).trim();
+
+    assertEquals(words, "Boys and Girls");
+
     Iterator<List<String>> iterator = list.grouped(2);
     assertEquals(iterator.head().size(), 2);
 
@@ -65,12 +70,6 @@ public class CollectionAPIUnitTest {
     assertEquals(map.size(), 2);
     assertEquals(map.get(false).get().size(), 1);
     assertEquals(map.get(true).get().size(), 5);
-
-    String words =
-        List.of("Boys", "Girls").intersperse("and").reduce((s1, s2) -> s1.concat(" " + s2)).trim();
-
-    assertEquals(words, "Boys and Girls");
-
   }
 
   @Test
