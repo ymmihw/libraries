@@ -84,3 +84,4 @@ Yarg | [Spring Yarg Integration](https://www.baeldung.com/spring-yarg)
 Module | Article
 --|--
 vavr-intro | [Introduction to Vavr](https://www.baeldung.com/vavr)
+vavr-collection | [Guide to Collections API in Vavr](https://www.baeldung.com/vavr-collections)
