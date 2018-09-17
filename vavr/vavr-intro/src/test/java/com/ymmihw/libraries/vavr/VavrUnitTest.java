@@ -1,5 +1,18 @@
 package com.ymmihw.libraries.vavr;
 
+import static io.vavr.API.$;
+import static io.vavr.API.Case;
+import static io.vavr.API.Match;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.function.BiFunction;
+import java.util.function.Function;
+import java.util.stream.IntStream;
+import org.junit.Test;
 import io.vavr.Function0;
 import io.vavr.Function1;
 import io.vavr.Function2;
@@ -13,19 +26,6 @@ import io.vavr.collection.Seq;
 import io.vavr.control.Option;
 import io.vavr.control.Try;
 import io.vavr.control.Validation;
-import org.junit.Test;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.function.BiFunction;
-import java.util.function.Function;
-import java.util.stream.IntStream;
-import static io.vavr.API.$;
-import static io.vavr.API.Case;
-import static io.vavr.API.Match;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
 
 public class VavrUnitTest {
 
@@ -308,36 +308,4 @@ public class VavrUnitTest {
         Match(input).of(Case($(1), "one"), Case($(2), "two"), Case($(3), "three"), Case($(), "?"));
     assertEquals("two", output);
   }
-
-  // mapping--component-wise(using Function interface)
-  @Test
-  public void givenTuple_whenMapsComponentWise_thenCorrect() {
-    Tuple2<String, Integer> java8 = Tuple.of("Java", 8);
-    Tuple2<String, Integer> mapOfJava8 = java8.map(s -> s + "Vavr", i -> i / 2);
-    int num = mapOfJava8._2();
-    assertEquals("JavaVavr", mapOfJava8._1);
-
-    assertEquals(4, num);
-
-  }
-
-  // mapping--with one mapper(using BiFunction interface)
-  @Test
-  public void givenTuple_whenMapsWithOneMapper_thenCorrect() {
-    Tuple2<String, Integer> java8 = Tuple.of("Java", 8);
-    Tuple2<String, Integer> mapOfJava8 = java8.map((s, i) -> Tuple.of(s + "Vavr", i / 2));
-    int num = mapOfJava8._2();
-    assertEquals("JavaVavr", mapOfJava8._1);
-
-    assertEquals(4, num);
-  }
-
-  // transforming a tuple
-  @Test
-  public void givenTuple_whenTransforms_thenCorrect() {
-    Tuple2<String, Integer> java8 = Tuple.of("Java", 8);
-    String transformed = java8.apply((s, i) -> s + "Vavr " + i / 2);
-    assertEquals("JavaVavr 4", transformed);
-  }
-
 }
