@@ -79,3 +79,8 @@ spring-boot-rest-client-swagger-codegen | [Generate Spring Boot REST Client with
 Module | Article
 --|--
 Yarg | [Spring Yarg Integration](https://www.baeldung.com/spring-yarg)
+
+#### Vavr
+Module | Article
+--|--
+vavr-intro | [Introduction to Vavr](https://www.baeldung.com/vavr)
