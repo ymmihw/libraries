@@ -157,6 +157,8 @@ public class CollectionAPIUnitTest {
 
     Array<Integer> intArray = Array.of(1, 2, 3);
     Array<Integer> newArray = intArray.removeAt(1);
+    
+    assertEquals(3, intArray.size());
     assertEquals(2, newArray.size());
     assertEquals(3, newArray.get(1).intValue());
 
