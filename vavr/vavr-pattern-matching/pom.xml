@@ -4,24 +4,17 @@
  <modelVersion>4.0.0</modelVersion>
  <parent>
   <groupId>com.ymmihw.libraries</groupId>
-  <artifactId>libraries</artifactId>
+  <artifactId>vavr</artifactId>
   <version>0.0.1-SNAPSHOT</version>
  </parent>
- <groupId>com.ymmihw.libraries</groupId>
- <artifactId>vavr</artifactId>
- <packaging>pom</packaging>
+ <groupId>com.ymmihw.libraries.vavr</groupId>
+ <artifactId>vavr-pattern-matching</artifactId>
  <version>0.0.1-SNAPSHOT</version>
- <name>vavr</name>
+ <name>vavr-pattern-matching</name>
  <url>http://maven.apache.org</url>
  <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  <vavr.version>0.9.2</vavr.version>
  </properties>
  <dependencies>
-  <dependency>
-   <groupId>io.vavr</groupId>
-   <artifactId>vavr</artifactId>
-   <version>${vavr.version}</version>
-  </dependency>
  </dependencies>
 </project>
