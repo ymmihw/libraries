@@ -88,3 +88,4 @@ vavr-collection | [Guide to Collections API in Vavr](https://www.baeldung.com/va
 vavr-try | [Guide to Try in Vavr](https://www.baeldung.com/vavr-try)
 vavr-either | [Introduction to Vavr’s Either](https://www.baeldung.com/vavr-either)
 vavr-pattern-matching | [Guide to Pattern Matching in Vavr](https://www.baeldung.com/vavr-pattern-matching)
+vavr-validate | [Introduction to Vavr’s Validation API](https://www.baeldung.com/vavr-validation-api)
