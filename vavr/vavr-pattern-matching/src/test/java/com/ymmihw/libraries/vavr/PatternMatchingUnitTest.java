@@ -1,11 +1,11 @@
 package com.ymmihw.libraries.vavr;
 
-import static com.ymmihw.libraries.vavr.DemoPatterns.*;
+import static com.ymmihw.libraries.vavr.DemoPatterns.$Employee;
+import static com.ymmihw.libraries.vavr.DemoPatterns.$LocalDate;
 import static io.vavr.API.$;
 import static io.vavr.API.Case;
 import static io.vavr.API.Match;
 import static io.vavr.API.run;
-import static io.vavr.API.*;
 import static io.vavr.Predicates.allOf;
 import static io.vavr.Predicates.anyOf;
 import static io.vavr.Predicates.instanceOf;
@@ -21,14 +21,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.BiFunction;
 import org.junit.Test;
-import io.vavr.API.Match.Pattern0;
 import io.vavr.MatchError;
-import io.vavr.Tuple;
-import io.vavr.Tuple2;
-import io.vavr.Tuple3;
 import io.vavr.control.Option;
-import io.vavr.match.annotation.Patterns;
-import io.vavr.match.annotation.Unapply;
 
 public class PatternMatchingUnitTest {
   @Test
