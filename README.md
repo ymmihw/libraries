@@ -93,3 +93,4 @@ vavr-lambda-exception | [Exceptions in Lambda Expression Using Vavr](https://www
 vavr-property-testing | [Property Testing Example With Vavr](https://www.baeldung.com/vavr-property-testing)
 vavr-spring-data | [Vavr Support in Spring Data](https://www.baeldung.com/spring-vavr)
 vavr-factory-methods | [Collection Factory Methods for Vavr](https://www.baeldung.com/vavr-collection-factory-methods)
+vavr-future | [Introduction to Future in Vavr](https://www.baeldung.com/vavr-future)
