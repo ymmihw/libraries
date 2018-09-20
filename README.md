@@ -90,3 +90,4 @@ vavr-either | [Introduction to Vavr’s Either](https://www.baeldung.com/vavr-ei
 vavr-pattern-matching | [Guide to Pattern Matching in Vavr](https://www.baeldung.com/vavr-pattern-matching)
 vavr-validate | [Introduction to Vavr’s Validation API](https://www.baeldung.com/vavr-validation-api)
 vavr-lambda-exception | [Exceptions in Lambda Expression Using Vavr](https://www.baeldung.com/exceptions-using-vavr)
+vavr-property-testing | [Property Testing Example With Vavr](https://www.baeldung.com/vavr-property-testing)
