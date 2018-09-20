@@ -1,4 +1,4 @@
-### Relevant Articles: 
+## Relevant Articles: 
 
 Module | Article
 --|--
@@ -15,7 +15,7 @@ JGroups-introduction | [Reliable Messaging with JGroups](http://www.baeldung.com
 TestContainers | [Docker Test Containers in Java Tests](https://www.baeldung.com/docker-test-containers)
 rome | [Quick Guide to RSS with Rome](https://www.baeldung.com/rome-rss)
 
-#### REST-assured
+### REST-assured
 
 Module | Article
 --|--
@@ -23,7 +23,7 @@ REST-assured-introduction | [A Guide to REST-assured](http://www.baeldung.com/re
 REST-assured-parameter-header-cookie | [Headers, Cookies and Parameters with REST-assured](http://www.baeldung.com/rest-assured-header-cookie-parameter)
 
 
-#### Reactor
+### Reactor
 
 Module | Article
 --|--
@@ -31,56 +31,56 @@ reactor-core-introduction | [Intro To Reactor Core](http://www.baeldung.com/reac
 reactor-bus-introduction | [Introduction to Spring Reactor](http://www.baeldung.com/spring-reactor)
 reactor-combine-publisher | [Combining Publishers in Project Reactor](http://www.baeldung.com/reactor-combine-streams)
 
-#### AsyncHttpClient
+### AsyncHttpClient
 
 Module | Article
 --|--
 asynchronous-http | [Asynchronous HTTP with async-http-client in Java](http://www.baeldung.com/async-http-client)
 websocket | [WebSockets with AsyncHttpClient](http://www.baeldung.com/async-http-client-websockets)
 
-#### AssertJ
+### AssertJ
 Module | Article
 --|--
 assertj-custom-assertion | [Custom Assertions with AssertJ](http://www.baeldung.com/assertj-custom-assertion)
 
-#### Tomcat
+### Tomcat
 Module | Article
 --|--
 tomcat-programmatic-setup | [Programmatically Create, Configure and Run a Tomcat Server](http://www.baeldung.com/tomcat-programmatic-setup)
 
-#### Guava
+### Guava
 Module | Article
 --|--
 guava-memoization | [Introduction to Guava Memoizer](http://www.baeldung.com/guava-memoizer)
 
-#### Redis
+### Redis
 Module | Article
 --|--
 lettuce | [Introduction to Lettuce – the Java Redis Client](http://www.baeldung.com/java-redis-lettuce)
 
-#### Jasypt
+### Jasypt
 Module | Article
 --|--
 jasypt-intro | [Intro to Jasypt](https://www.baeldung.com/jasypt)
 jasypt-spring-boot | [Spring Boot Configuration with Jasypt](https://www.baeldung.com/spring-boot-jasypt)
 
-#### Ignite
+### Ignite
 Module | Article
 --|--
 ignite-intro | [A Guide to Apache Ignite](https://www.baeldung.com/apache-ignite)
 ignite-spring-data | [Apache Ignite with Spring Data](https://www.baeldung.com/apache-ignite-spring-data)
 
-#### Swagger
+### Swagger
 Module | Article
 --|--
 spring-boot-rest-client-swagger-codegen | [Generate Spring Boot REST Client with Swagger](https://www.baeldung.com/spring-boot-rest-client-swagger-codegen)
 
-#### Yarg
+### Yarg
 Module | Article
 --|--
 Yarg | [Spring Yarg Integration](https://www.baeldung.com/spring-yarg)
 
-#### Vavr
+### Vavr
 Module | Article
 --|--
 vavr-intro | [Introduction to Vavr](https://www.baeldung.com/vavr)
