@@ -95,3 +95,7 @@ vavr-spring-data | [Vavr Support in Spring Data](https://www.baeldung.com/spring
 vavr-factory-methods | [Collection Factory Methods for Vavr](https://www.baeldung.com/vavr-collection-factory-methods)
 vavr-future | [Introduction to Future in Vavr](https://www.baeldung.com/vavr-future)
 vavr-java-interop | [Interoperability Between Java and Vavr](https://www.baeldung.com/java-vavr)
+
+### Drools
+Module | Article
+--|--
