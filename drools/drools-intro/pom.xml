@@ -4,29 +4,17 @@
  <modelVersion>4.0.0</modelVersion>
  <parent>
   <groupId>com.ymmihw.libraries</groupId>
-  <artifactId>libraries</artifactId>
+  <artifactId>drools</artifactId>
   <version>0.0.1-SNAPSHOT</version>
  </parent>
- <groupId>com.ymmihw.libraries</groupId>
- <artifactId>drools</artifactId>
+ <groupId>com.ymmihw.libraries.drools</groupId>
+ <artifactId>drools-intro</artifactId>
  <version>0.0.1-SNAPSHOT</version>
- <name>drools</name>
- <packaging>pom</packaging>
+ <name>drools-intro</name>
  <url>http://maven.apache.org</url>
  <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  <drools-version>7.11.0.Final</drools-version>
  </properties>
  <dependencies>
-  <dependency>
-   <groupId>org.kie</groupId>
-   <artifactId>kie-ci</artifactId>
-   <version>${drools-version}</version>
-  </dependency>
-  <dependency>
-   <groupId>org.drools</groupId>
-   <artifactId>drools-decisiontables</artifactId>
-   <version>${drools-version}</version>
-  </dependency>
  </dependencies>
 </project>

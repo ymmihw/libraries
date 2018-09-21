@@ -99,3 +99,4 @@ vavr-java-interop | [Interoperability Between Java and Vavr](https://www.baeldun
 ### Drools
 Module | Article
 --|--
+drools-intro | [Introduction to Drools](https://www.baeldung.com/drools)
