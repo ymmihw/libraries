@@ -94,3 +94,4 @@ vavr-property-testing | [Property Testing Example With Vavr](https://www.baeldun
 vavr-spring-data | [Vavr Support in Spring Data](https://www.baeldung.com/spring-vavr)
 vavr-factory-methods | [Collection Factory Methods for Vavr](https://www.baeldung.com/vavr-collection-factory-methods)
 vavr-future | [Introduction to Future in Vavr](https://www.baeldung.com/vavr-future)
+vavr-java-interop | [Interoperability Between Java and Vavr](https://www.baeldung.com/java-vavr)
