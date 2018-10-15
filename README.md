@@ -14,6 +14,7 @@ infinispan-introduction | [A Guide to Infinispan in Java](http://www.baeldung.co
 JGroups-introduction | [Reliable Messaging with JGroups](http://www.baeldung.com/jgroups)
 TestContainers | [Docker Test Containers in Java Tests](https://www.baeldung.com/docker-test-containers)
 rome | [Quick Guide to RSS with Rome](https://www.baeldung.com/rome-rss)
+JasperReports | [JasperReports with Spring](https://www.baeldung.com/spring-jasper)
 
 ### REST-assured
 
