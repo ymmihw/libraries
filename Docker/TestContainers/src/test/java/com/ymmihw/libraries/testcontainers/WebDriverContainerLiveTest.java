@@ -11,7 +11,7 @@ import org.testcontainers.containers.BrowserWebDriverContainer;
 public class WebDriverContainerLiveTest {
   @Rule
   public BrowserWebDriverContainer<?> chrome =
-      new BrowserWebDriverContainer<>().withDesiredCapabilities(DesiredCapabilities.chrome());
+      new BrowserWebDriverContainer<>().withCapabilities(DesiredCapabilities.chrome());
 
   @Test
   public void whenNavigatedToPage_thenHeadingIsInThePage() {

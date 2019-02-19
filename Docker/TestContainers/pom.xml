@@ -15,14 +15,14 @@
  <url>http://maven.apache.org</url>
  <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  <testcontainers.version>1.8.0</testcontainers.version>
-  <junit.platform.version>1.2.0</junit.platform.version>
+  <testcontainers.version>1.10.6</testcontainers.version>
+  <junit.platform.version>1.4.0</junit.platform.version>
  </properties>
  <dependencies>
-<!--   <dependency> -->
-<!--    <groupId>ch.qos.logback</groupId> -->
-<!--    <artifactId>logback-classic</artifactId> -->
-<!--   </dependency> -->
+  <dependency>
+   <groupId>ch.qos.logback</groupId>
+   <artifactId>logback-classic</artifactId>
+  </dependency>
   <dependency>
    <groupId>org.junit.platform</groupId>
    <artifactId>junit-platform-runner</artifactId>
@@ -74,13 +74,6 @@
   <plugins>
    <plugin>
     <artifactId>maven-surefire-plugin</artifactId>
-    <dependencies>
-     <dependency>
-      <groupId>org.junit.platform</groupId>
-      <artifactId>junit-platform-surefire-provider</artifactId>
-      <version>${junit.platform.version}</version>
-     </dependency>
-    </dependencies>
    </plugin>
   </plugins>
  </build>
