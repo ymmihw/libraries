@@ -355,7 +355,7 @@ public class UserRepositoryCommon {
     emails.add(USER_EMAIL2);
     emails.add(USER_EMAIL3);
 
-    Collection<User> usersWithEmails = userRepository.findByEmailIn(emails);
+    Collection<User> usersWithEmails = userRepository.findUserByEmails(emails);
 
     assertThat(usersWithEmails.size()).isEqualTo(2);
   }

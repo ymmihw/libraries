@@ -5,5 +5,5 @@ import java.util.Set;
 import com.ymmihw.libraries.testcontainers.domain.User;
 
 public interface UserRepositoryCustom {
-  List<User> findByEmailIn(Set<String> emails);
+  List<User> findUserByEmails(Set<String> emails);
 }
