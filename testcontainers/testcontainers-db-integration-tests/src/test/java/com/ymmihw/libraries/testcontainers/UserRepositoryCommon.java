@@ -19,7 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.ymmihw.libraries.testcontainers.domain.User;
 import com.ymmihw.libraries.testcontainers.repositories.UserRepository;
 
-public class UserRepositoryCommon {
+public abstract class UserRepositoryCommon {
 
   final String USER_EMAIL = "email@example.com";
   final String USER_EMAIL2 = "email2@example.com";
