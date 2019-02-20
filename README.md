@@ -18,6 +18,7 @@ JasperReports | [JasperReports with Spring](https://www.baeldung.com/spring-jasp
 ### TestContainers
 
 testcontainers-intro | [Docker Test Containers in Java Tests](https://www.baeldung.com/docker-test-containers)
+testcontainers-db-integration-tests | [DB Integration Tests with Spring Boot and Testcontainers](https://www.baeldung.com/spring-boot-testcontainers-integration-test)
 
 ### REST-assured
 

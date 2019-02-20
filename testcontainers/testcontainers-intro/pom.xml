@@ -3,10 +3,9 @@
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <modelVersion>4.0.0</modelVersion>
  <parent>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-starter-parent</artifactId>
-  <version>2.0.3.RELEASE</version>
-  <relativePath />
+  <groupId>com.ymmihw.libraries</groupId>
+  <artifactId>testcontainers</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
  </parent>
  <groupId>com.ymmihw.libraries.testcontainers</groupId>
  <artifactId>testcontainers-intro</artifactId>
@@ -15,19 +14,11 @@
  <url>http://maven.apache.org</url>
  <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  <testcontainers.version>1.10.6</testcontainers.version>
-  <junit.platform.version>1.4.0</junit.platform.version>
  </properties>
  <dependencies>
   <dependency>
    <groupId>ch.qos.logback</groupId>
    <artifactId>logback-classic</artifactId>
-  </dependency>
-  <dependency>
-   <groupId>org.junit.platform</groupId>
-   <artifactId>junit-platform-runner</artifactId>
-   <version>${junit.platform.version}</version>
-   <scope>test</scope>
   </dependency>
   <dependency>
    <groupId>org.junit.vintage</groupId>
