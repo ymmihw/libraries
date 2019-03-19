@@ -36,7 +36,8 @@ Module | Article
 reactor-core-introduction | [Intro To Reactor Core](http://www.baeldung.com/reactor-core)
 reactor-bus-introduction | [Introduction to Spring Reactor](http://www.baeldung.com/spring-reactor)
 reactor-combine-publisher | [Combining Publishers in Project Reactor](http://www.baeldung.com/reactor-combine-streams)
-
+reactor-create-sequence | [Programmatically Creating Sequences with Project Reactor](https://www.baeldung.com/flux-sequences-reactor)
+ 
 ### AsyncHttpClient
 
 Module | Article
