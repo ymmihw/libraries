@@ -23,5 +23,6 @@
   <module>reactor-bus-introduction</module>
   <module>reactor-combine-publisher</module>
   <module>reactor-create-sequence</module>
+  <module>reactor-test-step-verifier-test-publisher</module>
  </modules>
 </project>
