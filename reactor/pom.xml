@@ -24,5 +24,6 @@
   <module>reactor-combine-publisher</module>
   <module>reactor-create-sequence</module>
   <module>reactor-test-step-verifier-test-publisher</module>
+  <module>reactor-debug</module>
  </modules>
 </project>

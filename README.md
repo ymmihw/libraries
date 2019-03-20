@@ -38,6 +38,7 @@ reactor-bus-introduction | [Introduction to Spring Reactor](http://www.baeldung.
 reactor-combine-publisher | [Combining Publishers in Project Reactor](http://www.baeldung.com/reactor-combine-streams)
 reactor-create-sequence | [Programmatically Creating Sequences with Project Reactor](https://www.baeldung.com/flux-sequences-reactor)
 reactor-test-step-verifier-test-publisher | [Testing Reactive Streams Using StepVerifier and TestPublisher](https://www.baeldung.com/reactive-streams-step-verifier-test-publisher)
+reactor-debug | [Debugging Reactive Streams in Spring 5](https://www.baeldung.com/spring-debugging-reactive-streams)
  
 ### AsyncHttpClient
 
