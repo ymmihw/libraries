@@ -8,13 +8,11 @@ import org.slf4j.LoggerFactory;
 import com.ymmihw.libraries.reactor.model.Foo;
 import com.ymmihw.libraries.reactor.service.FooService;
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.Hooks;
 
 public class Checkpoint {
   private static Logger logger = LoggerFactory.getLogger(Checkpoint.class);
 
   public static void main(String[] args) throws InterruptedException {
-    Hooks.onOperatorDebug();
     FooService service = new FooService();
     Flux<Foo> fluxFoo = Flux.interval(Duration.ofMillis(100)).map(sequence -> {
       logger.info("retrieving Foo. Sequence: {}", sequence);
