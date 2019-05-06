@@ -14,6 +14,7 @@ infinispan-introduction | [A Guide to Infinispan in Java](http://www.baeldung.co
 JGroups-introduction | [Reliable Messaging with JGroups](http://www.baeldung.com/jgroups)
 rome | [Quick Guide to RSS with Rome](https://www.baeldung.com/rome-rss)
 JasperReports | [JasperReports with Spring](https://www.baeldung.com/spring-jasper)
+fastutil | [Guide to FastUtil](https://www.baeldung.com/fastutil)
 
 ### TestContainers
 Module | Article
