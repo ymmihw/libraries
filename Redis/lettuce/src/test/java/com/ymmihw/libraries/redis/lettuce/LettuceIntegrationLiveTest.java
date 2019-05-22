@@ -1,5 +1,19 @@
 package com.ymmihw.libraries.redis.lettuce;
 
+import static org.junit.Assert.assertTrue;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.testcontainers.containers.GenericContainer;
 import io.lettuce.core.LettuceFutures;
 import io.lettuce.core.RedisClient;
 import io.lettuce.core.RedisFuture;
@@ -10,36 +24,29 @@ import io.lettuce.core.api.sync.RedisCommands;
 import io.lettuce.core.pubsub.RedisPubSubListener;
 import io.lettuce.core.pubsub.StatefulRedisPubSubConnection;
 import io.lettuce.core.pubsub.api.async.RedisPubSubAsyncCommands;
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
-import static org.junit.Assert.assertTrue;
 
 public class LettuceIntegrationLiveTest {
 
   private static Logger log = LoggerFactory.getLogger(LettuceIntegrationLiveTest.class);
 
-  private static StatefulRedisConnection<String, String> redisConnection;
+  @Rule
+  public GenericContainer<?> redis =
+      new GenericContainer<>("redis:5.0.5-alpine").withExposedPorts(6379);
 
-  private static RedisClient redisClient;
+  private StatefulRedisConnection<String, String> redisConnection;
 
-  @BeforeClass
-  public static void setUp() {
+  private RedisClient redisClient;
+
+  @Before
+  public void setUp() {
     // Docker defaults to mapping redis port to 32768
-    redisClient = RedisClient.create("redis://192.168.10.177:6379/");
+    redisClient = RedisClient.create(
+        "redis://" + redis.getContainerIpAddress() + ":" + redis.getFirstMappedPort() + "/");
     redisConnection = redisClient.connect();
   }
 
-  @AfterClass
-  public static void destroy() {
+  @After
+  public void destroy() {
     redisConnection.close();
   }
 
