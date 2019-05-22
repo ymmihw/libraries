@@ -15,7 +15,8 @@ JGroups-introduction | [Reliable Messaging with JGroups](http://www.baeldung.com
 rome | [Quick Guide to RSS with Rome](https://www.baeldung.com/rome-rss)
 JasperReports | [JasperReports with Spring](https://www.baeldung.com/spring-jasper)
 fastutil | [Guide to FastUtil](https://www.baeldung.com/fastutil)
-tink| [Guide to Google Tink](https://www.baeldung.com/google-tink)
+tink | [Guide to Google Tink](https://www.baeldung.com/google-tink)
+passay | [Guide to Passay](https://www.baeldung.com/java-passay)
 
 ### TestContainers
 Module | Article

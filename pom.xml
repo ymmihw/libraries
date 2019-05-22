@@ -71,5 +71,6 @@
   <module>Tomcat</module>
   <module>vavr</module>
   <module>Yarg</module>
+  <module>passay</module>
  </modules>
 </project>
