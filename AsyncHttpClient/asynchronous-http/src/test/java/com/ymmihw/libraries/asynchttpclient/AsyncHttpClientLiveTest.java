@@ -36,7 +36,7 @@ public class AsyncHttpClientLiveTest {
   @Test
   public void givenHttpClient_executeSyncGetRequest() {
 
-    BoundRequestBuilder boundGetRequest = HTTP_CLIENT.prepareGet("http://www.baeldung.com");
+    BoundRequestBuilder boundGetRequest = HTTP_CLIENT.prepareGet("https://www.baeldung.com");
 
     Future<Response> responseFuture = boundGetRequest.execute();
     try {
@@ -58,7 +58,7 @@ public class AsyncHttpClientLiveTest {
   public void givenHttpClient_executeAsyncGetRequest() {
 
     // execute an unbound GET request
-    Request unboundGetRequest = Dsl.get("http://www.baeldung.com").build();
+    Request unboundGetRequest = Dsl.get("https://www.baeldung.com").build();
 
     HTTP_CLIENT.executeRequest(unboundGetRequest, new AsyncCompletionHandler<Integer>() {
       @Override
@@ -71,7 +71,7 @@ public class AsyncHttpClientLiveTest {
     });
 
     // execute a bound GET request
-    BoundRequestBuilder boundGetRequest = HTTP_CLIENT.prepareGet("http://www.baeldung.com");
+    BoundRequestBuilder boundGetRequest = HTTP_CLIENT.prepareGet("https://www.baeldung.com");
 
     boundGetRequest.execute(new AsyncCompletionHandler<Integer>() {
       @Override
@@ -93,7 +93,7 @@ public class AsyncHttpClientLiveTest {
   public void givenHttpClient_executeAsyncGetRequestWithAsyncHandler() {
 
     // execute an unbound GET request
-    Request unboundGetRequest = Dsl.get("http://www.baeldung.com").build();
+    Request unboundGetRequest = Dsl.get("https://www.baeldung.com").build();
 
     HTTP_CLIENT.executeRequest(unboundGetRequest, new AsyncHandler<Integer>() {
 
@@ -137,7 +137,7 @@ public class AsyncHttpClientLiveTest {
   @Test
   public void givenHttpClient_executeAsyncGetRequestWithListanableFuture() {
     // execute an unbound GET request
-    Request unboundGetRequest = Dsl.get("http://www.baeldung.com").build();
+    Request unboundGetRequest = Dsl.get("https://www.baeldung.com").build();
 
     ListenableFuture<Response> listenableFuture = HTTP_CLIENT.executeRequest(unboundGetRequest);
     listenableFuture.addListener(() -> {

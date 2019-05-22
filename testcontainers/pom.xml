@@ -20,4 +20,8 @@
  </properties>
  <dependencies>
  </dependencies>
+ <modules>
+  <module>testcontainers-db-integration-tests</module>
+  <module>testcontainers-intro</module>
+ </modules>
 </project>

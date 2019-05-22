@@ -34,7 +34,7 @@ public class LettuceIntegrationLiveTest {
   @BeforeClass
   public static void setUp() {
     // Docker defaults to mapping redis port to 32768
-    redisClient = RedisClient.create("redis://localhost:6379/");
+    redisClient = RedisClient.create("redis://192.168.10.177:6379/");
     redisConnection = redisClient.connect();
   }
 

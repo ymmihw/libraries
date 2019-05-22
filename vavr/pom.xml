@@ -24,4 +24,18 @@
    <version>${vavr.version}</version>
   </dependency>
  </dependencies>
+ <modules>
+  <module>vavr-collection</module>
+  <module>vavr-either</module>
+  <module>vavr-factory-methods</module>
+  <module>vavr-future</module>
+  <module>vavr-intro</module>
+  <module>vavr-java-interop</module>
+  <module>vavr-lambda-exception</module>
+  <module>vavr-pattern-matching</module>
+  <module>vavr-property-testing</module>
+  <module>vavr-spring-data</module>
+  <module>vavr-try</module>
+  <module>vavr-validate</module>
+ </modules>
 </project>
