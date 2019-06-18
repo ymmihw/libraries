@@ -72,5 +72,6 @@
   <module>vavr</module>
   <module>Yarg</module>
   <module>passay</module>
+  <module>RSocket</module>
  </modules>
 </project>
