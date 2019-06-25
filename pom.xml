@@ -73,5 +73,6 @@
   <module>Yarg</module>
   <module>passay</module>
   <module>RSocket</module>
+  <module>google-auto</module>
  </modules>
 </project>

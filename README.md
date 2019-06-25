@@ -113,3 +113,8 @@ vavr-java-interop | [Interoperability Between Java and Vavr](https://www.baeldun
 Module | Article
 --|--
 drools-intro | [Introduction to Drools](https://www.baeldung.com/drools)
+
+### google-auto
+Module | Article
+--|--
+AutoService | [Google AutoService](https://www.baeldung.com/google-autoservice)
