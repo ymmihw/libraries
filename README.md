@@ -118,3 +118,4 @@ drools-intro | [Introduction to Drools](https://www.baeldung.com/drools)
 Module | Article
 --|--
 AutoService | [Google AutoService](https://www.baeldung.com/google-autoservice)
+auto-factory | [Introduction to AutoFactory](https://www.baeldung.com/autofactory)

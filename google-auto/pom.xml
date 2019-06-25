@@ -18,5 +18,6 @@
  </dependencies>
  <modules>
   <module>AutoService</module>
+  <module>auto-factory</module>
  </modules>
 </project>
