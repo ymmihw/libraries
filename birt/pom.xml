@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <modelVersion>4.0.0</modelVersion>
+ <parent>
+  <groupId>com.ymmihw.libraries</groupId>
+  <artifactId>libraries</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+ </parent>
+ <artifactId>birt</artifactId>
+ <name>birt</name>
+ <url>http://maven.apache.org</url>
+ <properties>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  <eclipse.birt.runtime.version>4.8.0</eclipse.birt.runtime.version>
+ </properties>
+ <dependencies>
+  <dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter</artifactId>
+  </dependency>
+
+  <dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-web</artifactId>
+  </dependency>
+  <dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-logging</artifactId>
+   <!-- <exclusions> -->
+   <!-- <exclusion> -->
+   <!-- <groupId>ch.qos.logback</groupId> -->
+   <!-- <artifactId>logback-classic</artifactId> -->
+   <!-- </exclusion> -->
+   <!-- </exclusions> -->
+  </dependency>
+  <dependency>
+   <groupId>com.innoventsolutions.birt.runtime</groupId>
+   <artifactId>org.eclipse.birt.runtime_4.8.0-20180626</artifactId>
+   <version>${eclipse.birt.runtime.version}</version>
+  </dependency>
+  <dependency>
+   <groupId>org.projectlombok</groupId>
+   <artifactId>lombok</artifactId>
+   <scope>provided</scope>
+  </dependency>
+ </dependencies>
+</project>

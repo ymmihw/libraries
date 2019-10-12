@@ -74,5 +74,6 @@
   <module>passay</module>
   <module>RSocket</module>
   <module>google-auto</module>
+  <module>birt</module>
  </modules>
 </project>
