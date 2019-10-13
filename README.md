@@ -18,7 +18,7 @@ fastutil | [Guide to FastUtil](https://www.baeldung.com/fastutil)
 tink | [Guide to Google Tink](https://www.baeldung.com/google-tink)
 passay | [Guide to Passay](https://www.baeldung.com/java-passay)
 RSocket | [Introduction to RSocket](https://www.baeldung.com/rsocket)
-
+birt | [BIRT Reporting with Spring Boot](https://www.baeldung.com/birt-reports-spring-boot)
 ### TestContainers
 Module | Article
 --|--
