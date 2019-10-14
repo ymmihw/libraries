@@ -34,7 +34,7 @@ public class BirtReportController {
   @RequestMapping(produces = "application/json", method = RequestMethod.GET,
       value = "/report/reload")
   @ResponseBody
-  public ResponseEntity reloadReports(HttpServletResponse response) {
+  public ResponseEntity<?> reloadReports(HttpServletResponse response) {
     try {
       log.info("Reloading reports");
       reportService.loadReports();

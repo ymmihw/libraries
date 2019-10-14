@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.PostConstruct;
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.eclipse.birt.core.exception.BirtException;
@@ -27,11 +26,9 @@ import org.eclipse.birt.report.engine.api.IRunAndRenderTask;
 import org.eclipse.birt.report.engine.api.PDFRenderOption;
 import org.eclipse.birt.report.engine.api.RenderOption;
 import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
-import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
 import com.ymmihw.libraries.engine.dto.OutputType;
 import com.ymmihw.libraries.engine.dto.Report;
@@ -44,11 +41,6 @@ public class BirtReportService implements ApplicationContextAware, DisposableBea
   private String imagesPath;
 
   private HTMLServerImageHandler htmlImageHandler = new HTMLServerImageHandler();
-
-  @Autowired
-  private ResourceLoader resourceLoader;
-  @Autowired
-  private ServletContext servletContext;
 
   private IReportEngine birtEngine;
   private ApplicationContext context;
