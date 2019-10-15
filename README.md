@@ -119,3 +119,8 @@ Module | Article
 --|--
 AutoService | [Google AutoService](https://www.baeldung.com/google-autoservice)
 auto-factory | [Introduction to AutoFactory](https://www.baeldung.com/autofactory)
+
+### Liquibase
+Module | Article
+--|--
+liquibase-evolve-database | [Use Liquibase to Safely Evolve Your Database Schema](http://www.baeldung.com/liquibase-refactor-schema-of-java-app)
