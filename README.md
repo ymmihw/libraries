@@ -124,3 +124,8 @@ auto-factory | [Introduction to AutoFactory](https://www.baeldung.com/autofactor
 Module | Article
 --|--
 liquibase-evolve-database | [Use Liquibase to Safely Evolve Your Database Schema](http://www.baeldung.com/liquibase-refactor-schema-of-java-app)
+
+### flyway
+Module | Article
+--|--
+flyway-database-migrations | [Database Migrations with Flyway](http://www.baeldung.com/database-migrations-with-flyway)
