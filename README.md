@@ -129,3 +129,4 @@ liquibase-evolve-database | [Use Liquibase to Safely Evolve Your Database Schema
 Module | Article
 --|--
 flyway-database-migrations | [Database Migrations with Flyway](http://www.baeldung.com/database-migrations-with-flyway)
+flyway-callback | [A Guide to Flyway Callbacks](https://www.baeldung.com/flyway-callbacks)
