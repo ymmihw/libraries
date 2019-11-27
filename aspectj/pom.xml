@@ -29,6 +29,13 @@
     <groupId>org.codehaus.mojo</groupId>
     <artifactId>aspectj-maven-plugin</artifactId>
     <version>1.11</version>
+    <dependencies>
+     <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjtools</artifactId>
+      <version>1.9.4</version>
+     </dependency>
+    </dependencies>
     <configuration>
      <complianceLevel>1.8</complianceLevel>
      <source>1.8</source>
