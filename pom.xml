@@ -81,6 +81,6 @@
   <module>birt</module>
   <module>Liquibase</module>
   <module>flyway</module>
-  <module>aspectj</module>
+  <module>aspectj-intro</module>
  </modules>
 </project>

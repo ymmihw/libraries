@@ -1,10 +1,11 @@
 package com.ymmihw.libraries.aspectj;
 
-import lombok.Getter;
-
-@Getter
 public class Account {
   private int balance = 20;
+
+  public int getBalance() {
+    return balance;
+  }
 
   public boolean withdraw(int amount) {
     if (balance < amount) {

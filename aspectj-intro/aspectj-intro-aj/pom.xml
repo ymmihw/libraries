@@ -4,11 +4,11 @@
  <modelVersion>4.0.0</modelVersion>
  <parent>
   <groupId>com.ymmihw.libraries</groupId>
-  <artifactId>libraries</artifactId>
+  <artifactId>aspectj-intro</artifactId>
   <version>0.0.1-SNAPSHOT</version>
  </parent>
- <artifactId>aspectj</artifactId>
- <name>aspectj</name>
+ <artifactId>aspectj-intro-aj</artifactId>
+ <name>aspectj-intro-aj</name>
  <url>http://maven.apache.org</url>
  <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -43,18 +43,13 @@
      <showWeaveInfo>true</showWeaveInfo>
      <verbose>true</verbose>
      <Xlint>ignore</Xlint>
-     <encoding>${project.build.sourceEncoding}</encoding>
-     <forceAjcCompile>true</forceAjcCompile>
-     <sources /><!-- this is important! -->
-     <weaveDirectories>
-      <weaveDirectory>${project.build.directory}/classes</weaveDirectory>
-     </weaveDirectories>
+     <encoding>UTF-8</encoding>
     </configuration>
     <executions>
      <execution>
-      <phase>process-classes</phase>
       <goals>
        <goal>compile</goal>
+       <goal>test-compile</goal>
       </goals>
      </execution>
     </executions>

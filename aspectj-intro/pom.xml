@@ -19,5 +19,6 @@
  <modules>
   <module>aspectj-intro-annotation</module>
   <module>aspectj-intro-load-time-weaving</module>
+  <module>aspectj-intro-aj</module>
  </modules>
 </project>
