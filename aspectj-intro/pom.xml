@@ -18,5 +18,6 @@
  </dependencies>
  <modules>
   <module>aspectj-intro-annotation</module>
+  <module>aspectj-intro-load-time-weaving</module>
  </modules>
 </project>

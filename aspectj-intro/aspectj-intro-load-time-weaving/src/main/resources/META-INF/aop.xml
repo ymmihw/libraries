@@ -1,0 +1,9 @@
+<aspectj>
+ <aspects>
+  <aspect name="com.ymmihw.libraries.aspectj.LoadingTimeAspect" />
+  <weaver options="-verbose -showWeaveInfo">
+   <include within="org.apache.commons.lang3.*" />
+   <include within="com.ymmihw.libraries.aspectj.*" />
+  </weaver>
+ </aspects>
+</aspectj>

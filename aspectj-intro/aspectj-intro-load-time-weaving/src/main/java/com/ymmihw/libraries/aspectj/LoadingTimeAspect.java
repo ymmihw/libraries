@@ -8,16 +8,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @Aspect
-public class PrivateMethodAspect {
-  private static final Logger logger = LoggerFactory.getLogger(PrivateMethodAspect.class);
+public class LoadingTimeAspect {
+  private static final Logger logger = LoggerFactory.getLogger(LoadingTimeAspect.class);
 
-  @Pointcut("execution(* com.ymmihw.libraries.aspectj.SecuredMethod.privateMethod(..))")
-  public void callAt2() {}
+  @Pointcut("execution(* org.apache.commons.lang3.StringUtils.trimToNull(..))")
+  public void callTrimToNull() {}
 
-  @Pointcut("execution(* com.ymmihw.libraries.aspectj.SecuredMethod.getString(..))")
-  public void callAt1() {}
-
-  @Around("callAt2() || callAt1()")
+  @Around("callTrimToNull()")
   public Object around(ProceedingJoinPoint pjp) throws Throwable {
     logger.info("before {}", pjp.getSignature().getName());
     return pjp.proceed();
