@@ -82,5 +82,6 @@
   <module>Liquibase</module>
   <module>flyway</module>
   <module>aspectj-intro</module>
+  <module>okhttp</module>
  </modules>
 </project>

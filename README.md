@@ -14,6 +14,11 @@ RSocket | [Introduction to RSocket](https://www.baeldung.com/rsocket)
 birt | [BIRT Reporting with Spring Boot](https://www.baeldung.com/birt-reports-spring-boot)
 aspectj-intro | [Intro to AspectJ](http://www.baeldung.com/aspectj)
 
+### OkHttp
+Module | Article
+--|--
+okhttp-intro | [A Guide to OkHttp](https://www.baeldung.com/guide-to-okhttp)
+
 ###easymock
 Module | Article
 --|--
