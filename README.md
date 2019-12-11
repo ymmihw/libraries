@@ -18,6 +18,7 @@ aspectj-intro | [Intro to AspectJ](http://www.baeldung.com/aspectj)
 Module | Article
 --|--
 okhttp-intro | [A Guide to OkHttp](https://www.baeldung.com/guide-to-okhttp)
+okhttp-json-response | [Decode an OkHttp JSON Response](https://www.baeldung.com/okhttp-json-response)
 
 ###easymock
 Module | Article
