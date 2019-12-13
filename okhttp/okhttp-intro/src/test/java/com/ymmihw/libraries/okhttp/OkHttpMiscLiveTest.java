@@ -44,9 +44,7 @@ public class OkHttpMiscLiveTest {
     final OkHttpClient clientWithTimeout =
         new OkHttpClient.Builder().readTimeout(1, TimeUnit.SECONDS).build();
 
-    final Request request = new Request.Builder().url(baseUrl + "/delay/2")
-        // This URL is served with a 2 second delay.
-        .build();
+    final Request request = new Request.Builder().url(baseUrl + "/delay/2").build();
 
     final Call call = clientWithTimeout.newCall(request);
     final Response response = call.execute();

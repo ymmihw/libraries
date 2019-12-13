@@ -25,7 +25,6 @@
  <modules>
   <module>okhttp-intro</module>
   <module>okhttp-json-response</module>
-
   <module>okhttp-timeout</module>
  </modules>
 </project>
