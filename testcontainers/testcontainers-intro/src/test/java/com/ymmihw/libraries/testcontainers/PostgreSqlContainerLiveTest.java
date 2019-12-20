@@ -7,10 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import org.junit.Rule;
 import org.junit.Test;
-import org.junit.platform.commons.annotation.Testable;
 import org.testcontainers.containers.PostgreSQLContainer;
 
-@Testable
 public class PostgreSqlContainerLiveTest {
   @Rule
   public PostgreSQLContainer<?> postgresContainer = new PostgreSQLContainer<>();

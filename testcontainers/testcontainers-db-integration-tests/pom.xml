@@ -9,7 +9,6 @@
  </parent>
  <groupId>com.ymmihw.libraries.testcontainers</groupId>
  <artifactId>testcontainers-db-integration-tests</artifactId>
- <version>0.0.1-SNAPSHOT</version>
  <name>testcontainers-db-integration-tests</name>
  <url>http://maven.apache.org</url>
  <properties>

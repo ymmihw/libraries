@@ -250,8 +250,7 @@ public class LettuceIntegrationLiveTest {
     asyncCommands.flushCommands();
 
     // Wait until all futures complete
-    boolean result = LettuceFutures.awaitAll(5, TimeUnit.SECONDS,
-        futures.toArray(new RedisFuture[futures.size()]));
+    LettuceFutures.awaitAll(5, TimeUnit.SECONDS, futures.toArray(new RedisFuture[futures.size()]));
 
     asyncCommands.setAutoFlushCommands(true);
 

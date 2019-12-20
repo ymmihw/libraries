@@ -7,10 +7,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import org.junit.ClassRule;
 import org.junit.Test;
-import org.junit.platform.commons.annotation.Testable;
 import org.testcontainers.containers.GenericContainer;
 
-@Testable
 public class GenericContainerLiveTest {
   @ClassRule
   public static GenericContainer<?> simpleWebServer =

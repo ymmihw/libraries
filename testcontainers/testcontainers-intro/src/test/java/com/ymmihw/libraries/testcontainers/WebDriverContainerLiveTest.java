@@ -16,9 +16,9 @@ public class WebDriverContainerLiveTest {
   @Test
   public void whenNavigatedToPage_thenHeadingIsInThePage() {
     RemoteWebDriver driver = chrome.getWebDriver();
-    driver.get("https://saucelabs.com/test/guinea-pig");
-    String heading = driver.findElement(By.xpath("/html/body/h1")).getText();
-    assertEquals("This page is a Selenium sandbox", heading);
+    driver.get("http://example.com");
+    String heading = driver.findElement(By.xpath("/html/body/div/h1")).getText();
+    assertEquals("Example Domain", heading);
   }
 
 }
