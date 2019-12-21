@@ -13,6 +13,7 @@ passay | [Guide to Passay](https://www.baeldung.com/java-passay)
 RSocket | [Introduction to RSocket](https://www.baeldung.com/rsocket)
 birt | [BIRT Reporting with Spring Boot](https://www.baeldung.com/birt-reports-spring-boot)
 aspectj-intro | [Intro to AspectJ](http://www.baeldung.com/aspectj)
+webrtc | [Guide to WebRTC](https://www.baeldung.com/webrtc)
 
 ### OkHttp
 Module | Article
