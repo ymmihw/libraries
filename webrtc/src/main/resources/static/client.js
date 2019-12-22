@@ -31,14 +31,15 @@ function send(message) {
 	conn.send(JSON.stringify(message));
 }
 
-var peerConnection = {};
-var dataChannel = {};
+var peerConnection;
 var input = document.getElementById("messageInput");
+var sendChannel;
+var receiveChannel;
 
 function initialize() {
 	var configuration = null;
 
-	peerConnection = new RTCPeerConnection(configuration, {});
+	peerConnection = new RTCPeerConnection();
 
 	// Setup ice handling
 	peerConnection.onicecandidate = function(event) {
@@ -51,29 +52,33 @@ function initialize() {
 	};
 
 	// creating data channel
-	dataChannel = peerConnection.createDataChannel("dataChannel", {
-		reliable : true
-	});
+	sendChannel = peerConnection.createDataChannel("sendChannel");
 
 	peerConnection.ondatachannel = function(event) {
-		var receiveChannel = event.channel;
+		receiveChannel = event.channel;
 		receiveChannel.onmessage = function(event) {
 			console.log("ondatachannel message:", event.data);
 		};
+		receiveChannel.onopen = handleReceiveChannelStatusChange;
+		receiveChannel.onclose = handleReceiveChannelStatusChange;
 	};
 
-	dataChannel.onerror = function(error) {
+	sendChannel.onerror = function(error) {
 		console.log("Error occured on datachannel:", error);
 	};
-
-	// when we receive a message from the other peer, printing it on the console
-	dataChannel.onmessage = function(event) {
-		console.log("message:", event.data);
-	};
-
-	dataChannel.onclose = function() {
-		console.log("data channel is closed");
-	};
+	sendChannel.onopen = handleSendChannelStatusChange;
+	sendChannel.onclose = handleSendChannelStatusChange;
+}
+function handleReceiveChannelStatusChange(event) {
+	if (receiveChannel) {
+		console.log("Receive channel's status has changed to "
+				+ receiveChannel.readyState);
+	}
+}
+function handleSendChannelStatusChange(event) {
+	if (sendChannel) {
+		console.log("event:", event.data);
+	}
 }
 
 function createOffer() {
@@ -114,6 +119,6 @@ function handleAnswer(answer) {
 };
 
 function sendMessage() {
-	dataChannel.send(input.value);
+	sendChannel.send(input.value);
 	input.value = "";
 }
