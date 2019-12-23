@@ -12,18 +12,15 @@
  <url>http://maven.apache.org</url>
  <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  <rsocket.version>0.12.1</rsocket.version>
  </properties>
  <dependencies>
   <dependency>
    <groupId>io.rsocket</groupId>
    <artifactId>rsocket-core</artifactId>
-   <version>${rsocket.version}</version>
   </dependency>
   <dependency>
    <groupId>io.rsocket</groupId>
    <artifactId>rsocket-transport-netty</artifactId>
-   <version>${rsocket.version}</version>
   </dependency>
   <dependency>
    <groupId>junit</groupId>
