@@ -1,9 +1,22 @@
 //connecting to our signaling server 
-var conn = new WebSocket('ws://localhost:8080/socket');
+
+var loc = window.location, wsUri;
+if (loc.protocol === "https:") {
+	wsUri = "wss:";
+} else {
+	wsUri = "ws:";
+}
+wsUri += "//" + loc.host;
+wsUri += "/socket";
+var conn = new WebSocket(wsUri);
 
 conn.onopen = function() {
 	console.log("Connected to the signaling server");
 	initialize();
+};
+
+conn.onclose = function() {
+	console.log("Connected to the signaling server failed");
 };
 
 conn.onmessage = function(msg) {
@@ -22,6 +35,9 @@ conn.onmessage = function(msg) {
 	case "candidate":
 		handleCandidate(data);
 		break;
+	case "terminate":
+		handleTerminate();
+		break;
 	default:
 		break;
 	}
@@ -35,10 +51,21 @@ var peerConnection;
 var input = document.getElementById("messageInput");
 var sendChannel;
 var receiveChannel;
+var sendButton = document.getElementById('sendButton');
 
 function initialize() {
 	console.log("init");
 	var configuration = null;
+
+	if (peerConnection) {
+		peerConnection.close();
+	}
+	if (sendChannel) {
+		sendChannel.close();
+	}
+	if (receiveChannel) {
+		receiveChannel.close();
+	}
 
 	peerConnection = new RTCPeerConnection();
 
@@ -68,19 +95,25 @@ function initialize() {
 	sendChannel.onerror = function(error) {
 		console.log("Error occured on datachannel:", error);
 	};
-	sendChannel.onopen = handleSendChannelStatusChange;
-	sendChannel.onclose = handleSendChannelStatusChange;
+	sendChannel.onopen = function(event) {
+		if (sendChannel) {
+			console.log("Send channel's status has changed to "
+					+ sendChannel.readyState);
+		}
+		sendButton.disabled = false;
+	};
+	sendChannel.onclose = function(event) {
+		if (sendChannel) {
+			console.log("Send channel's status has changed to "
+					+ sendChannel.readyState);
+		}
+		sendButton.disabled = true;
+	};
 }
 function handleReceiveChannelStatusChange(event) {
 	if (receiveChannel) {
 		console.log("Receive channel's status has changed to "
 				+ receiveChannel.readyState);
-	}
-}
-function handleSendChannelStatusChange(event) {
-	if (sendChannel) {
-		console.log("Send channel's status has changed to "
-				+ sendChannel.readyState);
 	}
 }
 
@@ -119,6 +152,10 @@ function handleCandidate(candidate) {
 function handleAnswer(answer) {
 	peerConnection.setRemoteDescription(new RTCSessionDescription(answer));
 	console.log("connection established successfully!!");
+};
+
+function handleTerminate() {
+	initialize();
 };
 
 function sendMessage() {
