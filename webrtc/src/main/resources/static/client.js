@@ -37,6 +37,7 @@ var sendChannel;
 var receiveChannel;
 
 function initialize() {
+	console.log("init");
 	var configuration = null;
 
 	peerConnection = new RTCPeerConnection();
@@ -55,6 +56,7 @@ function initialize() {
 	sendChannel = peerConnection.createDataChannel("sendChannel");
 
 	peerConnection.ondatachannel = function(event) {
+		console.log("ondatachannel");
 		receiveChannel = event.channel;
 		receiveChannel.onmessage = function(event) {
 			console.log("ondatachannel message:", event.data);
@@ -77,7 +79,8 @@ function handleReceiveChannelStatusChange(event) {
 }
 function handleSendChannelStatusChange(event) {
 	if (sendChannel) {
-		console.log("event:", event.data);
+		console.log("Send channel's status has changed to "
+				+ sendChannel.readyState);
 	}
 }
 
