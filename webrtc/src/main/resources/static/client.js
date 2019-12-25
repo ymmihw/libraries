@@ -66,7 +66,6 @@ var receiveChannel;
 var sendButton = document.getElementById('sendButton');
 var removeVideo = document.getElementById('removeVideo');
 var localVideo = document.getElementById('localVideo');
-let localStream;
 function initialize() {
 	console.log("init");
 
@@ -139,15 +138,13 @@ function handleReceiveChannelStatusChange(event) {
 	}
 }
 
-const offerOptions = {
-	offerToReceiveAudio: 1,
-	offerToReceiveVideo: 1
-};
 function createOffer() {
-	navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(function(stream) {
+	const constraints = {
+		video: true, audio: true
+	};
+	navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
 		localVideo.srcObject = stream;
-		localStream = stream;
-		localStream.getTracks().forEach(track => peerConnection.addTrack(track, localStream));
+		stream.getTracks().forEach(track => peerConnection.addTrack(track, stream));
 		peerConnection.createOffer(function(offer) {
 			send({
 				event: "offer",
@@ -156,7 +153,7 @@ function createOffer() {
 			peerConnection.setLocalDescription(offer);
 		}, function(error) {
 			alert("Error creating an offer");
-		}, offerOptions);
+		});
 	}).catch(function(err) { console.log(err); });
 
 }
