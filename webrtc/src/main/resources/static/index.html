@@ -34,6 +34,18 @@ input {
 	bottom: 0;
 	width: 100%;
 }
+
+video { -
+	-width: 45%;
+	width: var(- -width);
+	height: calc(var(- -width)* 0.75);
+	margin: 0 0 20px 0;
+	vertical-align: top;
+}
+
+video#localVideo {
+	margin: 0 20px 20px 0;
+}
 </style>
 
 <body>
@@ -49,12 +61,14 @@ input {
   <button type="button" class="btn btn-primary" onclick='createOffer()'>Create Offer</button>
   <input id="messageInput" type="text" class="form-control" placeholder="message">
   <button type="button" id="sendButton" class="btn btn-primary" onclick='sendMessage()' disabled="true">SEND</button>
-  <script src="client.js"></script>
+  <br>
   <!--WebRTC related code-->
 
- </div>
- <div class="footer">This application is intentionally made simple to avoid cluttering with non WebRTC related code.</div>
+  <video id="localVideo" playsinline autoplay muted></video>
+  <video id="remoteVideo" playsinline autoplay></video>
 
+ </div>
+ <script src="client.js"></script>
 </body>
 
 </html>

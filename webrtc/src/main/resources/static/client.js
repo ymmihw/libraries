@@ -24,22 +24,34 @@ conn.onmessage = function(msg) {
 	var content = JSON.parse(msg.data);
 	var data = content.data;
 	switch (content.event) {
-	// when somebody wants to call us
-	case "offer":
-		handleOffer(data);
-		break;
-	case "answer":
-		handleAnswer(data);
-		break;
-	// when a remote peer sends an ice candidate to us
-	case "candidate":
-		handleCandidate(data);
-		break;
-	case "terminate":
-		handleTerminate();
-		break;
-	default:
-		break;
+		// when somebody wants to call us
+		case "offer":
+			handleOffer(data);
+			break;
+		case "answer":
+			handleAnswer(data);
+			break;
+		// when a remote peer sends an ice candidate to us
+		case "candidate":
+			handleCandidate(data);
+			break;
+		case "terminate":
+			handleTerminate();
+			break;
+		default:
+			break;
+	}
+};
+
+var constraints = {
+	video: {
+		frameRate: {
+			ideal: 10,
+			max: 15
+		},
+		width: 1280,
+		height: 720,
+		facingMode: "user"
 	}
 };
 
@@ -52,10 +64,11 @@ var input = document.getElementById("messageInput");
 var sendChannel;
 var receiveChannel;
 var sendButton = document.getElementById('sendButton');
-
+var removeVideo = document.getElementById('removeVideo');
+var localVideo = document.getElementById('localVideo');
+let localStream;
 function initialize() {
 	console.log("init");
-	var configuration = null;
 
 	if (peerConnection) {
 		peerConnection.close();
@@ -66,15 +79,15 @@ function initialize() {
 	if (receiveChannel) {
 		receiveChannel.close();
 	}
-
-	peerConnection = new RTCPeerConnection();
-
+	const configuration = {};
+	peerConnection = new RTCPeerConnection(configuration);
+	peerConnection.addEventListener('track', gotRemoteStream);
 	// Setup ice handling
 	peerConnection.onicecandidate = function(event) {
 		if (event.candidate) {
 			send({
-				event : "candidate",
-				data : event.candidate
+				event: "candidate",
+				data: event.candidate
 			});
 		}
 	};
@@ -98,35 +111,54 @@ function initialize() {
 	sendChannel.onopen = function(event) {
 		if (sendChannel) {
 			console.log("Send channel's status has changed to "
-					+ sendChannel.readyState);
+				+ sendChannel.readyState);
 		}
 		sendButton.disabled = false;
 	};
 	sendChannel.onclose = function(event) {
 		if (sendChannel) {
 			console.log("Send channel's status has changed to "
-					+ sendChannel.readyState);
+				+ sendChannel.readyState);
 		}
 		sendButton.disabled = true;
 	};
 }
-function handleReceiveChannelStatusChange(event) {
-	if (receiveChannel) {
-		console.log("Receive channel's status has changed to "
-				+ receiveChannel.readyState);
+
+function gotRemoteStream(e) {
+	console.log('gotRemoteStream')
+	if (remoteVideo.srcObject !== e.streams[0]) {
+		remoteVideo.srcObject = e.streams[0];
+		console.log('pc2 received remote stream');
 	}
 }
 
+function handleReceiveChannelStatusChange(event) {
+	if (receiveChannel) {
+		console.log("Receive channel's status has changed to "
+			+ receiveChannel.readyState);
+	}
+}
+
+const offerOptions = {
+	offerToReceiveAudio: 1,
+	offerToReceiveVideo: 1
+};
 function createOffer() {
-	peerConnection.createOffer(function(offer) {
-		send({
-			event : "offer",
-			data : offer
-		});
-		peerConnection.setLocalDescription(offer);
-	}, function(error) {
-		alert("Error creating an offer");
-	});
+	navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(function(stream) {
+		localVideo.srcObject = stream;
+		localStream = stream;
+		localStream.getTracks().forEach(track => peerConnection.addTrack(track, localStream));
+		peerConnection.createOffer(function(offer) {
+			send({
+				event: "offer",
+				data: offer
+			});
+			peerConnection.setLocalDescription(offer);
+		}, function(error) {
+			alert("Error creating an offer");
+		}, offerOptions);
+	}).catch(function(err) { console.log(err); });
+
 }
 
 function handleOffer(offer) {
@@ -136,8 +168,8 @@ function handleOffer(offer) {
 	peerConnection.createAnswer(function(answer) {
 		peerConnection.setLocalDescription(answer);
 		send({
-			event : "answer",
-			data : answer
+			event: "answer",
+			data: answer
 		});
 	}, function(error) {
 		alert("Error creating an answer");
