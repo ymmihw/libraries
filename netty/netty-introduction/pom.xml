@@ -7,9 +7,7 @@
   <artifactId>netty</artifactId>
   <version>0.0.1-SNAPSHOT</version>
  </parent>
- <groupId>com.ymmihw.libraries</groupId>
  <artifactId>netty-introduction</artifactId>
- <version>0.0.1-SNAPSHOT</version>
  <name>netty-introduction</name>
  <url>http://maven.apache.org</url>
  <properties>
