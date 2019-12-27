@@ -158,3 +158,4 @@ Module | Article
 --|--
 cucumber-intro | [REST API Testing with Cucumber](https://www.baeldung.com/cucumber-rest-api-testing)
 cucumber-scenario-outline | [Cucumber and Scenario Outline](https://www.baeldung.com/cucumber-scenario-outline)
+cucumber-spring | [Cucumber Spring Integration](https://www.baeldung.com/cucumber-spring-integration)
