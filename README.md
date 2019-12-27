@@ -157,3 +157,4 @@ flyway-callback | [A Guide to Flyway Callbacks](https://www.baeldung.com/flyway-
 Module | Article
 --|--
 cucumber-intro | [Cucumber and Scenario Outline](https://www.baeldung.com/cucumber-scenario-outline)
+cucumber-scenario-outline | [Cucumber and Scenario Outline](https://www.baeldung.com/cucumber-scenario-outline)
