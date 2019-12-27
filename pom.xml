@@ -87,5 +87,6 @@
   <module>aspectj-intro</module>
   <module>okhttp</module>
   <module>webrtc</module>
+  <module>cucumber</module>
  </modules>
 </project>
