@@ -156,5 +156,5 @@ flyway-callback | [A Guide to Flyway Callbacks](https://www.baeldung.com/flyway-
 ### Cucumber
 Module | Article
 --|--
-cucumber-intro | [Cucumber and Scenario Outline](https://www.baeldung.com/cucumber-scenario-outline)
+cucumber-intro | [REST API Testing with Cucumber](https://www.baeldung.com/cucumber-rest-api-testing)
 cucumber-scenario-outline | [Cucumber and Scenario Outline](https://www.baeldung.com/cucumber-scenario-outline)
