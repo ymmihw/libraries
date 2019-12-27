@@ -32,5 +32,6 @@
   <module>cucumber-intro</module>
   <module>cucumber-scenario-outline</module>
   <module>cucumber-spring</module>
+  <module>cucumber-java8</module>
  </modules>
 </project>
