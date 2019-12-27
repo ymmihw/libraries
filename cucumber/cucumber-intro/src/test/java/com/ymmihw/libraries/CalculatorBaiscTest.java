@@ -6,6 +6,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = {"classpath:features/calculator.feature"},
-    glue = {"com.ymmihw.libraries"})
+    glue = {"com.ymmihw.libraries"},
+    plugin = {"pretty", "json:target/reports/json/calculator.json"})
 public class CalculatorBaiscTest {
 }
