@@ -1,8 +1,6 @@
 package com.ymmihw.libraries;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -15,17 +13,11 @@ import io.cucumber.java.en.When;
 public class BookStoreRunSteps {
   private BookStore store;
   private List<Book> foundBooks;
-  private Book foundBook;
 
   @Before
   public void setUp() {
     store = new BookStore();
     foundBooks = new ArrayList<>();
-  }
-
-  @Given("^I have the following books in the store$")
-  public void haveBooksInTheStore(DataTable table) {
-    haveBooksInTheStoreByList(table);
   }
 
   @Given("^I have the following books in the store by list$")
@@ -59,15 +51,5 @@ public class BookStoreRunSteps {
   @Then("^I find (\\d+) books$")
   public void findBooks(int count) {
     assertEquals(count, foundBooks.size());
-  }
-
-  @Then("^I find a book$")
-  public void findABook() {
-    assertNotNull(foundBook);
-  }
-
-  @Then("^I find no book$")
-  public void findNoBook() {
-    assertNull(foundBook);
   }
 }
