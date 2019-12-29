@@ -160,3 +160,4 @@ cucumber-intro | [REST API Testing with Cucumber](https://www.baeldung.com/cucum
 cucumber-scenario-outline | [Cucumber and Scenario Outline](https://www.baeldung.com/cucumber-scenario-outline)
 cucumber-spring | [Cucumber Spring Integration](https://www.baeldung.com/cucumber-spring-integration)
 cucumber-java8 | [Cucumber Java 8 Support](https://www.baeldung.com/cucumber-java-8-support)
+cucumber-data-table | [Cucumber Data Tables](https://www.baeldung.com/cucumber-data-tables)
