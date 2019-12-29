@@ -61,6 +61,7 @@ public class LogbackTests {
       logger.debug("Logging message: {}", message);
       logger.debug("Going to divide {} by {}", 42, zero);
       int result = 42 / zero;
+      logger.debug("42 / zero is {}", result);
     } catch (Exception e) {
       logger.error("Error dividing {} by {} ", 42, zero, e);
     }

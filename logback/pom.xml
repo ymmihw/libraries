@@ -7,9 +7,7 @@
   <artifactId>libraries</artifactId>
   <version>0.0.1-SNAPSHOT</version>
  </parent>
- <groupId>com.ymmihw.libraries</groupId>
  <artifactId>logback</artifactId>
- <version>0.0.1-SNAPSHOT</version>
  <packaging>pom</packaging>
  <name>logback</name>
  <url>http://maven.apache.org</url>
