@@ -161,3 +161,4 @@ cucumber-scenario-outline | [Cucumber and Scenario Outline](https://www.baeldung
 cucumber-spring | [Cucumber Spring Integration](https://www.baeldung.com/cucumber-spring-integration)
 cucumber-java8 | [Cucumber Java 8 Support](https://www.baeldung.com/cucumber-java-8-support)
 cucumber-data-table | [Cucumber Data Tables](https://www.baeldung.com/cucumber-data-tables)
+cucumber-background | [Cucumber Background](https://www.baeldung.com/java-cucumber-background)
