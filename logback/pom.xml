@@ -31,5 +31,6 @@
  <modules>
   <module>logback-guide</module>
   <module>logback-custom-appender</module>
+  <module>logback-send-email</module>
  </modules>
 </project>

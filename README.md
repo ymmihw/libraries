@@ -40,6 +40,8 @@ Module | Article
 --|--
 logback-guide | [A Guide To Logback](http://www.baeldung.com/logback)
 logback-custom-appender | [Creating a Custom Logback Appender](http://www.baeldung.com/custom-logback-appender)
+logback-send-email | [Sending Emails with Logback](https://www.baeldung.com/logback-send-email)
+
 
 ### TestContainers
 Module | Article
