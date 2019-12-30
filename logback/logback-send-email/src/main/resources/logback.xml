@@ -7,10 +7,12 @@
  </appender>
 
  <appender name="emailAppender" class="ch.qos.logback.classic.net.SMTPAppender">
-  <smtpHost>smtp.qq.com</smtpHost>
-  <!-- one or more recipients are possible -->
+  <smtpHost>172.16.10.177</smtpHost>
+  <smtpPort>2525</smtpPort>
+  <username>myuser</username>
+  <password>secret</password>
   <to>whimmy@126.com</to>
-  <from>41618595@qq.com</from>
+  <from>whimmy@1261.com</from>
   <subject>ymmihw: %logger{20} - %msg</subject>
   <layout class="ch.qos.logback.classic.PatternLayout">
    <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg%n</pattern>
