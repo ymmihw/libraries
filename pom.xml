@@ -88,5 +88,6 @@
   <module>okhttp</module>
   <module>webrtc</module>
   <module>cucumber</module>
+  <module>jimfs-introduction</module>
  </modules>
 </project>
