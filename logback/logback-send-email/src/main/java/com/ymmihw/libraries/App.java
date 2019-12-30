@@ -9,6 +9,9 @@ public class App {
   private static Logger logger = LoggerFactory.getLogger(App.class);
 
   public static void main(String[] args) throws InterruptedException {
+    for (int i = 0; i < 10; i++) {
+      logger.info("{}", i);
+    }
     logger.error("test");
     TimeUnit.SECONDS.sleep(10);
   }
