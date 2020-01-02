@@ -33,7 +33,7 @@
   <dependency>
    <groupId>org.javers</groupId>
    <artifactId>javers-spring-boot-starter-sql</artifactId>
-   <version>5.8.7</version>
+   <version>${javers.version}</version>
   </dependency>
  </dependencies>
 </project>
