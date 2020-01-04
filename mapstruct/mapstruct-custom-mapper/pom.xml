@@ -7,16 +7,12 @@
   <artifactId>mapstruct</artifactId>
   <version>0.0.1-SNAPSHOT</version>
  </parent>
- <artifactId>mapstruct-intro</artifactId>
- <name>mapstruct-intro</name>
+ <artifactId>mapstruct-custom-mapper</artifactId>
+ <name>mapstruct-custom-mapper</name>
  <url>http://maven.apache.org</url>
  <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
  </properties>
  <dependencies>
-  <dependency>
-   <groupId>org.springframework</groupId>
-   <artifactId>spring-context</artifactId>
-  </dependency>
  </dependencies>
 </project>
