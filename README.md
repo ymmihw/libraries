@@ -170,3 +170,8 @@ cucumber-background | [Cucumber Background](https://www.baeldung.com/java-cucumb
 Module | Article
 --|--
 JaVers-intro | [Intro to JaVers](https://www.baeldung.com/javers)
+
+### mapstruct
+Module | Article
+--|--
+mapstruct-intro | [Quick Guide to MapStruct](http://www.baeldung.com/mapstruct)
