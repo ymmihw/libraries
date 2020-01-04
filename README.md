@@ -175,3 +175,4 @@ JaVers-intro | [Intro to JaVers](https://www.baeldung.com/javers)
 Module | Article
 --|--
 mapstruct-intro | [Quick Guide to MapStruct](http://www.baeldung.com/mapstruct)
+mapstruct-custom-mapper | [Custom Mapper with MapStruct](https://www.baeldung.com/mapstruct-custom-mapper)
