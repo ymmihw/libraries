@@ -90,5 +90,6 @@
   <module>cucumber</module>
   <module>jimfs-introduction</module>
   <module>JaVers</module>
+  <module>mapstruct</module>
  </modules>
 </project>
