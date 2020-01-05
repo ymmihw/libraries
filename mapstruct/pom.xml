@@ -26,6 +26,7 @@
  <modules>
   <module>mapstruct-intro</module>
   <module>mapstruct-custom-mapper</module>
+  <module>mapstruct-multiple-source</module>
  </modules>
  <build>
   <plugins>
