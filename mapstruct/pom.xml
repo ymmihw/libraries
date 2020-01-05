@@ -27,6 +27,7 @@
   <module>mapstruct-intro</module>
   <module>mapstruct-custom-mapper</module>
   <module>mapstruct-multiple-source</module>
+  <module>mapstruct-ignore-unmapped-properties</module>
  </modules>
  <build>
   <plugins>

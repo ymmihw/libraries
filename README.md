@@ -177,3 +177,4 @@ Module | Article
 mapstruct-intro | [Quick Guide to MapStruct](http://www.baeldung.com/mapstruct)
 mapstruct-custom-mapper | [Custom Mapper with MapStruct](https://www.baeldung.com/mapstruct-custom-mapper)
 mapstruct-multiple-source | [Using Multiple Source Objects with MapStruct](https://www.baeldung.com/mapstruct-multiple-source-objects)
+mapstruct-ignore-unmapped-properties | [Ignoring Unmapped Properties with MapStruct](https://www.baeldung.com/mapstruct-ignore-unmapped-properties)
