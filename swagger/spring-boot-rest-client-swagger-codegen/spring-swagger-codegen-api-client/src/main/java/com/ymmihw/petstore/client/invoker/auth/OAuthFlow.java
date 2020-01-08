@@ -1,5 +1,5 @@
 package com.ymmihw.petstore.client.invoker.auth;
 
 public enum OAuthFlow {
-    accessCode, implicit, password, application
+  accessCode, implicit, password, application
 }

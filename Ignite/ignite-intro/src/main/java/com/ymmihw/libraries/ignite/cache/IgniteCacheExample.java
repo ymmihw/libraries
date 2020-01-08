@@ -23,10 +23,11 @@ public class IgniteCacheExample {
     IgniteCache<Integer, String> cache = ignite.getOrCreateCache("baeldungCache");
 
     cache.put(1, "baeldung cache value");
-
+    @SuppressWarnings("unused")
     String message = cache.get(1);
   }
 
+  @SuppressWarnings("unused")
   private static void getObjectFromCache(Ignite ignite) {
 
     IgniteCache<Integer, Employee> cache = ignite.getOrCreateCache("baeldungCache");
@@ -38,6 +39,7 @@ public class IgniteCacheExample {
     Employee employee = cache.get(1);
   }
 
+  @SuppressWarnings("unused")
   private static void getFromCacheWithSQl(Ignite ignite) {
 
     IgniteCache<Integer, Employee> cache = ignite.cache("baeldungCache");
@@ -51,6 +53,7 @@ public class IgniteCacheExample {
     }
   }
 
+  @SuppressWarnings("unused")
   private static void customInitialization() {
 
     IgniteConfiguration configuration = new IgniteConfiguration();

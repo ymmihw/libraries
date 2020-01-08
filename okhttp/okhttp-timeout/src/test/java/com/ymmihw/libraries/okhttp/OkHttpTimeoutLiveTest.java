@@ -62,7 +62,7 @@ public class OkHttpTimeoutLiveTest {
         new OkHttpClient.Builder().writeTimeout(10, TimeUnit.MILLISECONDS).build();
 
     Request request = new Request.Builder().url(HTTPS_ADDRESS_DELAY_2)
-        .post(RequestBody.create(create1MBString(), MediaType.parse("text/plain"))).build();
+        .post(RequestBody.create(MediaType.parse("text/plain"), create1MBString())).build();
 
     // When
     Throwable thrown = catchThrowable(() -> client.newCall(request).execute());

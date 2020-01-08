@@ -40,6 +40,7 @@ public class VavrUnitTest {
     assertNotNull(possibleNullObj);
   }
 
+  @SuppressWarnings("null")
   @Test(expected = NullPointerException.class)
   public void givenValue_whenNullCheckNeeded_thenCorrect2() {
     Object possibleNullObj = null;
@@ -100,6 +101,7 @@ public class VavrUnitTest {
 
   @Test(expected = ArithmeticException.class)
   public void givenBadCode_whenThrowsException_thenCorrect() {
+    @SuppressWarnings("unused")
     int i = 1 / 0;
   }
 
@@ -221,6 +223,7 @@ public class VavrUnitTest {
 
   @Test
   public void givenList_whenSorts_thenCorrect() {
+    @SuppressWarnings("unused")
     List<Integer> sortedList = List.of(3, 2, 1).sorted();
   }
 

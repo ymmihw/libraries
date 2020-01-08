@@ -6,11 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.List;
-import org.apache.ignite.IgniteCache;
-import org.apache.ignite.cache.query.QueryCursor;
-import org.apache.ignite.cache.query.SqlFieldsQuery;
-import com.ymmihw.libraries.ignite.model.Employee;
 
 /**
  * Created by Gebruiker on 3/14/2018.

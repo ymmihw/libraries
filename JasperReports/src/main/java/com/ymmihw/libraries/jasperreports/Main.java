@@ -8,6 +8,7 @@ import com.ymmihw.libraries.jasperreports.config.JasperRerportsSimpleConfig;
 public class Main {
   public static void main(String[] args) {
 
+    @SuppressWarnings("resource")
     AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
     ctx.register(JasperRerportsSimpleConfig.class);
     ctx.refresh();

@@ -59,7 +59,7 @@ public class OkHttpPostingLiveTest {
 
     final Request request = new Request.Builder().url(URL_SECURED_BY_BASIC_AUTHENTICATION)
         .addHeader("Authorization", Credentials.basic("test", "test"))
-        .post(RequestBody.create(postBody, MediaType.parse("application/json; charset=utf-8")))
+        .post(RequestBody.create(MediaType.parse("application/json; charset=utf-8"), postBody))
         .build();
 
     final Call call = client.newCall(request);
@@ -73,7 +73,7 @@ public class OkHttpPostingLiveTest {
     final String json = "{\"id\":1,\"name\":\"John\"}";
 
     final RequestBody body =
-        RequestBody.create(json, MediaType.parse("application/json; charset=utf-8"));
+        RequestBody.create(MediaType.parse("application/json; charset=utf-8"), json);
     final Request request = new Request.Builder().url(baseUrl + "/users/detail").post(body).build();
 
     final Call call = client.newCall(request);
@@ -87,7 +87,7 @@ public class OkHttpPostingLiveTest {
     final RequestBody requestBody = new MultipartBody.Builder().setType(MultipartBody.FORM)
         .addFormDataPart("username", "test").addFormDataPart("password", "test")
         .addFormDataPart("file", "file.txt", RequestBody.create(
-            new File("src/test/resources/test.txt"), MediaType.parse("application/octet-stream")))
+            MediaType.parse("application/octet-stream"), new File("src/test/resources/test.txt")))
         .build();
 
     final Request request =

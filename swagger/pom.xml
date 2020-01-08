@@ -20,5 +20,6 @@
  </dependencies>
  <modules>
   <module>spring-boot-rest-client-swagger-codegen</module>
+  <module>swagger-2-documentation-for-spring-rest-api</module>
  </modules>
 </project>

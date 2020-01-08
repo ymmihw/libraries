@@ -22,8 +22,9 @@ import com.ymmihw.libraries.testcontainers.domain.User;
 public class UserRepositoryTCIntegrationTest extends UserRepositoryCommon {
 
   @ClassRule
-  public static PostgreSQLContainer postgreSQLContainer = new PostgreSQLContainer("postgres:11.1")
-      .withDatabaseName("integration-tests-db").withUsername("sa").withPassword("sa");
+  public static PostgreSQLContainer<?> postgreSQLContainer =
+      new PostgreSQLContainer<>("postgres:11.1").withDatabaseName("integration-tests-db")
+          .withUsername("sa").withPassword("sa");
 
   @Test
   @Transactional
