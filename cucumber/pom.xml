@@ -35,5 +35,6 @@
   <module>cucumber-java8</module>
   <module>cucumber-data-table</module>
   <module>cucumber-background</module>
+  <module>cucumber-hooks</module>
  </modules>
 </project>

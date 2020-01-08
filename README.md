@@ -165,6 +165,7 @@ cucumber-spring | [Cucumber Spring Integration](https://www.baeldung.com/cucumbe
 cucumber-java8 | [Cucumber Java 8 Support](https://www.baeldung.com/cucumber-java-8-support)
 cucumber-data-table | [Cucumber Data Tables](https://www.baeldung.com/cucumber-data-tables)
 cucumber-background | [Cucumber Background](https://www.baeldung.com/java-cucumber-background)
+cucumber-hooks | [Cucumber Hooks](https://www.baeldung.com/java-cucumber-hooks)
 
 ### JaVers
 Module | Article

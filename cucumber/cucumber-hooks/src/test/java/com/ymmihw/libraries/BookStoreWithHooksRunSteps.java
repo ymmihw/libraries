@@ -1,0 +1,87 @@
+package com.ymmihw.libraries;
+
+import static org.junit.Assert.assertEquals;
+import java.util.ArrayList;
+import java.util.List;
+import io.cucumber.core.api.Scenario;
+import io.cucumber.datatable.DataTable;
+import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
+import io.cucumber.java.Before;
+import io.cucumber.java.BeforeStep;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.cucumber.java8.En;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+public class BookStoreWithHooksRunSteps implements En {
+
+  private BookStore store;
+  private List<Book> foundBooks;
+
+  public BookStoreWithHooksRunSteps() {
+    store = new BookStore();
+    foundBooks = new ArrayList<>();
+    Before(1, () -> startBrowser());
+  }
+
+  @Given("^The following books are available in the store$")
+  public void haveBooksInTheStore(DataTable table) {
+    List<List<String>> rows = table.asLists(String.class);
+
+    for (List<String> columns : rows) {
+      store.addBook(new Book(columns.get(0), columns.get(1)));
+    }
+  }
+
+  @When("^I ask for a book by the author (.+)$")
+  public void searchForBooksByAuthor(String author) {
+    foundBooks = store.booksByAuthor(author);
+  }
+
+  @Then("^The salesperson says that there are (\\d+) books$")
+  public void findBooks(int count) {
+    assertEquals(count, foundBooks.size());
+  }
+
+  // ****************************
+
+  @Before(order = 2, value = "@Screenshots")
+  public void beforeScenario(Scenario scenario) {
+    takeScreenshot();
+  }
+
+  @After
+  public void afterScenario(Scenario scenario) {
+    takeScreenshot();
+  }
+
+  @BeforeStep
+  public void beforeStep(Scenario scenario) {
+    takeScreenshot();
+  }
+
+  @AfterStep
+  public void afterStep(Scenario scenario) {
+    takeScreenshot();
+    closeBrowser();
+  }
+
+  public void takeScreenshot() {
+    log.debug("takeScreenshot");
+    // code to take and save screenshot
+  }
+
+  public void startBrowser() {
+    log.debug("startBrowser");
+    // code to open browser
+  }
+
+  public void closeBrowser() {
+    log.debug("closeBrowser");
+    // code to close browser
+  }
+
+}
