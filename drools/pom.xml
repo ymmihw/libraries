@@ -29,4 +29,7 @@
    <version>${drools-version}</version>
   </dependency>
  </dependencies>
+ <modules>
+  <module>drools-intro</module>
+ </modules>
 </project>

@@ -21,7 +21,8 @@ import com.ymmihw.libraries.testcontainers.util.BaeldungPostgresqlContainer;
 public class UserRepositoryTCAutoIntegrationTest extends UserRepositoryCommon {
 
   @ClassRule
-  public static PostgreSQLContainer postgreSQLContainer = BaeldungPostgresqlContainer.getInstance();
+  public static PostgreSQLContainer<?> postgreSQLContainer =
+      BaeldungPostgresqlContainer.getInstance();
 
   @Test
   @Transactional

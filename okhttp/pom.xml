@@ -13,13 +13,11 @@
  <url>http://maven.apache.org</url>
  <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  <okhttp.version>4.2.2</okhttp.version>
  </properties>
  <dependencies>
   <dependency>
    <groupId>com.squareup.okhttp3</groupId>
    <artifactId>okhttp</artifactId>
-   <version>${okhttp.version}</version>
   </dependency>
  </dependencies>
  <modules>

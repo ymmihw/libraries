@@ -8,7 +8,6 @@ import org.jasypt.encryption.pbe.PooledPBEStringEncryptor;
 import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
 import org.jasypt.util.password.BasicPasswordEncryptor;
 import org.jasypt.util.text.BasicTextEncryptor;
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class JasyptUnitTest {

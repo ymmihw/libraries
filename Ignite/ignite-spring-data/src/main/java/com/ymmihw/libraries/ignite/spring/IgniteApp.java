@@ -17,6 +17,7 @@ import com.ymmihw.libraries.ignite.spring.repository.EmployeeRepository;
 public class IgniteApp {
 
   public static void main(String[] args) {
+    @SuppressWarnings("resource")
     AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
     context.register(SpringDataConfig.class);
     context.refresh();
@@ -34,6 +35,7 @@ public class IgniteApp {
     System.out.println(employee);
   }
 
+  @SuppressWarnings("unused")
   private void getUsingTheCache(Integer employeeId) {
 
     Ignite ignite = Ignition.ignite();

@@ -18,4 +18,8 @@
  </properties>
  <dependencies>
  </dependencies>
+ <modules>
+  <module>jasypt-intro</module>
+  <module>jasypt-spring-boot</module>
+ </modules>
 </project>

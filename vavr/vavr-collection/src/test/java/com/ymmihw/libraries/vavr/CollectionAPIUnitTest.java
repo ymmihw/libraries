@@ -34,28 +34,28 @@ public class CollectionAPIUnitTest {
 
     List<String> list = List.of("Java", "PHP", "Jquery", "JavaScript", "JShell", "JAVA");
 
-    List list1 = list.drop(2);
+    List<String> list1 = list.drop(2);
     assertFalse(list1.contains("Java") && list1.contains("PHP"));
 
-    List list2 = list.dropRight(2);
+    List<String> list2 = list.dropRight(2);
     assertFalse(list2.contains("JAVA") && list2.contains("JShell"));
 
-    List list3 = list.dropUntil(s -> s.contains("Shell"));
+    List<String> list3 = list.dropUntil(s -> s.contains("Shell"));
     assertEquals(list3.size(), 2);
 
-    List list4 = list.dropWhile(s -> s.length() > 0);
+    List<String> list4 = list.dropWhile(s -> s.length() > 0);
     assertTrue(list4.isEmpty());
 
-    List list5 = list.take(1);
+    List<String> list5 = list.take(1);
     assertEquals(list5.single(), "Java");
 
-    List list6 = list.takeRight(1);
+    List<String> list6 = list.takeRight(1);
     assertEquals(list6.single(), "JAVA");
 
-    List list7 = list.takeUntil(s -> s.length() > 6);
+    List<String> list7 = list.takeUntil(s -> s.length() > 6);
     assertEquals(list7.size(), 3);
 
-    List list8 = list.distinctBy((s1, s2) -> s1.startsWith(s2.charAt(0) + "") ? 0 : 1);
+    List<String> list8 = list.distinctBy((s1, s2) -> s1.startsWith(s2.charAt(0) + "") ? 0 : 1);
     assertEquals(list8.size(), 2);
 
     String words =
@@ -81,7 +81,7 @@ public class CollectionAPIUnitTest {
 
     assertEquals(intList1.peek(), Integer.valueOf(10));
 
-    List intList2 = intList1.pop();
+    List<Integer> intList2 = intList1.pop();
     assertEquals(intList2.size(), (intList1.size() - 1));
 
   }
@@ -157,7 +157,7 @@ public class CollectionAPIUnitTest {
 
     Array<Integer> intArray = Array.of(1, 2, 3);
     Array<Integer> newArray = intArray.removeAt(1);
-    
+
     assertEquals(3, intArray.size());
     assertEquals(2, newArray.size());
     assertEquals(3, newArray.get(1).intValue());

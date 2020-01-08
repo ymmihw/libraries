@@ -41,7 +41,7 @@ public class OkHttpFileUploadingLiveTest {
 
     final RequestBody requestBody = new MultipartBody.Builder().setType(MultipartBody.FORM)
         .addFormDataPart("file", "file.txt", RequestBody.create(
-            new File("src/test/resources/test.txt"), MediaType.parse("application/octet-stream")))
+            MediaType.parse("application/octet-stream"), new File("src/test/resources/test.txt")))
         .build();
 
     final Request request =
@@ -58,7 +58,7 @@ public class OkHttpFileUploadingLiveTest {
 
     final RequestBody requestBody = new MultipartBody.Builder().setType(MultipartBody.FORM)
         .addFormDataPart("file", "file.txt", RequestBody.create(
-            new File("src/test/resources/test.txt"), MediaType.parse("application/octet-stream")))
+            MediaType.parse("application/octet-stream"), new File("src/test/resources/test.txt")))
         .build();
 
     final ProgressRequestWrapper countingBody =

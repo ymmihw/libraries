@@ -18,4 +18,8 @@
  </properties>
  <dependencies>
  </dependencies>
+ <modules>
+  <module>ignite-intro</module>
+  <module>ignite-spring-data</module>
+ </modules>
 </project>

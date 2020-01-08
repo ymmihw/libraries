@@ -20,7 +20,7 @@ public class SpringDataConfig {
   public Ignite igniteInstance() {
     IgniteConfiguration config = new IgniteConfiguration();
 
-    CacheConfiguration cache = new CacheConfiguration("baeldungCache");
+    CacheConfiguration<Integer, EmployeeDTO> cache = new CacheConfiguration<>("baeldungCache");
 
     cache.setIndexedTypes(Integer.class, EmployeeDTO.class);
     config.setCacheConfiguration(cache);

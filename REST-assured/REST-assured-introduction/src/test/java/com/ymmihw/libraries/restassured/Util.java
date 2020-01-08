@@ -8,6 +8,7 @@ final class Util {
   private Util() {}
 
   static String inputStreamToString(InputStream is) {
+    @SuppressWarnings("resource")
     Scanner s = new Scanner(is).useDelimiter("\\A");
     return s.hasNext() ? s.next() : "";
   }

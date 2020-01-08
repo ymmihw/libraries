@@ -70,6 +70,7 @@ public class ReactorIntegrationTest {
 
           @Override
           public void onComplete() {
+            @SuppressWarnings("unused")
             int ham = 2;
           }
         });
