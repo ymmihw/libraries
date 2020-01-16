@@ -91,5 +91,6 @@
   <module>jimfs-introduction</module>
   <module>JaVers</module>
   <module>mapstruct</module>
+  <module>gatling</module>
  </modules>
 </project>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <modelVersion>4.0.0</modelVersion>
+ <parent>
+  <groupId>com.ymmihw.libraries</groupId>
+  <artifactId>gatling</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+ </parent>
+ <groupId>com.ymmihw.libraries</groupId>
+ <artifactId>gatling-intro</artifactId>
+ <version>0.0.1-SNAPSHOT</version>
+ <name>gatling-intro</name>
+ <url>http://maven.apache.org</url>
+ <properties>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+ </properties>
+ <dependencies>
+  <dependency>
+   <groupId>io.gatling</groupId>
+   <artifactId>gatling-app</artifactId>
+  </dependency>
+  <dependency>
+   <groupId>io.gatling.highcharts</groupId>
+   <artifactId>gatling-charts-highcharts</artifactId>
+  </dependency>
+ </dependencies>
+ <build>
+  <testSourceDirectory>src/test/scala</testSourceDirectory>
+  <plugins>
+   <plugin>
+    <groupId>io.gatling</groupId>
+    <artifactId>gatling-maven-plugin</artifactId>
+   </plugin>
+  </plugins>
+ </build>
+</project>
