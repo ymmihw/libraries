@@ -71,8 +71,8 @@ public class CacheConfiguration {
 
   private Configuration passivatingConfiguration() {
     return new ConfigurationBuilder().memory().evictionType(EvictionType.COUNT).size(1)
-        .persistence().passivation(true).addSingleFileStore().purgeOnStartup(true)
-        .location(System.getProperty("java.io.tmpdir")).build();
+        .persistence().passivation(true).addSingleFileStore().purgeOnStartup(true).location("tmp")
+        .build();
   }
 
   private Configuration transactionalConfiguration() {
