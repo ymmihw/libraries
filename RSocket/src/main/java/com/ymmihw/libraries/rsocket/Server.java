@@ -3,32 +3,25 @@ package com.ymmihw.libraries.rsocket;
 import static com.ymmihw.libraries.rsocket.support.Constants.DATA_STREAM_NAME;
 import static com.ymmihw.libraries.rsocket.support.Constants.TCP_PORT;
 import org.reactivestreams.Publisher;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import com.ymmihw.libraries.rsocket.support.DataPublisher;
 import com.ymmihw.libraries.rsocket.support.GameController;
-import io.rsocket.AbstractRSocket;
 import io.rsocket.Payload;
-import io.rsocket.RSocketFactory;
+import io.rsocket.RSocket;
+import io.rsocket.core.RSocketServer;
 import io.rsocket.transport.netty.server.TcpServerTransport;
 import reactor.core.Disposable;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 public class Server {
-
-  private static final Logger LOG = LoggerFactory.getLogger(Server.class);
-
   private final Disposable server;
   private final DataPublisher dataPublisher = new DataPublisher();
   private final GameController gameController;
 
   public Server() {
-    this.server = RSocketFactory.receive()
-        .acceptor((setupPayload, reactiveSocket) -> Mono.just(new RSocketImpl()))
-        .transport(TcpServerTransport.create("localhost", TCP_PORT)).start()
-        .doOnNext(x -> LOG.info("Server started")).subscribe();
-
+    this.server =
+        RSocketServer.create((setupPayload, reactiveSocket) -> Mono.just(new RSocketImpl()))
+            .bind(TcpServerTransport.create("localhost", TCP_PORT)).block();
     this.gameController = new GameController("Server Player");
   }
 
@@ -40,7 +33,7 @@ public class Server {
   /**
    * RSocket implementation
    */
-  private class RSocketImpl extends AbstractRSocket {
+  private class RSocketImpl implements RSocket {
 
     /**
      * Handle Request/Response messages
