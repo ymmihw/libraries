@@ -4,7 +4,7 @@ import static com.ymmihw.libraries.rsocket.support.Constants.DATA_STREAM_NAME;
 import static com.ymmihw.libraries.rsocket.support.Constants.TCP_PORT;
 import io.rsocket.Payload;
 import io.rsocket.RSocket;
-import io.rsocket.RSocketFactory;
+import io.rsocket.core.RSocketConnector;
 import io.rsocket.transport.netty.client.TcpClientTransport;
 import io.rsocket.util.DefaultPayload;
 import reactor.core.publisher.Flux;
@@ -14,8 +14,8 @@ public class ReqStreamClient {
   private final RSocket socket;
 
   public ReqStreamClient() {
-    this.socket = RSocketFactory.connect()
-        .transport(TcpClientTransport.create("localhost", TCP_PORT)).start().block();
+    this.socket =
+        RSocketConnector.connectWith(TcpClientTransport.create("localhost", TCP_PORT)).block();
   }
 
   public Flux<Float> getDataStream() {

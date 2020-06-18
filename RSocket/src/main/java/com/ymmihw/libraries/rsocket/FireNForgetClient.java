@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.List;
 import io.rsocket.Payload;
 import io.rsocket.RSocket;
-import io.rsocket.RSocketFactory;
+import io.rsocket.core.RSocketConnector;
 import io.rsocket.transport.netty.client.TcpClientTransport;
 import io.rsocket.util.DefaultPayload;
 import reactor.core.publisher.Flux;
@@ -20,8 +20,8 @@ public class FireNForgetClient {
   private final List<Float> data;
 
   public FireNForgetClient() {
-    this.socket = RSocketFactory.connect()
-        .transport(TcpClientTransport.create("localhost", TCP_PORT)).start().block();
+    this.socket =
+        RSocketConnector.connectWith(TcpClientTransport.create("localhost", TCP_PORT)).block();
     this.data = Collections.unmodifiableList(generateData());
   }
 

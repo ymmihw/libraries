@@ -4,7 +4,7 @@ import static com.ymmihw.libraries.rsocket.support.Constants.ERROR_MSG;
 import static com.ymmihw.libraries.rsocket.support.Constants.TCP_PORT;
 import io.rsocket.Payload;
 import io.rsocket.RSocket;
-import io.rsocket.RSocketFactory;
+import io.rsocket.core.RSocketConnector;
 import io.rsocket.transport.netty.client.TcpClientTransport;
 import io.rsocket.util.DefaultPayload;
 
@@ -13,8 +13,8 @@ public class ReqResClient {
   private final RSocket socket;
 
   public ReqResClient() {
-    this.socket = RSocketFactory.connect()
-        .transport(TcpClientTransport.create("localhost", TCP_PORT)).start().block();
+    this.socket =
+        RSocketConnector.connectWith(TcpClientTransport.create("localhost", TCP_PORT)).block();
   }
 
   public String callBlocking(String string) {
