@@ -186,3 +186,8 @@ mapstruct-ignore-unmapped-properties | [Ignoring Unmapped Properties with MapStr
 Module | Article
 --|--
 gatling-intro | [Intro to Gatling](http://www.baeldung.com/introduction-to-gatling)
+
+### caffeine
+Module | Article
+--|--
+caffeine-intro | [Introduction to Caffeine](https://www.baeldung.com/java-caching-caffeine)

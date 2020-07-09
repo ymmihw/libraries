@@ -94,5 +94,6 @@
   <module>gatling</module>
   <module>opencv</module>
   <module>SnakeYAML</module>
+  <module>caffeine</module>
  </modules>
 </project>
