@@ -191,3 +191,10 @@ gatling-intro | [Intro to Gatling](http://www.baeldung.com/introduction-to-gatli
 Module | Article
 --|--
 caffeine-intro | [Introduction to Caffeine](https://www.baeldung.com/java-caching-caffeine)
+
+### Junit4
+
+Module | Article
+--|--
+junit4-assert | [Assertions in JUnit 4 and JUnit 5](http://www.baeldung.com/junit-assertions)
+junit4-exception | [Assert an Exception is Thrown in JUnit 4 and 5](http://www.baeldung.com/junit-assert-exception)

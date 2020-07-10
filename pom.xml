@@ -95,5 +95,6 @@
   <module>opencv</module>
   <module>SnakeYAML</module>
   <module>caffeine</module>
+  <module>junit4</module>
  </modules>
 </project>
