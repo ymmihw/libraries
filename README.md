@@ -210,3 +210,10 @@ junit5-migration | [Migrating from JUnit 4 to JUnit 5](http://www.baeldung.com/j
 junit5-mockito | [Mockito and JUnit 5 – Using ExtendWith](http://www.baeldung.com/mockito-junit-5-extension)
 junit5-test | [JUnit 5 @Test Annotation](http://www.baeldung.com/junit-5-test-annotation)
 junit5-assertions | [Assertions in JUnit 4 and JUnit 5](http://www.baeldung.com/junit-assertions)
+
+### Hamcrest
+Module | Article
+--|--
+core-matchers | [Hamcrest Common Core Matchers](http://www.baeldung.com/hamcrest-core-matchers)
+custom-matchers | [Hamcrest Custom Matchers](http://www.baeldung.com/hamcrest-custom-matchers)
+object-matcher | [Hamcrest Object Matchers](http://www.baeldung.com/hamcrest-object-matchers)
