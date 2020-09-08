@@ -205,7 +205,7 @@ junit5-preview | [The Basics of JUnit 5 – A Preview](http://www.baeldung.com/j
 junit5-guide | [A Guide to JUnit 5](http://www.baeldung.com/junit-5)
 junit5-repeatedtest | [A Guide to @RepeatedTest in Junit 5](http://www.baeldung.com/junit-5-repeated-test)
 junit5-dynamictest | [Guide to Dynamic Tests in Junit 5](http://www.baeldung.com/junit5-dynamic-tests)
-junit5-dynamictest | [A Guide to JUnit 5 Extensions](http://www.baeldung.com/junit-5-extensions)
+junit5-extensionst | [A Guide to JUnit 5 Extensions](http://www.baeldung.com/junit-5-extensions)
 junit5-migration | [Migrating from JUnit 4 to JUnit 5](http://www.baeldung.com/junit-5-migration)
 junit5-mockito | [Mockito and JUnit 5 – Using ExtendWith](http://www.baeldung.com/mockito-junit-5-extension)
 junit5-test | [JUnit 5 @Test Annotation](http://www.baeldung.com/junit-5-test-annotation)
