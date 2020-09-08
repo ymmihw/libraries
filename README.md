@@ -157,6 +157,7 @@ Module | Article
 --|--
 flyway-database-migrations | [Database Migrations with Flyway](http://www.baeldung.com/database-migrations-with-flyway)
 flyway-callback | [A Guide to Flyway Callbacks](https://www.baeldung.com/flyway-callbacks)
+flyway-repair | [Flyway Repair With Spring Boot](https://www.baeldung.com/spring-boot-flyway-repair)
 
 ### Cucumber
 Module | Article
