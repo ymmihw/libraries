@@ -17,6 +17,7 @@ webrtc | [Guide to WebRTC](https://www.baeldung.com/webrtc)
 jimfs-introduction | [File System Mocking with Jimfs](https://www.baeldung.com/jimfs-file-system-mocking)
 opencv | [Intro to OpenCV with Java](https://www.baeldung.com/java-opencv)
 SnakeYAML-multi-lines | [Breaking YAML Strings Over Multiple Lines](https://www.baeldung.com/yaml-multi-line)
+jmapper | [Guide to JMapper](https://www.baeldung.com/jmapper)
 
 ### OkHttp
 Module | Article

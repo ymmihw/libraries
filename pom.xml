@@ -98,5 +98,6 @@
   <module>junit4</module>
   <module>junit5</module>
   <module>hamcrest</module>
+  <module>jmapper</module>
  </modules>
 </project>
