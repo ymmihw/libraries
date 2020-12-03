@@ -37,21 +37,21 @@ public class AvroSerealizerDeSerealizerUnitTest {
   public void tearDown() throws Exception {}
 
   @Test
-  public void WhenSerializedUsingJSONEncoder_thenObjectGetsSerialized() {
+  public void whenSerializedUsingJSONEncoder_thenObjectGetsSerialized() {
     byte[] data = serealizer.serealizeAvroHttpRequestJSON(request);
     assertTrue(Objects.nonNull(data));
     assertTrue(data.length > 0);
   }
 
   @Test
-  public void WhenSerializedUsingBinaryEncoder_thenObjectGetsSerialized() {
+  public void whenSerializedUsingBinaryEncoder_thenObjectGetsSerialized() {
     byte[] data = serealizer.serealizeAvroHttpRequestBinary(request);
     assertTrue(Objects.nonNull(data));
     assertTrue(data.length > 0);
   }
 
   @Test
-  public void WhenDeserializeUsingJSONDecoder_thenActualAndExpectedObjectsAreEqual() {
+  public void whenDeserializeUsingJSONDecoder_thenActualAndExpectedObjectsAreEqual() {
     byte[] data = serealizer.serealizeAvroHttpRequestJSON(request);
     AvroHttpRequest actualRequest = deSerealizer.deSerealizeAvroHttpRequestJSON(data);
     assertEquals(actualRequest, request);
@@ -59,7 +59,7 @@ public class AvroSerealizerDeSerealizerUnitTest {
   }
 
   @Test
-  public void WhenDeserializeUsingBinaryecoder_thenActualAndExpectedObjectsAreEqual() {
+  public void whenDeserializeUsingBinaryecoder_thenActualAndExpectedObjectsAreEqual() {
     byte[] data = serealizer.serealizeAvroHttpRequestBinary(request);
     AvroHttpRequest actualRequest = deSerealizer.deSerealizeAvroHttpRequestBinary(data);
     assertEquals(actualRequest, request);

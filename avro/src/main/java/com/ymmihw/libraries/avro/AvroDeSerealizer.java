@@ -10,30 +10,29 @@ import org.slf4j.LoggerFactory;
 
 public class AvroDeSerealizer {
 
-    private static Logger logger = LoggerFactory.getLogger(AvroDeSerealizer.class);
+  private static Logger logger = LoggerFactory.getLogger(AvroDeSerealizer.class);
 
-    public AvroHttpRequest deSerealizeAvroHttpRequestJSON(byte[] data) {
-        DatumReader<AvroHttpRequest> reader = new SpecificDatumReader<>(AvroHttpRequest.class);
-        Decoder decoder = null;
-        try {
-            decoder = DecoderFactory.get()
-                .jsonDecoder(AvroHttpRequest.getClassSchema(), new String(data));
-            return reader.read(null, decoder);
-        } catch (IOException e) {
-            logger.error("Deserialization error" + e.getMessage());
-        }
-        return null;
+  public AvroHttpRequest deSerealizeAvroHttpRequestJSON(byte[] data) {
+    DatumReader<AvroHttpRequest> reader = new SpecificDatumReader<>(AvroHttpRequest.class);
+    Decoder decoder = null;
+    try {
+      decoder =
+          DecoderFactory.get().jsonDecoder(AvroHttpRequest.getClassSchema(), new String(data));
+      return reader.read(null, decoder);
+    } catch (IOException e) {
+      logger.error("Deserialization error" + e.getMessage());
     }
+    return null;
+  }
 
-    public AvroHttpRequest deSerealizeAvroHttpRequestBinary(byte[] data) {
-        DatumReader<AvroHttpRequest> employeeReader = new SpecificDatumReader<>(AvroHttpRequest.class);
-        Decoder decoder = DecoderFactory.get()
-            .binaryDecoder(data, null);
-        try {
-            return employeeReader.read(null, decoder);
-        } catch (IOException e) {
-            logger.error("Deserialization error" + e.getMessage());
-        }
-        return null;
+  public AvroHttpRequest deSerealizeAvroHttpRequestBinary(byte[] data) {
+    DatumReader<AvroHttpRequest> employeeReader = new SpecificDatumReader<>(AvroHttpRequest.class);
+    Decoder decoder = DecoderFactory.get().binaryDecoder(data, null);
+    try {
+      return employeeReader.read(null, decoder);
+    } catch (IOException e) {
+      logger.error("Deserialization error" + e.getMessage());
     }
+    return null;
+  }
 }

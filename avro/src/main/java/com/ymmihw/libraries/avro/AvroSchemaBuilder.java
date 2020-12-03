@@ -10,11 +10,11 @@ public class AvroSchemaBuilder {
         SchemaBuilder.record("ClientIdentifier").namespace("com.ymmihw.libraries.avro").fields()
             .requiredString("hostName").requiredString("ipAddress").endRecord();
 
-    Schema avroHttpRequest = SchemaBuilder.record("AvroHttpRequest")
-        .namespace("com.ymmihw.libraries.avro").fields().requiredLong("requestTime")
-        .name("clientIdentifier").type(clientIdentifier).noDefault().name("employeeNames").type()
-        .array().items().stringType().noDefault().name("active").type()
-        .enumeration("Active").symbols("YES", "NO").noDefault().endRecord();
+    Schema avroHttpRequest =
+        SchemaBuilder.record("AvroHttpRequest").namespace("com.ymmihw.libraries.avro").fields()
+            .requiredLong("requestTime").name("clientIdentifier").type(clientIdentifier).noDefault()
+            .name("employeeNames").type().array().items().stringType().noDefault().name("active")
+            .type().enumeration("Active").symbols("YES", "NO").noDefault().endRecord();
     System.out.println(avroHttpRequest.toString());
   }
 }
