@@ -19,6 +19,7 @@ opencv | [Intro to OpenCV with Java](https://www.baeldung.com/java-opencv)
 SnakeYAML-multi-lines | [Breaking YAML Strings Over Multiple Lines](https://www.baeldung.com/yaml-multi-line)
 jmapper | [Guide to JMapper](https://www.baeldung.com/jmapper)
 protobuffer | [Introduction to Google Protocol Buffer](http://www.baeldung.com/google-protocol-buffer)
+avro | [Guide to Apache Avro](https://www.baeldung.com/java-apache-avro)
 
 ### OkHttp
 Module | Article
