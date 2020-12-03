@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <modelVersion>4.0.0</modelVersion>
+ <parent>
+  <groupId>com.ymmihw.libraries</groupId>
+  <artifactId>libraries</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+ </parent>
+ <groupId>com.ymmihw.libraries</groupId>
+ <artifactId>protobuffer</artifactId>
+ <version>0.0.1-SNAPSHOT</version>
+ <name>protobuffer</name>
+ <url>http://maven.apache.org</url>
+ <properties>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  <protobuf.version>4.0.0-rc-2</protobuf.version>
+ </properties>
+ <dependencies>
+  <dependency>
+   <groupId>com.google.protobuf</groupId>
+   <artifactId>protobuf-java</artifactId>
+   <version>${protobuf.version}</version>
+  </dependency>
+ </dependencies>
+</project>
