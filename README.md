@@ -20,6 +20,7 @@ SnakeYAML-multi-lines | [Breaking YAML Strings Over Multiple Lines](https://www.
 jmapper | [Guide to JMapper](https://www.baeldung.com/jmapper)
 protobuffer | [Introduction to Google Protocol Buffer](http://www.baeldung.com/google-protocol-buffer)
 avro | [Guide to Apache Avro](https://www.baeldung.com/java-apache-avro)
+Kryo | [Introduction To Kryo](https://www.baeldung.com/kryo)
 
 ### OkHttp
 Module | Article

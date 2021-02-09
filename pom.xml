@@ -101,5 +101,6 @@
   <module>jmapper</module>
   <module>protobuffer</module>
   <module>avro</module>
+  <module>Kryo</module>
  </modules>
 </project>
