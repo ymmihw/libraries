@@ -102,5 +102,6 @@
   <module>protobuffer</module>
   <module>avro</module>
   <module>Kryo</module>
+  <module>apache-poi</module>
  </modules>
 </project>
