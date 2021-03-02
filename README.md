@@ -21,6 +21,8 @@ jmapper | [Guide to JMapper](https://www.baeldung.com/jmapper)
 protobuffer | [Introduction to Google Protocol Buffer](http://www.baeldung.com/google-protocol-buffer)
 avro | [Guide to Apache Avro](https://www.baeldung.com/java-apache-avro)
 Kryo | [Introduction To Kryo](https://www.baeldung.com/kryo)
+graphviz-java | [graphviz-java](https://github.com/nidi3/graphviz-java)
+apache-poi | [Microsoft Word Processing in Java with Apache POI](https://www.baeldung.com/java-microsoft-word-with-apache-poi)
 
 ### OkHttp
 Module | Article

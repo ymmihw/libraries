@@ -102,5 +102,7 @@
   <module>protobuffer</module>
   <module>avro</module>
   <module>Kryo</module>
+  <module>apache-poi</module>
+  <module>graphviz-java</module>
  </modules>
 </project>
