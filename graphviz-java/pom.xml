@@ -19,7 +19,7 @@
  <dependencies>
   <dependency>
    <groupId>guru.nidi</groupId>
-   <artifactId>graphviz-kotlin</artifactId>
+   <artifactId>graphviz-java</artifactId>
    <version>${graphviz.version}</version>
   </dependency>
   <dependency>
