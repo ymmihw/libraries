@@ -3,6 +3,7 @@ package com.ymmihw.libraries.testcontainers;
 import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.ClassRule;
 import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.util.TestPropertyValues;
@@ -51,5 +52,10 @@ public class UserRepositoryTCIntegrationTest extends UserRepositoryCommon {
               "spring.datasource.password=" + postgreSQLContainer.getPassword())
           .applyTo(configurableApplicationContext.getEnvironment());
     }
+  }
+  @Override
+  @AfterEach
+  public void cleanUp() {
+    userRepository.deleteAll();
   }
 }
