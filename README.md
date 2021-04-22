@@ -224,3 +224,8 @@ Module | Article
 core-matchers | [Hamcrest Common Core Matchers](http://www.baeldung.com/hamcrest-core-matchers)
 custom-matchers | [Hamcrest Custom Matchers](http://www.baeldung.com/hamcrest-custom-matchers)
 object-matcher | [Hamcrest Object Matchers](http://www.baeldung.com/hamcrest-object-matchers)
+
+### Querydsl
+Module | Article
+--|--
+Querydsl-intro | [Intro to Querydsl](http://www.baeldung.com/intro-to-querydsl)
