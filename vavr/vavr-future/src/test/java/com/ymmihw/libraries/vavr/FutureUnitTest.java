@@ -4,7 +4,7 @@ import io.vavr.Tuple;
 import io.vavr.concurrent.Future;
 import io.vavr.control.Option;
 import io.vavr.control.Try;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import static java.util.concurrent.Executors.newSingleThreadExecutor;

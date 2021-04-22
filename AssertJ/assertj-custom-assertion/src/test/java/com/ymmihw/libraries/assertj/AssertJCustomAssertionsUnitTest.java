@@ -1,14 +1,10 @@
 package com.ymmihw.libraries.assertj;
 
 import static com.ymmihw.libraries.assertj.PersonAssert.assertThat;
-import static org.junit.Assert.fail;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import static org.junit.jupiter.api.Assertions.fail;
+import org.junit.jupiter.api.Test;
 
 public class AssertJCustomAssertionsUnitTest {
-  @Rule
-  public ExpectedException thrown = ExpectedException.none();
 
   @Test
   public void whenPersonNameMatches_thenCorrect() {

@@ -3,7 +3,7 @@ package com.ymmihw.libraries.netty;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import java.nio.charset.Charset;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import io.netty.channel.embedded.EmbeddedChannel;
 import io.netty.handler.codec.http.DefaultFullHttpRequest;
 import io.netty.handler.codec.http.FullHttpRequest;

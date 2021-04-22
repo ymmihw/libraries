@@ -1,7 +1,7 @@
 package com.ymmihw.libraries.tomcat;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -9,26 +9,23 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.BlockJUnit4ClassRunner;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Created by adi on 1/14/18.
  */
-@RunWith(BlockJUnit4ClassRunner.class)
 public class ProgrammaticTomcatIntegrationTest {
 
   private ProgrammaticTomcat tomcat = new ProgrammaticTomcat();
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     tomcat.startTomcat();
   }
 
-  @After
+  @AfterEach
   public void tearDown() throws Exception {
     tomcat.stopTomcat();
   }

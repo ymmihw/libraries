@@ -1,7 +1,7 @@
 package com.ymmihw.junit5.migration.junit4;
 
 import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import com.ymmihw.junit5.migration.junit4.rules.TraceUnitTestRule;
 
 public class RuleExampleTest {

@@ -1,10 +1,11 @@
 package com.ymmihw.libraries.vavr;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.Arrays;
 import java.util.Optional;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import io.vavr.collection.HashMap;
 import io.vavr.collection.LinkedHashSet;
 import io.vavr.collection.List;
@@ -55,10 +56,10 @@ public class CollectionsInteroperabilityUnitTest {
     assertTrue(vavrStream instanceof io.vavr.collection.Stream);
   }
 
-  @Test(expected = UnsupportedOperationException.class)
+  @Test
   public void givenParams_whenVavrListConverted_thenException() {
     java.util.List<String> javaList = List.of("Java", "Haskell", "Scala").asJava();
-    javaList.add("Python");
+    assertThrows(UnsupportedOperationException.class, () -> javaList.add("Python"));
     assertEquals(4, javaList.size());
   }
 

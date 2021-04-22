@@ -26,4 +26,9 @@ public class ExampleFlywayCallback implements Callback {
   public void handle(Event event, Context context) {
     log.info("> " + event);
   }
+
+  @Override
+  public String getCallbackName() {
+    return "ExampleFlywayCallback";
+  }
 }

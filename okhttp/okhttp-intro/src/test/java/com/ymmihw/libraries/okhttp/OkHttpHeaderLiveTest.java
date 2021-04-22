@@ -1,8 +1,8 @@
 package com.ymmihw.libraries.okhttp;
 
 import java.io.IOException;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -14,7 +14,7 @@ public class OkHttpHeaderLiveTest {
 
   private OkHttpClient client;
 
-  @Before
+  @BeforeEach
   public void init() {
     client = new OkHttpClient();
   }

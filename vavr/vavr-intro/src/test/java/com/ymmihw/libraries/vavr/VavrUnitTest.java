@@ -3,16 +3,17 @@ package com.ymmihw.libraries.vavr;
 import static io.vavr.API.$;
 import static io.vavr.API.Case;
 import static io.vavr.API.Match;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.stream.IntStream;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import io.vavr.Function0;
 import io.vavr.Function1;
 import io.vavr.Function2;
@@ -41,10 +42,12 @@ public class VavrUnitTest {
   }
 
   @SuppressWarnings("null")
-  @Test(expected = NullPointerException.class)
+  @Test
   public void givenValue_whenNullCheckNeeded_thenCorrect2() {
     Object possibleNullObj = null;
-    assertEquals("somevalue", possibleNullObj.toString());
+    assertThrows(NullPointerException.class, () -> {
+      possibleNullObj.toString();
+    });
   }
 
   @Test
@@ -99,10 +102,12 @@ public class VavrUnitTest {
    * try
    */
 
-  @Test(expected = ArithmeticException.class)
+  @Test
   public void givenBadCode_whenThrowsException_thenCorrect() {
-    @SuppressWarnings("unused")
-    int i = 1 / 0;
+    assertThrows(ArithmeticException.class, () -> {
+      @SuppressWarnings("unused")
+      int i = 1 / 0;
+    });
   }
 
   @Test
@@ -118,10 +123,12 @@ public class VavrUnitTest {
     assertEquals(-1, errorSentinel);
   }
 
-  @Test(expected = RuntimeException.class)
+  @Test
   public void givenBadCode_whenTryHandles_thenCorrect3() {
     Try<Integer> result = Try.of(() -> 1 / 0);
-    result.getOrElseThrow(e -> new RuntimeException(e));// re-throw different ex type
+    assertThrows(RuntimeException.class, () -> {
+      result.getOrElseThrow(e -> new RuntimeException(e));// re-throw different ex type
+    });
   }
 
   /*
@@ -192,11 +199,13 @@ public class VavrUnitTest {
   /*
    * collections
    */
-  @Test(expected = UnsupportedOperationException.class)
+  @Test
   public void whenImmutableCollectionThrows_thenCorrect() {
     java.util.List<String> wordList = Arrays.asList("abracadabra");
     java.util.List<String> list = Collections.unmodifiableList(wordList);
-    list.add("boom");
+    assertThrows(UnsupportedOperationException.class, () -> {
+      list.add("boom");
+    });
   }
 
   @Test

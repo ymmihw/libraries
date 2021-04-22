@@ -1,14 +1,16 @@
 package com.ymmihw.libraries.easymock;
 
-import org.easymock.EasyMockRunner;
+import static org.easymock.EasyMock.expect;
+import static org.easymock.EasyMock.replay;
+import static org.easymock.EasyMock.verify;
+import java.util.NoSuchElementException;
+import org.easymock.EasyMockExtension;
 import org.easymock.Mock;
 import org.easymock.TestSubject;
-import org.junit.*;
-import org.junit.runner.RunWith;
-import java.util.NoSuchElementException;
-import static org.easymock.EasyMock.*;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
-@RunWith(EasyMockRunner.class)
+@ExtendWith(EasyMockExtension.class)
 public class BaeldungReaderAnnotatedTest {
 
   @Mock

@@ -1,9 +1,9 @@
 package com.ymmihw.libraries;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import io.cucumber.core.api.Scenario;
-import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
-import io.cucumber.java.Before;
 import io.cucumber.java.BeforeStep;
 import io.cucumber.java8.LambdaGlue;
 import lombok.extern.slf4j.Slf4j;
@@ -14,12 +14,13 @@ public class HookConfig implements LambdaGlue {
     Before(1, () -> startBrowser());
   }
 
-  @Before(order = 2, value = "@Screenshots")
+//  @BeforeEach(order = 2, value = "@Screenshots") TODO
+  @BeforeEach
   public void beforeScenario(Scenario scenario) {
     takeScreenshot();
   }
 
-  @After
+  @AfterEach
   public void afterScenario(Scenario scenario) {
     takeScreenshot();
   }

@@ -26,7 +26,7 @@ import static org.hamcrest.CoreMatchers.startsWithIgnoringCase;
 import static org.hamcrest.CoreMatchers.theInstance;
 import static org.hamcrest.MatcherAssert.assertThat;
 import java.util.List;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import com.google.common.collect.Lists;
 
 public class HamcrestCoreMatchersTest {

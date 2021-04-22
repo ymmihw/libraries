@@ -1,7 +1,12 @@
 package com.ymmihw.libraries.passay;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Properties;
+import org.junit.jupiter.api.Test;
 import org.passay.LengthRule;
 import org.passay.MessageResolver;
 import org.passay.PasswordData;
@@ -11,12 +16,6 @@ import org.passay.RuleResult;
 import org.passay.RuleResultDetail;
 import org.passay.RuleResultMetadata;
 import org.passay.WhitespaceRule;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.net.URL;
-import java.util.Properties;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
 
 public class PasswordValidatorUnitTest {
 
@@ -47,7 +46,7 @@ public class PasswordValidatorUnitTest {
 
     RuleResult validate = passwordValidator.validate(passwordData);
     assertFalse(validate.isValid());
-    Assert.assertEquals("TOO_LONG", validate.getDetails().get(0).getErrorCode());
+    assertEquals("TOO_LONG", validate.getDetails().get(0).getErrorCode());
   }
 
   @Test

@@ -3,8 +3,8 @@ package com.ymmihw.libraries.infinispan;
 import java.util.function.Supplier;
 import org.infinispan.Cache;
 import org.infinispan.manager.DefaultCacheManager;
-import org.junit.After;
-import org.junit.Before;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import com.ymmihw.libraries.infinispan.listener.CacheListener;
 import com.ymmihw.libraries.infinispan.repository.HelloWorldRepository;
 import com.ymmihw.libraries.infinispan.service.HelloWorldService;
@@ -19,7 +19,7 @@ public class ConfigurationTest {
   protected HelloWorldService helloWorldService;
   protected TransactionalService transactionalService;
 
-  @Before
+  @BeforeEach
   public void setup() {
     CacheConfiguration configuration = new CacheConfiguration();
     CacheListener listener = new CacheListener();
@@ -47,7 +47,7 @@ public class ConfigurationTest {
     this.transactionalService = new TransactionalService(transactionalCache);
   }
 
-  @After
+  @AfterEach
   public void tearDown() {
     cacheManager.stop();
   }

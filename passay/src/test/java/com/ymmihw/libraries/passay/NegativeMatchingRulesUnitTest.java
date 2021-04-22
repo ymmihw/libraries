@@ -1,10 +1,14 @@
 package com.ymmihw.libraries.passay;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.util.Arrays;
+import java.util.List;
 import org.cryptacular.bean.EncodingHashBean;
 import org.cryptacular.spec.CodecSpec;
 import org.cryptacular.spec.DigestSpec;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.passay.DictionaryRule;
 import org.passay.DictionarySubstringRule;
 import org.passay.DigestHistoryRule;
@@ -23,10 +27,6 @@ import org.passay.UsernameRule;
 import org.passay.WhitespaceRule;
 import org.passay.dictionary.ArrayWordList;
 import org.passay.dictionary.WordListDictionary;
-import java.util.Arrays;
-import java.util.List;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
 
 public class NegativeMatchingRulesUnitTest {
 
@@ -148,7 +148,7 @@ public class NegativeMatchingRulesUnitTest {
 
     RuleResult validate = passwordValidator.validate(passwordData);
 
-    Assert.assertTrue(validate.isValid());
+    assertTrue(validate.isValid());
   }
 
   private String getDetail(RuleResult validate, int i) {

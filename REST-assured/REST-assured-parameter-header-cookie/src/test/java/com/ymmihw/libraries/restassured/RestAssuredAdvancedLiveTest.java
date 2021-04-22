@@ -5,17 +5,17 @@ import static io.restassured.RestAssured.when;
 import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.lessThan;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import io.restassured.RestAssured;
 import io.restassured.http.Cookie;
 import io.restassured.response.Response;
 import java.util.concurrent.TimeUnit;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class RestAssuredAdvancedLiveTest {
 
-  @Before
+  @BeforeEach
   public void setup() {
     RestAssured.baseURI = "https://api.github.com";
     RestAssured.port = 443;

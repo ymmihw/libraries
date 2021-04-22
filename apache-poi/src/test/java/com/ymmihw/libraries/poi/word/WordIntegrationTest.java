@@ -1,23 +1,22 @@
 package com.ymmihw.libraries.poi.word;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
-
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFRun;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 public class WordIntegrationTest {
   static WordDocument wordDocument;
 
-  @BeforeClass
+  @BeforeAll
   public static void generateMSWordFile() throws Exception {
     WordIntegrationTest.wordDocument = new WordDocument();
     wordDocument.handleSimpleDoc();
@@ -36,7 +35,7 @@ public class WordIntegrationTest {
     assertEquals("009933", titleRun.getColor());
     assertTrue(titleRun.isBold());
     assertEquals("Courier", titleRun.getFontFamily());
-    assertEquals(20, titleRun.getFontSize());
+    assertEquals(20, titleRun.getFontSizeAsDouble().intValue());
 
     assertEquals("from HTTP fundamentals to API Mastery", paragraphs.get(1).getText());
     assertEquals("What makes a good API?", paragraphs.get(3).getText());

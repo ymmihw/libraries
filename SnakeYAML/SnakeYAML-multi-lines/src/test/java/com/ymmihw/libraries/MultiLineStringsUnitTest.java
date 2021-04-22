@@ -1,17 +1,17 @@
 package com.ymmihw.libraries;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.io.InputStream;
 import java.util.Map;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.yaml.snakeyaml.Yaml;
 
 public class MultiLineStringsUnitTest {
 
   private Yaml yaml;
 
-  @Before
+  @BeforeEach
   public void setup() {
     yaml = new Yaml();
   }
@@ -77,9 +77,7 @@ public class MultiLineStringsUnitTest {
   }
 
   String parseYamlKey(String fileName, String key) {
-    InputStream inputStream = this.getClass()
-                                  .getClassLoader()
-                                  .getResourceAsStream(fileName);
+    InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream(fileName);
     Map<String, String> parsed = yaml.load(inputStream);
     return parsed.get(key);
   }

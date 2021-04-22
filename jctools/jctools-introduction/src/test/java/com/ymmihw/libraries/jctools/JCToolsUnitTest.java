@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import org.jctools.queues.SpscArrayQueue;
 import org.jctools.queues.SpscChunkedArrayQueue;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class JCToolsUnitTest {
 

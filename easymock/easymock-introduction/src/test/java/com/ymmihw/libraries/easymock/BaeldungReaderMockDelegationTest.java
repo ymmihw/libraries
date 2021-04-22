@@ -1,8 +1,8 @@
 package com.ymmihw.libraries.easymock;
 
-import org.easymock.*;
-import org.junit.*;
-import static org.easymock.EasyMock.*;
+import static org.easymock.EasyMock.expect;
+import org.easymock.EasyMockSupport;
+import org.junit.jupiter.api.Test;
 
 public class BaeldungReaderMockDelegationTest {
 

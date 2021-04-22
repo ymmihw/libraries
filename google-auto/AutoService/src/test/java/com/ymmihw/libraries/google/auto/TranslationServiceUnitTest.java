@@ -1,16 +1,16 @@
 package com.ymmihw.libraries.google.auto;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.ServiceLoader;
 import java.util.stream.StreamSupport;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class TranslationServiceUnitTest {
 
   private ServiceLoader<TranslationService> loader;
 
-  @Before
+  @BeforeEach
   public void setUp() {
     loader = ServiceLoader.load(TranslationService.class);
   }

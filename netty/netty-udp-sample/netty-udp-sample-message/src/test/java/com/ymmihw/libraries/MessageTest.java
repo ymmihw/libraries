@@ -1,9 +1,9 @@
 package com.ymmihw.libraries;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class MessageTest {
   @Test
@@ -31,13 +31,13 @@ public class MessageTest {
     System.out.println(Arrays.toString(bytes));
     Message m2 = new Message();
     m2.decodeBinary(bytes);
-    Assert.assertEquals(body, new String(m2.getBodyBytes(), "UTF-8"));
-    Assert.assertEquals(m.getChecksum(), m2.getChecksum());
-    Assert.assertEquals(m.getLength(), m2.getLength());
-    Assert.assertEquals(m.getType(), m2.getType());
-    Assert.assertEquals(m.getVersion(), m2.getVersion());
-    Assert.assertEquals(m.getFormat(), m2.getFormat());
-    Assert.assertEquals(m.getMessageId(), m2.getMessageId());
-    Assert.assertEquals(m.getMagicNumber(), m2.getMagicNumber());
+    assertEquals(body, new String(m2.getBodyBytes(), "UTF-8"));
+    assertEquals(m.getChecksum(), m2.getChecksum());
+    assertEquals(m.getLength(), m2.getLength());
+    assertEquals(m.getType(), m2.getType());
+    assertEquals(m.getVersion(), m2.getVersion());
+    assertEquals(m.getFormat(), m2.getFormat());
+    assertEquals(m.getMessageId(), m2.getMessageId());
+    assertEquals(m.getMagicNumber(), m2.getMagicNumber());
   }
 }

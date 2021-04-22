@@ -1,10 +1,10 @@
 package com.ymmihw.libraries.drools;
 
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.io.IOException;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import com.ymmihw.libraries.drools.model.Applicant;
 import com.ymmihw.libraries.drools.model.SuggestedRole;
 import com.ymmihw.libraries.drools.service.ApplicantService;
@@ -15,7 +15,7 @@ public class ApplicantServiceIntegrationTest {
 
   private ApplicantService applicantService;
 
-  @Before
+  @BeforeEach
   public void setup() {
     applicantService = new ApplicantService();
   }

@@ -2,8 +2,8 @@ package com.ymmihw.libraries.jmapper.relation;
 
 import static com.googlecode.jmapper.api.JMapperAPI.attribute;
 import static com.googlecode.jmapper.api.JMapperAPI.mappedClass;
-import static org.junit.Assert.assertEquals;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import com.googlecode.jmapper.RelationalJMapper;
 import com.googlecode.jmapper.api.JMapperAPI;
 import com.ymmihw.libraries.jmapper.relational.User;

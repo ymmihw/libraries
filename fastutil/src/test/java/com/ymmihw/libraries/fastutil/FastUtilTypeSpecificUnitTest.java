@@ -2,8 +2,8 @@ package com.ymmihw.libraries.fastutil;
 
 import it.unimi.dsi.fastutil.doubles.Double2DoubleMap;
 import it.unimi.dsi.fastutil.doubles.Double2DoubleOpenHashMap;
-import static org.junit.Assert.assertEquals;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 
 public class FastUtilTypeSpecificUnitTest {

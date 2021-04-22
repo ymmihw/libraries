@@ -1,20 +1,19 @@
 package com.ymmihw.libraries.okhttp;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import java.io.File;
 import java.io.IOException;
 import java.net.SocketTimeoutException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.test.context.junit4.SpringRunner;
 import com.ymmihw.libraries.okhttp.sampleapp.Application;
 import okhttp3.Cache;
 import okhttp3.Call;
@@ -22,7 +21,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-@RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class, webEnvironment = WebEnvironment.RANDOM_PORT)
 public class OkHttpMiscLiveTest {
 
@@ -33,49 +31,53 @@ public class OkHttpMiscLiveTest {
   private String baseUrl;
   private OkHttpClient client;
 
-  @Before
+  @BeforeEach
   public void init() {
     client = new OkHttpClient();
     baseUrl = "http://localhost:" + port;
   }
 
-  @Test(expected = SocketTimeoutException.class)
+  @Test
   public void whenSetRequestTimeout_thenFail() throws IOException {
-    final OkHttpClient clientWithTimeout =
-        new OkHttpClient.Builder().readTimeout(1, TimeUnit.SECONDS).build();
+    assertThrows(SocketTimeoutException.class, () -> {
+      final OkHttpClient clientWithTimeout =
+          new OkHttpClient.Builder().readTimeout(1, TimeUnit.SECONDS).build();
 
-    final Request request = new Request.Builder().url(baseUrl + "/delay/2").build();
+      final Request request = new Request.Builder().url(baseUrl + "/delay/2").build();
 
-    final Call call = clientWithTimeout.newCall(request);
-    final Response response = call.execute();
-    response.close();
+      final Call call = clientWithTimeout.newCall(request);
+      final Response response = call.execute();
+      response.close();
+    });
   }
 
-  @Test(expected = IOException.class)
+  @Test
   public void whenCancelRequest_thenCorrect() throws IOException {
-    final ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
+    assertThrows(IOException.class, () -> {
+      final ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
 
-    final Request request = new Request.Builder().url(baseUrl + "/delay/2")
-        // This URL is served with a 2 second delay.
-        .build();
+      final Request request = new Request.Builder().url(baseUrl + "/delay/2")
+          // This URL is served with a 2 second delay.
+          .build();
 
-    final int seconds = 1;
-    final long startNanos = System.nanoTime();
+      final int seconds = 1;
+      final long startNanos = System.nanoTime();
 
-    final Call call = client.newCall(request);
+      final Call call = client.newCall(request);
 
-    // Schedule a job to cancel the call in 1 second.
-    executor.schedule(() -> {
+      // Schedule a job to cancel the call in 1 second.
+      executor.schedule(() -> {
 
-      logger.debug("Canceling call: " + ((System.nanoTime() - startNanos) / 1e9f));
-      call.cancel();
-      logger.debug("Canceled call: " + ((System.nanoTime() - startNanos) / 1e9f));
+        logger.debug("Canceling call: " + ((System.nanoTime() - startNanos) / 1e9f));
+        call.cancel();
+        logger.debug("Canceled call: " + ((System.nanoTime() - startNanos) / 1e9f));
 
-    }, seconds, TimeUnit.SECONDS);
+      }, seconds, TimeUnit.SECONDS);
 
-    logger.debug("Executing call: " + ((System.nanoTime() - startNanos) / 1e9f));
-    final Response response = call.execute();
-    logger.debug("Call completed: " + ((System.nanoTime() - startNanos) / 1e9f), response);
+      logger.debug("Executing call: " + ((System.nanoTime() - startNanos) / 1e9f));
+      final Response response = call.execute();
+      logger.debug("Call completed: " + ((System.nanoTime() - startNanos) / 1e9f), response);
+    });
   }
 
   @Test

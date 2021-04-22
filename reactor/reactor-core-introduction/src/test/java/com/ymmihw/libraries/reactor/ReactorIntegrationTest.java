@@ -1,6 +1,6 @@
 package com.ymmihw.libraries.reactor;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 import reactor.core.publisher.ConnectableFlux;

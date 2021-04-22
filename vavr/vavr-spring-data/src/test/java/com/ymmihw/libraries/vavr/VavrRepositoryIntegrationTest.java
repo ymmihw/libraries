@@ -1,25 +1,22 @@
 package com.ymmihw.libraries.vavr;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 import io.vavr.collection.Seq;
 import io.vavr.control.Option;
 
-@RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)
 public class VavrRepositoryIntegrationTest {
 
   @Autowired
   private VavrUserRepository userRepository;
 
-  @Before
+  @BeforeEach
   public void setup() {
     User user1 = new User();
     user1.setName("John");

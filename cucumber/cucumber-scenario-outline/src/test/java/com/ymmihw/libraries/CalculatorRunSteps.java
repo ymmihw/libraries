@@ -1,8 +1,9 @@
 package com.ymmihw.libraries;
 
+
+import static org.hamcrest.MatcherAssert.assertThat;
 import org.hamcrest.Matchers;
-import org.junit.Assert;
-import io.cucumber.java.Before;
+import org.junit.jupiter.api.BeforeEach;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -13,7 +14,7 @@ public class CalculatorRunSteps {
 
   private Calculator calculator;
 
-  @Before
+  @BeforeEach
   private void init() {
     total = -999;
   }
@@ -30,7 +31,7 @@ public class CalculatorRunSteps {
 
   @Then("^the result should be (-?\\d+)$")
   public void validateResult(int result) throws Throwable {
-    Assert.assertThat(total, Matchers.equalTo(result));
+    assertThat(total, Matchers.equalTo(result));
   }
 
 }

@@ -1,11 +1,11 @@
 package com.ymmihw.libraries;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import org.junit.jupiter.api.BeforeEach;
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -14,7 +14,7 @@ public class BookStoreRunSteps {
   private BookStore store;
   private List<Book> foundBooks;
 
-  @Before
+  @BeforeEach
   public void setUp() {
     store = new BookStore();
     foundBooks = new ArrayList<>();

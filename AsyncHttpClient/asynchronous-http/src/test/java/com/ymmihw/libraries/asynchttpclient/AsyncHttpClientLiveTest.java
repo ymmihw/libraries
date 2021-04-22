@@ -1,7 +1,7 @@
 package com.ymmihw.libraries.asynchttpclient;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -18,15 +18,15 @@ import org.asynchttpclient.HttpResponseStatus;
 import org.asynchttpclient.ListenableFuture;
 import org.asynchttpclient.Request;
 import org.asynchttpclient.Response;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import io.netty.handler.codec.http.HttpHeaders;
 
 public class AsyncHttpClientLiveTest {
 
   private static AsyncHttpClient HTTP_CLIENT;
 
-  @Before
+  @BeforeEach
   public void setup() {
     AsyncHttpClientConfig clientConfig =
         Dsl.config().setConnectTimeout(15000).setRequestTimeout(15000).build();

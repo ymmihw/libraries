@@ -1,6 +1,6 @@
 package com.ymmihw.libraries.passay;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.passay.AllowedCharacterRule;
 import org.passay.AllowedRegexRule;
 import org.passay.CharacterCharacteristicsRule;
@@ -11,7 +11,7 @@ import org.passay.LengthRule;
 import org.passay.PasswordData;
 import org.passay.PasswordValidator;
 import org.passay.RuleResult;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class PositiveMatchingRulesUnitTest {
 
