@@ -15,7 +15,7 @@
  <url>http://maven.apache.org</url>
  <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  <testcontainers.version>1.10.6</testcontainers.version>
+  <testcontainers.version>1.15.3</testcontainers.version>
  </properties>
  <dependencies>
  </dependencies>
