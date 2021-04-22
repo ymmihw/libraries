@@ -8,18 +8,17 @@
   <version>0.0.1-SNAPSHOT</version>
  </parent>
  <groupId>com.ymmihw.libraries</groupId>
- <artifactId>apache-poi</artifactId>
+ <artifactId>Querydsl</artifactId>
  <version>0.0.1-SNAPSHOT</version>
- <name>apache-poi</name>
+ <packaging>pom</packaging>
+ <name>Querydsl</name>
  <url>http://maven.apache.org</url>
  <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
  </properties>
  <dependencies>
-  <dependency>
-   <groupId>org.apache.poi</groupId>
-   <artifactId>poi-ooxml</artifactId>
-   <version>5.0.0</version>
-  </dependency>
  </dependencies>
+ <modules>
+  <module>Querydsl-intro</module>
+ </modules>
 </project>

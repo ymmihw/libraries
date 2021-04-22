@@ -104,5 +104,6 @@
   <module>Kryo</module>
   <module>apache-poi</module>
   <module>graphviz-java</module>
+  <module>Querydsl</module>
  </modules>
 </project>
