@@ -1,6 +1,6 @@
 package com.ymmihw.libraries;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 import io.cucumber.java8.En;
 
 public class ShoppingStepsDef implements En {
