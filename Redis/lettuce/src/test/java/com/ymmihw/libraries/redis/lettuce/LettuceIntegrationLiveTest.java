@@ -1,16 +1,16 @@
 package com.ymmihw.libraries.redis.lettuce;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-import org.junit.After;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.Assert;
-import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testcontainers.containers.GenericContainer;
@@ -37,7 +37,7 @@ public class LettuceIntegrationLiveTest {
 
   private RedisClient redisClient;
 
-  @Before
+  @BeforeEach
   public void setUp() {
     // Docker defaults to mapping redis port to 32768
     redisClient = RedisClient.create(
@@ -45,7 +45,7 @@ public class LettuceIntegrationLiveTest {
     redisConnection = redisClient.connect();
   }
 
-  @After
+  @AfterEach
   public void destroy() {
     redisConnection.close();
   }

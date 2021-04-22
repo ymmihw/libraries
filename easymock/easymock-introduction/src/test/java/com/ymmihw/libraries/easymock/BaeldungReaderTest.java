@@ -1,9 +1,14 @@
 package com.ymmihw.libraries.easymock;
 
-import org.junit.*;
+import static org.easymock.EasyMock.expect;
+import static org.easymock.EasyMock.mock;
+import static org.easymock.EasyMock.niceMock;
+import static org.easymock.EasyMock.replay;
+import static org.easymock.EasyMock.strictMock;
+import static org.easymock.EasyMock.verify;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.NoSuchElementException;
-import static org.easymock.EasyMock.*;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
 
 public class BaeldungReaderTest {
 

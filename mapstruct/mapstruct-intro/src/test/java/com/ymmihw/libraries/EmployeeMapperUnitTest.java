@@ -1,12 +1,12 @@
 package com.ymmihw.libraries;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;
 import com.ymmihw.libraries.mapper.EmployeeMapper;
 import com.ymmihw.libraries.model.Division;

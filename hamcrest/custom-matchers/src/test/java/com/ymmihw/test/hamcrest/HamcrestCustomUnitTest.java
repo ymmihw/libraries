@@ -1,6 +1,6 @@
 package com.ymmihw.test.hamcrest;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import static com.ymmihw.test.hamcrest.IsDivisibleBy.divisibleBy;
 import static com.ymmihw.test.hamcrest.IsOnlyDigits.onlyDigits;
 import static com.ymmihw.test.hamcrest.IsUppercase.uppercase;

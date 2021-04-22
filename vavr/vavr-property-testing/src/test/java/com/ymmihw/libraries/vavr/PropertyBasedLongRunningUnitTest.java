@@ -5,7 +5,7 @@ import io.vavr.collection.Stream;
 import io.vavr.test.Arbitrary;
 import io.vavr.test.CheckResult;
 import io.vavr.test.Property;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import java.util.function.Predicate;
 import static io.vavr.API.$;
 import static io.vavr.API.Case;

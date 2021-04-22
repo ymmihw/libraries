@@ -9,9 +9,9 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 import static io.restassured.module.jsv.JsonSchemaValidatorSettings.settings;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasItems;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import com.github.fge.jsonschema.SchemaVersion;
 import com.github.fge.jsonschema.cfg.ValidationConfiguration;
 import com.github.fge.jsonschema.main.JsonSchemaFactory;
@@ -27,7 +27,7 @@ public class RestAssuredIntegrationTest {
   private static final String APPLICATION_JSON = "application/json";
   private static final String GAME_ODDS = getEventJson();
 
-  @BeforeClass
+  @BeforeAll
   public static void before() throws Exception {
     System.out.println("Setting up!");
     wireMockServer.start();
@@ -75,7 +75,7 @@ public class RestAssuredIntegrationTest {
         .using(settings().with().checkedValidation(false)));
   }
 
-  @AfterClass
+  @AfterAll
   public static void after() throws Exception {
     System.out.println("Running: tearDown");
     wireMockServer.stop();

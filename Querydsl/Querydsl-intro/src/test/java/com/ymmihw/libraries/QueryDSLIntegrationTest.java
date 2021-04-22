@@ -3,18 +3,18 @@
  */
 package com.ymmihw.libraries;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import com.querydsl.core.Tuple;
 import com.querydsl.core.types.dsl.Expressions;
 import com.querydsl.core.types.dsl.NumberPath;
@@ -33,7 +33,7 @@ public class QueryDSLIntegrationTest {
 
   private JPAQueryFactory queryFactory;
 
-  @BeforeClass
+  @BeforeAll
   public static void populateDatabase() {
     emf = Persistence.createEntityManagerFactory("com.ymmihw.libraries.entities");
     EntityManager em = emf.createEntityManager();
@@ -76,7 +76,7 @@ public class QueryDSLIntegrationTest {
 
   }
 
-  @Before
+  @BeforeEach
   public void setUp() {
     em = emf.createEntityManager();
     em.getTransaction().begin();
@@ -182,13 +182,13 @@ public class QueryDSLIntegrationTest {
 
   }
 
-  @After
+  @AfterEach
   public void tearDown() {
     em.getTransaction().commit();
     em.close();
   }
 
-  @AfterClass
+  @AfterAll
   public static void afterClass() {
     emf.close();
   }

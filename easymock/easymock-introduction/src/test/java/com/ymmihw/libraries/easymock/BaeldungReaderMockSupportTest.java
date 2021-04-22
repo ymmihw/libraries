@@ -1,13 +1,16 @@
 package com.ymmihw.libraries.easymock;
 
-import org.easymock.*;
-import org.junit.*;
-import org.junit.runner.RunWith;
+import static org.easymock.EasyMock.expect;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.NoSuchElementException;
-import static org.easymock.EasyMock.*;
-import static org.junit.Assert.assertEquals;
+import org.easymock.EasyMockExtension;
+import org.easymock.EasyMockSupport;
+import org.easymock.Mock;
+import org.easymock.TestSubject;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
-@RunWith(EasyMockRunner.class)
+@ExtendWith(EasyMockExtension.class)
 public class BaeldungReaderMockSupportTest extends EasyMockSupport {
 
   @TestSubject

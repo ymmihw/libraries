@@ -1,12 +1,12 @@
 package com.ymmihw.libraries.vavr;
 
 import static org.hamcrest.CoreMatchers.instanceOf;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import io.vavr.collection.Seq;
 import io.vavr.control.Either.Right;
 import io.vavr.control.Validation.Invalid;
@@ -16,12 +16,12 @@ public class ValidationTest {
 
   private static UserValidator userValidator;
 
-  @BeforeClass
+  @BeforeAll
   public static void setUpUserValidatorInstance() {
     userValidator = new UserValidator();
   }
 
-  @AfterClass
+  @AfterAll
   public static void teardownUserValidatorInstance() {
     userValidator = null;
   }

@@ -1,9 +1,20 @@
 package com.ymmihw.libraries.vavr;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotSame;
+import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.util.Comparator;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import org.junit.jupiter.api.Test;
 import io.vavr.Tuple;
 import io.vavr.Tuple2;
-import io.vavr.collection.*;
+import io.vavr.collection.Array;
 import io.vavr.collection.BitSet;
+import io.vavr.collection.CharSeq;
 import io.vavr.collection.HashMap;
 import io.vavr.collection.HashSet;
 import io.vavr.collection.Iterator;
@@ -13,18 +24,10 @@ import io.vavr.collection.Queue;
 import io.vavr.collection.Set;
 import io.vavr.collection.SortedMap;
 import io.vavr.collection.SortedSet;
+import io.vavr.collection.Stream;
 import io.vavr.collection.TreeMap;
 import io.vavr.collection.TreeSet;
 import io.vavr.collection.Vector;
-import org.junit.Test;
-import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotSame;
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.assertTrue;
 
 public class CollectionAPIUnitTest {
 
@@ -324,12 +327,11 @@ public class CollectionAPIUnitTest {
     assertEquals(4, javaList.get(3).intValue());
   }
 
-  @Test(expected = UnsupportedOperationException.class)
+  @Test
   public void givenVavrList_whenConvertedView_thenException() {
     java.util.List<Integer> javaList = List.of(1, 2, 3).asJava();
-
     assertEquals(3, javaList.get(2).intValue());
-    javaList.add(4);
+    assertThrows(UnsupportedOperationException.class, () -> javaList.add(4));
   }
 
   @Test

@@ -1,6 +1,6 @@
 package com.ymmihw.libraries.aspectj;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class UnitTest {
   @Test

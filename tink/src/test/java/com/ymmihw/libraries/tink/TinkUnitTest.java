@@ -1,6 +1,16 @@
 package com.ymmihw.libraries.tink;
 
-import com.google.crypto.tink.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import java.security.GeneralSecurityException;
+import org.junit.jupiter.api.Test;
+import com.google.crypto.tink.Aead;
+import com.google.crypto.tink.HybridDecrypt;
+import com.google.crypto.tink.HybridEncrypt;
+import com.google.crypto.tink.KeysetHandle;
+import com.google.crypto.tink.Mac;
+import com.google.crypto.tink.PublicKeySign;
+import com.google.crypto.tink.PublicKeyVerify;
 import com.google.crypto.tink.aead.AeadConfig;
 import com.google.crypto.tink.aead.AeadFactory;
 import com.google.crypto.tink.aead.AeadKeyTemplates;
@@ -13,9 +23,6 @@ import com.google.crypto.tink.mac.MacKeyTemplates;
 import com.google.crypto.tink.signature.PublicKeySignFactory;
 import com.google.crypto.tink.signature.PublicKeyVerifyFactory;
 import com.google.crypto.tink.signature.SignatureKeyTemplates;
-import org.junit.Assert;
-import org.junit.Test;
-import java.security.GeneralSecurityException;
 
 public class TinkUnitTest {
 
@@ -34,7 +41,7 @@ public class TinkUnitTest {
 
     byte[] ciphertext = aead.encrypt(PLAINTEXT.getBytes(), DATA.getBytes());
 
-    Assert.assertNotEquals(PLAINTEXT, new String(ciphertext));
+    assertNotEquals(PLAINTEXT, new String(ciphertext));
   }
 
   @Test
@@ -90,7 +97,7 @@ public class TinkUnitTest {
 
     byte[] plaintextDecrypted = hybridDecrypt.decrypt(ciphertext, contextInfo.getBytes());
 
-    Assert.assertEquals(PLAINTEXT, new String(plaintextDecrypted));
+    assertEquals(PLAINTEXT, new String(plaintextDecrypted));
   }
 }
 

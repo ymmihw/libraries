@@ -2,7 +2,7 @@ package com.ymmihw.libraries.jmapper;
 
 import com.googlecode.jmapper.JMapper;
 import com.googlecode.jmapper.api.JMapperAPI;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 
@@ -10,8 +10,8 @@ import static com.googlecode.jmapper.api.JMapperAPI.*;
 import static com.googlecode.jmapper.api.JMapperAPI.attribute;
 import static com.googlecode.jmapper.api.JMapperAPI.global;
 import static com.googlecode.jmapper.api.JMapperAPI.mappedClass;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class JMapperIntegrationTest {
 

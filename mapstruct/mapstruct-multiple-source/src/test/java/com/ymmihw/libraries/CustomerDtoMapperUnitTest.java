@@ -1,6 +1,6 @@
 package com.ymmihw.libraries;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;
 import com.ymmihw.libraries.mapper.CustomerDtoMapper;

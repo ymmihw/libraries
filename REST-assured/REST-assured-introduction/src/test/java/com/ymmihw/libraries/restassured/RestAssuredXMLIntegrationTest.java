@@ -8,9 +8,9 @@ import static io.restassured.RestAssured.post;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.xml.HasXPath.hasXPath;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.WireMock;
 import io.restassured.RestAssured;
@@ -23,7 +23,7 @@ public class RestAssuredXMLIntegrationTest {
   private static final String APPLICATION_XML = "application/xml";
   private static final String EMPLOYEES = getXml();
 
-  @BeforeClass
+  @BeforeAll
   public static void before() throws Exception {
     System.out.println("Setting up!");
     wireMockServer.start();
@@ -68,7 +68,7 @@ public class RestAssuredXMLIntegrationTest {
         RestAssuredXMLIntegrationTest.class.getResourceAsStream("/employees.xml"));
   }
 
-  @AfterClass
+  @AfterAll
   public static void after() throws Exception {
     System.out.println("Running: tearDown");
     wireMockServer.stop();

@@ -1,16 +1,13 @@
 package com.ymmihw.libraries;
 
-import static org.junit.Assert.assertEquals;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.ymmihw.libraries.mapper.SimpleSourceDestinationMapper;
 import com.ymmihw.libraries.model.SimpleDestination;
 import com.ymmihw.libraries.model.SimpleSource;
 
-@RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = SpringBootConfig.class)
 public class SimpleSourceDestinationMapperIntegrationTest {
 

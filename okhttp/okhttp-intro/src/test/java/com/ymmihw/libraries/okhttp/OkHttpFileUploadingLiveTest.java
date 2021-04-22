@@ -1,17 +1,15 @@
 package com.ymmihw.libraries.okhttp;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import java.io.File;
 import java.io.IOException;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.test.context.junit4.SpringRunner;
 import com.ymmihw.libraries.okhttp.sampleapp.Application;
 import okhttp3.Call;
 import okhttp3.MediaType;
@@ -21,7 +19,6 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-@RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class, webEnvironment = WebEnvironment.RANDOM_PORT)
 public class OkHttpFileUploadingLiveTest {
 
@@ -30,7 +27,7 @@ public class OkHttpFileUploadingLiveTest {
   private String baseUrl;
   private OkHttpClient client;
 
-  @Before
+  @BeforeEach
   public void init() {
     client = new OkHttpClient();
     baseUrl = "http://localhost:" + port;

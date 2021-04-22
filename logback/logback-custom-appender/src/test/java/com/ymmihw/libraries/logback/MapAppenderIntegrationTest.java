@@ -1,8 +1,8 @@
 package com.ymmihw.libraries.logback;
 
-import static org.junit.Assert.assertEquals;
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.slf4j.LoggerFactory;
 import ch.qos.logback.classic.Logger;
 
@@ -10,7 +10,7 @@ public class MapAppenderIntegrationTest {
 
   private Logger rootLogger;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     rootLogger = (Logger) LoggerFactory.getLogger("ROOT");
   }

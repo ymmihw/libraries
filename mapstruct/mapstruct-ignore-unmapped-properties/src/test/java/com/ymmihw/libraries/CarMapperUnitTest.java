@@ -1,7 +1,7 @@
 package com.ymmihw.libraries;
 
-import static org.junit.Assert.assertEquals;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import com.ymmihw.libraries.mapper.CarMapper;
 import com.ymmihw.libraries.model.Car;
 import com.ymmihw.libraries.model.CarDTO;

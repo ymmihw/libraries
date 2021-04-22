@@ -1,8 +1,8 @@
 package com.ymmihw.libraries.drools;
 
-import static junit.framework.TestCase.assertEquals;
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import com.ymmihw.libraries.drools.model.Product;
 import com.ymmihw.libraries.drools.service.ProductService;
 
@@ -11,7 +11,7 @@ public class ProductServiceIntegrationTest {
 
   private ProductService productService;
 
-  @Before
+  @BeforeEach
   public void setup() {
     productService = new ProductService();
   }

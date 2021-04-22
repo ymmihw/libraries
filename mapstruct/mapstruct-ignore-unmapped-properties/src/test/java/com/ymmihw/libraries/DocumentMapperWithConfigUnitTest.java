@@ -3,7 +3,7 @@ package com.ymmihw.libraries;
 import static org.assertj.core.api.Assertions.assertThat;
 import java.util.Arrays;
 import java.util.Date;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import com.ymmihw.libraries.mapper.DocumentMapperWithConfig;
 import com.ymmihw.libraries.model.Document;
 import com.ymmihw.libraries.model.DocumentDTO;

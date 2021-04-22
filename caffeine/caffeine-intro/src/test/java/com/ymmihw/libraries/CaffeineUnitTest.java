@@ -1,14 +1,13 @@
 package com.ymmihw.libraries;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Nonnull;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import com.github.benmanes.caffeine.cache.AsyncLoadingCache;
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
@@ -72,7 +71,7 @@ public class CaffeineUnitTest {
     });
 
     cache.getAll(Arrays.asList("A", "B", "C"))
-        .thenAccept(dataObjectMap -> Assert.assertEquals(3, dataObjectMap.size()));
+        .thenAccept(dataObjectMap -> assertEquals(3, dataObjectMap.size()));
   }
 
   @Test
@@ -80,16 +79,16 @@ public class CaffeineUnitTest {
     LoadingCache<String, DataObject> cache = Caffeine.newBuilder().maximumSize(1)
         .refreshAfterWrite(10, TimeUnit.MINUTES).build(k -> DataObject.get("Data for " + k));
 
-    Assert.assertEquals(0, cache.estimatedSize());
+    assertEquals(0, cache.estimatedSize());
 
     cache.get("A");
 
-    Assert.assertEquals(1, cache.estimatedSize());
+    assertEquals(1, cache.estimatedSize());
 
     cache.get("B");
     cache.cleanUp();
 
-    Assert.assertEquals(1, cache.estimatedSize());
+    assertEquals(1, cache.estimatedSize());
   }
 
   @Test
@@ -97,20 +96,20 @@ public class CaffeineUnitTest {
     LoadingCache<String, DataObject> cache = Caffeine.newBuilder().maximumWeight(10)
         .weigher((k, v) -> 5).build(k -> DataObject.get("Data for " + k));
 
-    Assert.assertEquals(0, cache.estimatedSize());
+    assertEquals(0, cache.estimatedSize());
 
     cache.get("A");
 
-    Assert.assertEquals(1, cache.estimatedSize());
+    assertEquals(1, cache.estimatedSize());
 
     cache.get("B");
 
-    Assert.assertEquals(2, cache.estimatedSize());
+    assertEquals(2, cache.estimatedSize());
 
     cache.get("C");
     cache.cleanUp();
 
-    Assert.assertEquals(2, cache.estimatedSize());
+    assertEquals(2, cache.estimatedSize());
   }
 
   @Test
@@ -155,7 +154,7 @@ public class CaffeineUnitTest {
     cache.get("A");
     cache.get("A");
 
-    Assert.assertEquals(1, cache.stats().hitCount());
-    Assert.assertEquals(1, cache.stats().missCount());
+    assertEquals(1, cache.stats().hitCount());
+    assertEquals(1, cache.stats().missCount());
   }
 }

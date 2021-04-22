@@ -1,7 +1,7 @@
 package com.ymmihw.libraries.infinispan.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import com.ymmihw.libraries.infinispan.ConfigurationTest;
 
 public class HelloWorldServiceIntegrationTest extends ConfigurationTest {

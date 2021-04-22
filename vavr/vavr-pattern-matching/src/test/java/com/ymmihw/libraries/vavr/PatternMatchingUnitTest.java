@@ -14,13 +14,14 @@ import static io.vavr.Predicates.isIn;
 import static io.vavr.Predicates.isNotNull;
 import static io.vavr.Predicates.isNull;
 import static io.vavr.Predicates.noneOf;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.BiFunction;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import io.vavr.MatchError;
 import io.vavr.control.Option;
 
@@ -42,10 +43,10 @@ public class PatternMatchingUnitTest {
     assertEquals("unknown", output);
   }
 
-  @Test(expected = MatchError.class)
+  @Test
   public void givenNoMatchAndNoDefault_whenThrows_thenCorrect() {
     int input = 5;
-    Match(input).of(Case($(1), "one"), Case($(2), "two"));
+    assertThrows(MatchError.class, () -> Match(input).of(Case($(1), "one"), Case($(2), "two")));
   }
 
   @Test

@@ -1,12 +1,12 @@
 package com.ymmihw.libraries.passay;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.util.stream.Stream;
+import org.junit.jupiter.api.Test;
 import org.passay.CharacterData;
 import org.passay.CharacterRule;
 import org.passay.EnglishCharacterData;
 import org.passay.PasswordGenerator;
-import java.util.stream.Stream;
 
 public class PasswordGeneratorUnitTest {
 
@@ -17,8 +17,8 @@ public class PasswordGeneratorUnitTest {
     PasswordGenerator passwordGenerator = new PasswordGenerator();
     String password = passwordGenerator.generatePassword(10, digits);
 
-    Assert.assertTrue(password.length() == 10);
-    Assert.assertTrue(containsOnlyCharactersFromSet(password, "0123456789"));
+    assertTrue(password.length() == 10);
+    assertTrue(containsOnlyCharactersFromSet(password, "0123456789"));
   }
 
   @Test
@@ -38,7 +38,7 @@ public class PasswordGeneratorUnitTest {
     PasswordGenerator passwordGenerator = new PasswordGenerator();
     String password = passwordGenerator.generatePassword(10, specialCharacterRule);
 
-    Assert.assertTrue(containsOnlyCharactersFromSet(password, "ABCxyz123!@#"));
+    assertTrue(containsOnlyCharactersFromSet(password, "ABCxyz123!@#"));
   }
 
   private boolean containsOnlyCharactersFromSet(String password, String setOfCharacters) {

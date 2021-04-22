@@ -8,9 +8,9 @@ import okhttp3.ResponseBody;
 import okhttp3.mockwebserver.MockResponse;
 import okhttp3.mockwebserver.MockWebServer;
 import org.junit.Assert;
-import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.rules.ExpectedException;
 
 import java.io.InputStreamReader;
@@ -29,7 +29,7 @@ public class ResponseDecoderUnitTest {
 
   OkHttpClient client;
 
-  @Before
+  @BeforeEach
   public void setUp() {
     sampleResponse = new SimpleEntity("Baeldung");
     client = new OkHttpClient.Builder().build();

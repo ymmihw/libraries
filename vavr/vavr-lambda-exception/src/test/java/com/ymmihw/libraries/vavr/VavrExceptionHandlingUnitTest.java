@@ -1,11 +1,12 @@
 package com.ymmihw.libraries.vavr;
 
+import static org.junit.jupiter.api.Assertions.assertNotSame;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import io.vavr.API;
@@ -19,7 +20,7 @@ public class VavrExceptionHandlingUnitTest {
   private List<Integer> integers;
   private List<Integer> validIntegersOnly;
 
-  @Before
+  @BeforeEach
   public void init() {
     integers = Arrays.asList(3, 9, 7, 0, 10, 20);
     validIntegersOnly = Arrays.asList(3, 9, 7, 5, 10, 20);
@@ -32,11 +33,14 @@ public class VavrExceptionHandlingUnitTest {
     validIntegersOnly.stream().map(fn.unchecked()).forEach(i -> LOG.debug("{}", i));
   }
 
-  @Test(expected = IOException.class)
+  @Test
   public void exceptionCausingMethod_UsingCheckedFunction_ThenFailure() {
-    CheckedFunction1<Integer, Integer> fn = i -> readFromFile(i);
 
-    integers.stream().map(fn.unchecked()).forEach(i -> LOG.debug("{}", i));
+    assertThrows(IOException.class, () -> {
+      CheckedFunction1<Integer, Integer> fn = i -> readFromFile(i);
+      integers.stream().map(fn.unchecked()).forEach(i -> LOG.debug("{}", i));
+    });
+
   }
 
   @Test
@@ -45,16 +49,19 @@ public class VavrExceptionHandlingUnitTest {
         .forEach(i -> LOG.debug("{}", i));
   }
 
-  @Test(expected = IOException.class)
+  @Test
   public void exceptionCausingMethod_UsingAPI_ThenFailure() {
-    integers.stream().map(API.unchecked(i -> readFromFile(i))).forEach(i -> LOG.debug("{}", i));
+    assertThrows(IOException.class, () -> {
+      integers.stream().map(API.unchecked(i -> readFromFile(i))).forEach(i -> LOG.debug("{}", i));
+    });
+
   }
 
   @Test
   public void exceptionCausingMethod_UsingLift_ThenSuccess() {
     validIntegersOnly.stream().map(CheckedFunction1.lift(i -> readFromFile(i)))
         .map(i -> i.getOrElse(-1)).forEach(i -> {
-          Assert.assertNotSame(-1, i);
+          assertNotSame(-1, i);
           LOG.debug("{}", i);
         });
   }
