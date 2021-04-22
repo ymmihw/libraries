@@ -7,8 +7,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Stream;
+import org.junit.After;
 import org.junit.Test;
-import org.junit.jupiter.api.AfterEach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -396,7 +396,7 @@ public abstract class UserRepositoryCommon {
     assertThat(userPeter.getEmail()).isEqualTo(USER_EMAIL2);
   }
 
-  @AfterEach
+  @After
   public void cleanUp() {
     userRepository.deleteAll();
   }
