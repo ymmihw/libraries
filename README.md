@@ -229,3 +229,4 @@ object-matcher | [Hamcrest Object Matchers](http://www.baeldung.com/hamcrest-obj
 Module | Article
 --|--
 Querydsl-intro | [Intro to Querydsl](http://www.baeldung.com/intro-to-querydsl)
+Querydsl-with-jpa | [A Guide to Querydsl with JPA](https://www.baeldung.com/querydsl-with-jpa-tutorial)
