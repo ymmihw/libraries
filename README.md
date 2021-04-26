@@ -23,6 +23,7 @@ avro | [Guide to Apache Avro](https://www.baeldung.com/java-apache-avro)
 Kryo | [Introduction To Kryo](https://www.baeldung.com/kryo)
 graphviz-java | [graphviz-java](https://github.com/nidi3/graphviz-java)
 apache-poi | [Microsoft Word Processing in Java with Apache POI](https://www.baeldung.com/java-microsoft-word-with-apache-poi)
+retrofit | [Introduction to Retrofit](http://www.baeldung.com/retrofit)
 
 ### OkHttp
 Module | Article

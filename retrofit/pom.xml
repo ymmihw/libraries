@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <modelVersion>4.0.0</modelVersion>
+ <parent>
+  <groupId>com.ymmihw.libraries</groupId>
+  <artifactId>libraries</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+ </parent>
+ <groupId>com.ymmihw.libraries</groupId>
+ <artifactId>retrofit</artifactId>
+ <version>0.0.1-SNAPSHOT</version>
+ <name>retrofit</name>
+ <url>http://maven.apache.org</url>
+ <properties>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+ </properties>
+ <dependencies>
+  <dependency>
+   <groupId>com.squareup.retrofit2</groupId>
+   <artifactId>retrofit</artifactId>
+   <version>${retrofit.version}</version>
+  </dependency>
+  <dependency>
+   <groupId>com.squareup.retrofit2</groupId>
+   <artifactId>converter-gson</artifactId>
+   <version>${retrofit.version}</version>
+  </dependency>
+  <dependency>
+   <groupId>com.squareup.okhttp3</groupId>
+   <artifactId>logging-interceptor</artifactId>
+  </dependency>
+ </dependencies>
+</project>
