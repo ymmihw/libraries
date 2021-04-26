@@ -28,5 +28,8 @@ public class EmployeesTest {
   public void whenGetEmployees_thenEmptyList() throws SQLException {
     assertEquals(0, employeeDao.findAll().size());
   }
+  
+  public void setLogger(org.apache.logging.log4j.Logger logger) {
+  }
 
 }
