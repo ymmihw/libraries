@@ -12,6 +12,7 @@
  <url>http://maven.apache.org</url>
 
  <properties>
+  <testcontainers.version>1.15.3</testcontainers.version>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   <retrofit.version>2.9.0</retrofit.version>
   <spring-framework.version>5.3.6</spring-framework.version>
