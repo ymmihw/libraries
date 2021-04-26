@@ -5,15 +5,19 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import org.junit.ClassRule;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.testcontainers.containers.GenericContainer;
 
 public class GenericContainerLiveTest {
-  @ClassRule
   public static GenericContainer<?> simpleWebServer =
       new GenericContainer<>("alpine:3.2").withExposedPorts(80).withCommand("/bin/sh", "-c",
           "while true; do echo " + "\"HTTP/1.1 200 OK\n\nHello World!\" | nc -l -p 80; done");
+
+  @BeforeEach
+  public void beforeEach() {
+    simpleWebServer.start();
+  }
 
   @Test
   public void givenSimpleWebServerContainer_whenGetReuqest_thenReturnsResponse() throws Exception {

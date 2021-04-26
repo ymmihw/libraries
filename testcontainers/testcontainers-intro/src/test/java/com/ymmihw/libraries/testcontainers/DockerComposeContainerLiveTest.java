@@ -6,15 +6,19 @@ import java.io.File;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import org.junit.ClassRule;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.testcontainers.containers.DockerComposeContainer;
 
 public class DockerComposeContainerLiveTest {
-  @ClassRule
   public static DockerComposeContainer<?> compose =
       new DockerComposeContainer<>(new File("src/test/resources/test-compose.yml"))
           .withExposedService("simpleWebServer_1", 80);
+
+  @BeforeEach
+  public void beforeEach() {
+    compose.start();
+  }
 
   @Test
   public void givenSimpleWebServerContainer_whenGetReuqest_thenReturnsResponse() throws Exception {
