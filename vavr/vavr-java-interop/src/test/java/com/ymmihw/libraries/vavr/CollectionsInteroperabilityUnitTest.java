@@ -60,7 +60,7 @@ public class CollectionsInteroperabilityUnitTest {
   public void givenParams_whenVavrListConverted_thenException() {
     java.util.List<String> javaList = List.of("Java", "Haskell", "Scala").asJava();
     assertThrows(UnsupportedOperationException.class, () -> javaList.add("Python"));
-    assertEquals(4, javaList.size());
+    assertEquals(3, javaList.size());
   }
 
   @Test

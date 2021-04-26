@@ -5,13 +5,19 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import org.junit.Rule;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.testcontainers.containers.PostgreSQLContainer;
+import org.testcontainers.utility.DockerImageName;
 
 public class PostgreSqlContainerLiveTest {
-  @Rule
-  public PostgreSQLContainer<?> postgresContainer = new PostgreSQLContainer<>();
+  public PostgreSQLContainer<?> postgresContainer = new PostgreSQLContainer<>(
+      DockerImageName.parse("postgres").withTag(PostgreSQLContainer.DEFAULT_TAG));
+
+  @BeforeEach
+  public void beforeEach() {
+    postgresContainer.start();
+  }
 
   @Test
   public void whenSelectQueryExecuted_thenResulstsReturned() throws Exception {

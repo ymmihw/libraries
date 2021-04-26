@@ -3,12 +3,12 @@ package com.ymmihw.libraries;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
+import org.springframework.boot.test.context.SpringBootTest;
 import com.ymmihw.libraries.mapper.SimpleSourceDestinationMapper;
 import com.ymmihw.libraries.model.SimpleDestination;
 import com.ymmihw.libraries.model.SimpleSource;
 
-@ContextConfiguration(classes = SpringBootConfig.class)
+@SpringBootTest(classes = SpringBootConfig.class)
 public class SimpleSourceDestinationMapperIntegrationTest {
 
   @Autowired

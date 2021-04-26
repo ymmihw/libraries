@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
  <modelVersion>4.0.0</modelVersion>
 
  <groupId>com.ymmihw.libraries</groupId>
@@ -11,6 +12,7 @@
  <url>http://maven.apache.org</url>
 
  <properties>
+  <testcontainers.version>1.15.3</testcontainers.version>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   <retrofit.version>2.9.0</retrofit.version>
   <spring-framework.version>5.3.6</spring-framework.version>
@@ -56,6 +58,18 @@
      <target>1.8</target>
     </configuration>
    </plugin>
+   <!-- maven not run test -->
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>2.22.0</version>
+   </plugin>
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-failsafe-plugin</artifactId>
+    <version>2.22.0</version>
+   </plugin>
+   <!-- maven not run test -->
   </plugins>
  </build>
  <modules>
@@ -110,6 +124,6 @@
   <module>apache-poi</module>
   <module>graphviz-java</module>
   <module>Querydsl</module>
-    <module>retrofit</module>
-  </modules>
+  <module>retrofit</module>
+ </modules>
 </project>
