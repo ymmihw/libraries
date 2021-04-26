@@ -11,7 +11,8 @@ import org.testcontainers.containers.PostgreSQLContainer;
 
 public class PostgreSqlContainerLiveTest {
   @Rule
-  public PostgreSQLContainer<?> postgresContainer = new PostgreSQLContainer<>();
+  public PostgreSQLContainer<?> postgresContainer =
+      new PostgreSQLContainer<>("postgreSQLContainer");
 
   @Test
   public void whenSelectQueryExecuted_thenResulstsReturned() throws Exception {
