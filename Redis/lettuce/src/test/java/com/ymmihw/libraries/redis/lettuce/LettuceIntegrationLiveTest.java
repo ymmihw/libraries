@@ -6,10 +6,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-import org.junit.Assert;
-import org.junit.Rule;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.Rule;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,7 +30,8 @@ public class LettuceIntegrationLiveTest {
   private static Logger log = LoggerFactory.getLogger(LettuceIntegrationLiveTest.class);
 
   @Rule
-  public GenericContainer<?> redis = new GenericContainer<>("redis:5.0.5-alpine");
+  public GenericContainer<?> redis =
+      new GenericContainer<>("redis:5.0.5-alpine").withExposedPorts(6379);
 
   private StatefulRedisConnection<String, String> redisConnection;
 
