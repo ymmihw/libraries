@@ -8,10 +8,11 @@ import java.sql.SQLException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.testcontainers.containers.PostgreSQLContainer;
+import org.testcontainers.utility.DockerImageName;
 
 public class PostgreSqlContainerLiveTest {
-  public PostgreSQLContainer<?> postgresContainer =
-      new PostgreSQLContainer<>("postgreSQLContainer");
+  public PostgreSQLContainer<?> postgresContainer = new PostgreSQLContainer<>(
+      DockerImageName.parse("postgres").withTag(PostgreSQLContainer.DEFAULT_TAG));
 
   @BeforeEach
   public void beforeEach() {
