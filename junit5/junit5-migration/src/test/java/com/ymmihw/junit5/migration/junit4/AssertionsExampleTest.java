@@ -11,7 +11,7 @@ public class AssertionsExampleTest {
   @Test
   @Ignore
   public void shouldFailBecauseTheNumbersAreNotEqualld() {
-    Assert.assertEquals("Numbers are not equal!", 2, 3);
+    Assert.assertNotEquals("Numbers are not equal!", 2, 3);
   }
 
   @Test
