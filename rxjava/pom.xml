@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+ <modelVersion>4.0.0</modelVersion>
+ <parent>
+  <groupId>com.ymmihw.libraries</groupId>
+  <artifactId>libraries</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+ </parent>
+ <groupId>com.ymmihw</groupId>
+ <artifactId>rxjava</artifactId>
+ <version>0.0.1-SNAPSHOT</version>
+ <packaging>pom</packaging>
+
+ <name>rxjava</name>
+ <url>http://maven.apache.org</url>
+ <properties>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+ </properties>
+
+ <dependencies>
+  <dependency>
+   <groupId>io.reactivex.rxjava2</groupId>
+   <artifactId>rxjava</artifactId>
+  </dependency>
+  <dependency>
+   <groupId>com.google.guava</groupId>
+   <artifactId>guava</artifactId>
+   <scope>test</scope>
+  </dependency>
+ </dependencies>
+ <modules>
+  <module>backpressure</module>
+  <module>combine-observable</module>
+  <module>custom-operators</module>
+  <module>error-handling</module>
+  <module>filter-operator</module>
+  <module>flowable</module>
+  <module>introduction</module>
+  <module>maybe</module>
+  <module>retrofit</module>
+  <module>rxrelay</module>
+  <module>scheduler</module>
+  <module>string</module>
+  <module>testing</module>
+  <module>utility-operators</module>
+  <module>vertx</module>
+ </modules>
+</project>

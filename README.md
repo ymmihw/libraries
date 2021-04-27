@@ -232,3 +232,22 @@ Module | Article
 --|--
 Querydsl-intro | [Intro to Querydsl](http://www.baeldung.com/intro-to-querydsl)
 Querydsl-with-jpa | [A Guide to Querydsl with JPA](https://www.baeldung.com/querydsl-with-jpa-tutorial)
+
+### RxJava
+Module | Article
+--|--
+filter-operator | [Filtering Observables in RxJava](http://www.baeldung.com/rxjava-filtering)
+combine-observable | [Combining Observables in RxJava](http://www.baeldung.com/rxjava-combine-observables)
+rxrelay | [Introduction to RxRelay for RxJava](http://www.baeldung.com/rx-relay)
+introduction | [Introduction to RxJava](http://www.baeldung.com/rx-java) 
+maybe | [RxJava Maybe](http://www.baeldung.com/rxjava-maybe) 
+string | [RxJava StringObservable](http://www.baeldung.com/rxjava-string) 
+flowable | [RxJava 2 – Flowable](http://www.baeldung.com/rxjava-2-flowable)
+scheduler | [Schedulers in RxJava](http://www.baeldung.com/rxjava-schedulers)
+utility-operators | [Observable Utility Operators in RxJava](http://www.baeldung.com/rxjava-observable-operators)
+backpressure | [Dealing with Backpressure with RxJava](http://www.baeldung.com/rxjava-backpressure) 
+custom-operators | [Implementing Custom Operators in RxJava](http://www.baeldung.com/rxjava-custom-operators) 
+error-handling | [RxJava and Error Handling](http://www.baeldung.com/rxjava-error-handling)
+testing | [How to Test RxJava?](http://www.baeldung.com/rxjava-testing)
+retrofit | [Integrating Retrofit with RxJava](http://www.baeldung.com/retrofit-rxjava) 
+vertx | [Example of Vertx and RxJava Integration](http://www.baeldung.com/vertx-rx-java) 
