@@ -257,3 +257,9 @@ vertx | [Example of Vertx and RxJava Integration](http://www.baeldung.com/vertx-
 Module | Article
 --|--
 json-java | [Introduction to JSON-Java (org.json)](http://www.baeldung.com/java-org-json)
+
+### xml
+Module | Article
+--|--
+xml-libraries | [XML Libraries Support in Java](http://www.baeldung.com/java-xml-libraries)
+xerces | [DOM parsing with Xerces](http://www.baeldung.com/java-xerces-dom-parsing)
