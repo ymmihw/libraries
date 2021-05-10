@@ -32,6 +32,7 @@ Module | Article
 okhttp-intro | [A Guide to OkHttp](https://www.baeldung.com/guide-to-okhttp)
 okhttp-json-response | [Decode an OkHttp JSON Response](https://www.baeldung.com/okhttp-json-response)
 okhttp-timeout | [A Quick Guide to Timeouts in OkHttp](https://www.baeldung.com/okhttp-timeouts)
+okhttp-interceptors | [Adding Interceptors in OkHTTP](https://www.baeldung.com/java-okhttp-interceptors)
 
 ### easymock
 Module | Article

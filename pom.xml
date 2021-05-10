@@ -73,6 +73,7 @@
   </plugins>
  </build>
  <modules>
+  <module>akka</module>
   <module>AssertJ</module>
   <module>AsyncHttpClient</module>
   <module>drools</module>
@@ -125,5 +126,8 @@
   <module>graphviz-java</module>
   <module>Querydsl</module>
   <module>retrofit</module>
+  <module>xml</module>
+  <module>json</module>
+  <module>rxjava</module>
  </modules>
 </project>
