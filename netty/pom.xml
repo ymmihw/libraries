@@ -25,5 +25,6 @@
   <module>netty-exception</module>
   <module>netty-embeddedchannel</module>
   <module>netty-udp-sample</module>
+     <module>netty-user-guide-for-4x</module>
  </modules>
 </project>

@@ -46,6 +46,7 @@ Module | Article
 netty-introduction | [Introduction to Netty](http://www.baeldung.com/netty)
 netty-exception | [Exceptions in Netty](http://www.baeldung.com/netty-exception-handling)
 netty-embeddedchannel | [Testing Netty with EmbeddedChannel](http://www.baeldung.com/testing-netty-embedded-channel)
+netty-user-guide-for-4x | [User guide for 4.x](https://netty.io/wiki/user-guide-for-4.x.html)
 
 ### logback
 Module | Article

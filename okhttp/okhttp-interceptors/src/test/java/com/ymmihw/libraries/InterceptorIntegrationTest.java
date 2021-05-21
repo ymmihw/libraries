@@ -31,7 +31,7 @@ public class InterceptorIntegrationTest {
     }
 
     @Test
-    public void givenSimpleLogginInterceptor_whenRequestSent_thenHeadersLogged() throws IOException {
+    public void givenSimpleLoggingInterceptor_whenRequestSent_thenHeadersLogged() throws IOException {
         server.enqueue(new MockResponse().setBody("Hello Baeldung Readers!"));
 
         OkHttpClient client =
