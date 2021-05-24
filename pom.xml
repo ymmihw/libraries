@@ -129,5 +129,6 @@
         <module>xml</module>
         <module>json</module>
         <module>rxjava</module>
+        <module>cglib</module>
     </modules>
 </project>
