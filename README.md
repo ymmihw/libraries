@@ -26,6 +26,7 @@ apache-poi | [Microsoft Word Processing in Java with Apache POI](https://www.bae
 retrofit | [Introduction to Retrofit](http://www.baeldung.com/retrofit)
 akka-introduction | [Introduction to Akka Actors in Java](http://www.baeldung.com/akka-actors-java)
 cglib | [Introduction to cglib](https://www.baeldung.com/cglib)
+debezium | [Introduction to Debezium](https://www.baeldung.com/debezium-intro)
 
 ### OkHttp
 Module | Article

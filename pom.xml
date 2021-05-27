@@ -130,5 +130,6 @@
         <module>json</module>
         <module>rxjava</module>
         <module>cglib</module>
+        <module>debezium</module>
     </modules>
 </project>
