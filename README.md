@@ -56,7 +56,7 @@ Module | Article
 logback-guide | [A Guide To Logback](http://www.baeldung.com/logback)
 logback-custom-appender | [Creating a Custom Logback Appender](http://www.baeldung.com/custom-logback-appender)
 logback-send-email | [Sending Emails with Logback](https://www.baeldung.com/logback-send-email)
-
+logback-mask-sensitive-data | [Mask Sensitive Data in Logs With Logback](https://www.baeldung.com/logback-mask-sensitive-data)
 
 ### TestContainers
 Module | Article
