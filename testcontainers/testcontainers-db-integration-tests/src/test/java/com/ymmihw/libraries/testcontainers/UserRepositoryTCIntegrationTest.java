@@ -1,27 +1,27 @@
 package com.ymmihw.libraries.testcontainers;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import org.junit.ClassRule;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import com.ymmihw.libraries.testcontainers.domain.User;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.util.TestPropertyValues;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 import org.testcontainers.containers.PostgreSQLContainer;
-import com.ymmihw.libraries.testcontainers.domain.User;
+import org.testcontainers.junit.jupiter.Container;
+import org.testcontainers.junit.jupiter.Testcontainers;
 
-@RunWith(SpringRunner.class)
+import static org.assertj.core.api.Assertions.assertThat;
+
+@Testcontainers
 @SpringBootTest
 @ActiveProfiles("tc")
 @ContextConfiguration(initializers = {UserRepositoryTCIntegrationTest.Initializer.class})
 public class UserRepositoryTCIntegrationTest extends UserRepositoryCommon {
 
-  @ClassRule
+  @Container
   public static PostgreSQLContainer<?> postgreSQLContainer =
       new PostgreSQLContainer<>("postgres:11.1").withDatabaseName("integration-tests-db")
           .withUsername("sa").withPassword("sa");

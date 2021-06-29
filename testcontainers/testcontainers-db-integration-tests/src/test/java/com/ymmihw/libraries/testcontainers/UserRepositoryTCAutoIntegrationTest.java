@@ -1,26 +1,26 @@
 package com.ymmihw.libraries.testcontainers;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import org.junit.ClassRule;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.transaction.annotation.Transactional;
-import org.testcontainers.containers.PostgreSQLContainer;
 import com.ymmihw.libraries.testcontainers.domain.User;
 import com.ymmihw.libraries.testcontainers.util.BaeldungPostgresqlContainer;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.transaction.annotation.Transactional;
+import org.testcontainers.containers.PostgreSQLContainer;
+import org.testcontainers.junit.jupiter.Container;
+import org.testcontainers.junit.jupiter.Testcontainers;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Created by adam.
  */
-@RunWith(SpringRunner.class)
+@Testcontainers
 @SpringBootTest
 @ActiveProfiles({"tc", "tc-auto"})
 public class UserRepositoryTCAutoIntegrationTest extends UserRepositoryCommon {
 
-  @ClassRule
+  @Container
   public static PostgreSQLContainer<?> postgreSQLContainer =
       BaeldungPostgresqlContainer.getInstance();
 
