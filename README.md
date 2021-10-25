@@ -35,6 +35,7 @@ okhttp-intro | [A Guide to OkHttp](https://www.baeldung.com/guide-to-okhttp)
 okhttp-json-response | [Decode an OkHttp JSON Response](https://www.baeldung.com/okhttp-json-response)
 okhttp-timeout | [A Quick Guide to Timeouts in OkHttp](https://www.baeldung.com/okhttp-timeouts)
 okhttp-interceptors | [Adding Interceptors in OkHTTP](https://www.baeldung.com/java-okhttp-interceptors)
+okhttp-self-signed-cert | [Trusting a Self-Signed Certificate in OkHttp](https://www.baeldung.com/okhttp-self-signed-cert)
 
 ### easymock
 Module | Article
@@ -152,6 +153,7 @@ vavr-java-interop | [Interoperability Between Java and Vavr](https://www.baeldun
 Module | Article
 --|--
 drools-intro | [Introduction to Drools](https://www.baeldung.com/drools)
+drools-excel | [Drools Using Rules from Excel Files](https://www.baeldung.com/drools-excel)
 
 ### google-auto
 Module | Article

@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
+    <artifactId>okhttp</artifactId>
     <groupId>com.ymmihw.libraries</groupId>
-    <artifactId>libraries</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>okhttp</artifactId>
-  <name>okhttp</name>
-  <packaging>pom</packaging>
-  <url>http://maven.apache.org</url>
+  <groupId>com.ymmihw.libraries</groupId>
+  <artifactId>okhttp-self-signed-cert</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <name>okhttp-self-signed-cert</name>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
   <dependencies>
-    <dependency>
-      <groupId>com.squareup.okhttp3</groupId>
-      <artifactId>okhttp</artifactId>
-    </dependency>
   </dependencies>
-  <modules>
-    <module>okhttp-intro</module>
-    <module>okhttp-json-response</module>
-    <module>okhttp-timeout</module>
-    <module>okhttp-interceptors</module>
-    <module>okhttp-self-signed-cert</module>
-  </modules>
+
+  <build>
+  </build>
 </project>

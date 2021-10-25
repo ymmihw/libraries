@@ -31,5 +31,6 @@
  </dependencies>
  <modules>
   <module>drools-intro</module>
+  <module>drools-excel</module>
  </modules>
 </project>
