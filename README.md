@@ -153,6 +153,7 @@ vavr-java-interop | [Interoperability Between Java and Vavr](https://www.baeldun
 Module | Article
 --|--
 drools-intro | [Introduction to Drools](https://www.baeldung.com/drools)
+drools-excel | [Drools Using Rules from Excel Files](https://www.baeldung.com/drools-excel)
 
 ### google-auto
 Module | Article
