@@ -154,6 +154,7 @@ Module | Article
 --|--
 drools-intro | [Introduction to Drools](https://www.baeldung.com/drools)
 drools-excel | [Drools Using Rules from Excel Files](https://www.baeldung.com/drools-excel)
+drools-spring-integration | [Drools Spring Integration](https://www.baeldung.com/drools-spring-integration)
 
 ### google-auto
 Module | Article
