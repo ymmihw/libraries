@@ -155,6 +155,7 @@ Module | Article
 drools-intro | [Introduction to Drools](https://www.baeldung.com/drools)
 drools-excel | [Drools Using Rules from Excel Files](https://www.baeldung.com/drools-excel)
 drools-spring-integration | [Drools Spring Integration](https://www.baeldung.com/drools-spring-integration)
+drools-backward-chaining | [An Example of Backward Chaining in Drools](https://www.baeldung.com/drools-backward-chaining)
 
 ### google-auto
 Module | Article

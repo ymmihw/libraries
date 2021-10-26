@@ -1,37 +1,40 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
- <modelVersion>4.0.0</modelVersion>
- <parent>
+<project
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.ymmihw.libraries</groupId>
+    <artifactId>libraries</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
   <groupId>com.ymmihw.libraries</groupId>
-  <artifactId>libraries</artifactId>
+  <artifactId>drools</artifactId>
   <version>0.0.1-SNAPSHOT</version>
- </parent>
- <groupId>com.ymmihw.libraries</groupId>
- <artifactId>drools</artifactId>
- <version>0.0.1-SNAPSHOT</version>
- <name>drools</name>
- <packaging>pom</packaging>
- <url>http://maven.apache.org</url>
- <properties>
-  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  <drools-version>7.11.0.Final</drools-version>
- </properties>
- <dependencies>
-  <dependency>
-   <groupId>org.kie</groupId>
-   <artifactId>kie-ci</artifactId>
-   <version>${drools-version}</version>
-  </dependency>
-  <dependency>
-   <groupId>org.drools</groupId>
-   <artifactId>drools-decisiontables</artifactId>
-   <version>${drools-version}</version>
-  </dependency>
- </dependencies>
- <modules>
-  <module>drools-intro</module>
-  <module>drools-excel</module>
-   <module>drools-spring-integration</module>
- </modules>
+  <name>drools</name>
+  <packaging>pom</packaging>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <drools-version>7.11.0.Final</drools-version>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.kie</groupId>
+      <artifactId>kie-ci</artifactId>
+      <version>${drools-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.drools</groupId>
+      <artifactId>drools-decisiontables</artifactId>
+      <version>${drools-version}</version>
+    </dependency>
+  </dependencies>
+  <modules>
+    <module>drools-intro</module>
+    <module>drools-excel</module>
+    <module>drools-spring-integration</module>
+    <module>drools-backward-chaining</module>
+  </modules>
 </project>
