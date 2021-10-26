@@ -32,5 +32,6 @@
  <modules>
   <module>drools-intro</module>
   <module>drools-excel</module>
+   <module>drools-spring-integration</module>
  </modules>
 </project>
