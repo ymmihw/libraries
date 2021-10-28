@@ -16,6 +16,7 @@
   <name>gRPC</name>
   <modules>
     <module>gRPC-intro</module>
+    <module>gRPC-streaming</module>
   </modules>
 
   <properties>

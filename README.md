@@ -276,3 +276,4 @@ xerces | [DOM parsing with Xerces](http://www.baeldung.com/java-xerces-dom-parsi
 Module | Article
 --|--
 gRPC-intro | [Introduction to gRPC](https://www.baeldung.com/grpc-introduction)
+gRPC-streaming | [Streaming with gRPC in Java](https://www.baeldung.com/java-grpc-streaming)
