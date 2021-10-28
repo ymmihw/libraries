@@ -271,3 +271,8 @@ Module | Article
 --|--
 xml-libraries | [XML Libraries Support in Java](http://www.baeldung.com/java-xml-libraries)
 xerces | [DOM parsing with Xerces](http://www.baeldung.com/java-xerces-dom-parsing)
+
+### gRPC
+Module | Article
+--|--
+gRPC-intro | [Introduction to gRPC](https://www.baeldung.com/grpc-introduction)
