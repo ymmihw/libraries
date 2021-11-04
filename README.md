@@ -277,3 +277,4 @@ Module | Article
 --|--
 gRPC-intro | [Introduction to gRPC](https://www.baeldung.com/grpc-introduction)
 gRPC-streaming | [Streaming with gRPC in Java](https://www.baeldung.com/java-grpc-streaming)
+gRPC-error-handling | [Error Handling in gRPC](https://www.baeldung.com/grpcs-error-handling)
