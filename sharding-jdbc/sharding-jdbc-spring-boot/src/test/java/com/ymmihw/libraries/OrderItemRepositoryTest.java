@@ -22,4 +22,10 @@ public class OrderItemRepositoryTest {
     List<OrderItem> orderItems = repository.findAllUseJpql(10L, 1001L);
     System.out.println(orderItems);
   }
+
+  @Test
+  public void testFindAllUseMethodName() {
+    List<OrderItem> orderItems = repository.findAllByUserIdAndOrderId(10L, 1001L);
+    System.out.println(orderItems);
+  }
 }

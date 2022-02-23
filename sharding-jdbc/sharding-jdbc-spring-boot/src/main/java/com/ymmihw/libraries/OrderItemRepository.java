@@ -19,4 +19,6 @@ public interface OrderItemRepository extends JpaRepository<OrderItem, Long> {
       value =
           "SELECT i FROM Order o JOIN OrderItem i ON o.orderId=i.orderId WHERE o.userId= :userId AND o.orderId= :orderId")
   List<OrderItem> findAllUseJpql(@Param("userId") Long userId, @Param("orderId") Long orderId);
+
+  List<OrderItem> findAllByUserIdAndOrderId(Long userId, Long orderId);
 }
