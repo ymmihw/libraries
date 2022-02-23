@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>sharding-jdbc-intro</module>
+        <module>sharding-jdbc-spring-boot</module>
     </modules>
 
     <artifactId>sharding-jdbc</artifactId>
