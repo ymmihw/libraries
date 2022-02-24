@@ -12,6 +12,7 @@
     <modules>
         <module>sharding-jdbc-intro</module>
         <module>sharding-jdbc-spring-boot</module>
+        <module>sharding-jdbc-readwrite-splitting</module>
     </modules>
 
     <artifactId>sharding-jdbc</artifactId>

@@ -1,6 +1,8 @@
 package com.ymmihw.libraries;
 
 import lombok.Data;
+import org.apache.shardingsphere.core.strategy.keygen.SnowflakeShardingKeyGenerator;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
