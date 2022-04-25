@@ -27,6 +27,7 @@ retrofit | [Introduction to Retrofit](http://www.baeldung.com/retrofit)
 akka-introduction | [Introduction to Akka Actors in Java](http://www.baeldung.com/akka-actors-java)
 cglib | [Introduction to cglib](https://www.baeldung.com/cglib)
 debezium | [Introduction to Debezium](https://www.baeldung.com/debezium-intro)
+quartz-intro | [Introduction to Quartz](https://www.baeldung.com/quartz)
 
 ### OkHttp
 Module | Article

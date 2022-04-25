@@ -133,5 +133,6 @@
         <module>debezium</module>
         <module>gRPC</module>
         <module>sharding-jdbc</module>
+        <module>quartz</module>
     </modules>
 </project>
