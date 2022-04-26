@@ -134,5 +134,6 @@
         <module>gRPC</module>
         <module>sharding-jdbc</module>
         <module>quartz</module>
+        <module>jackson</module>
     </modules>
 </project>
