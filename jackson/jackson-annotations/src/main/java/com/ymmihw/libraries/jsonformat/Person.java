@@ -1,4 +1,4 @@
-package com.ymmihw.libraries;
+package com.ymmihw.libraries.jsonformat;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
