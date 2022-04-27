@@ -284,3 +284,4 @@ gRPC-error-handling | [Error Handling in gRPC](https://www.baeldung.com/grpcs-er
 Module | Article
 --|--
 jackson-annotations | [Guide to @JsonFormat in Jackson](https://www.baeldung.com/jackson-jsonformat)
+                    | [Deduction-Based Polymorphism in Jackson 2.12](https://www.baeldung.com/jackson-deduction-based-polymorphism)
