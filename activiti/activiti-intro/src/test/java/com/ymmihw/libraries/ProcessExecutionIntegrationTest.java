@@ -1,21 +1,15 @@
 package com.ymmihw.libraries;
 
-import org.activiti.engine.ActivitiException;
-import org.activiti.engine.ProcessEngine;
-import org.activiti.engine.ProcessEngines;
-import org.activiti.engine.RepositoryService;
-import org.activiti.engine.RuntimeService;
-import org.activiti.engine.TaskService;
+import org.activiti.engine.*;
 import org.activiti.engine.runtime.ProcessInstance;
 import org.activiti.engine.task.Task;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ProcessExecutionIntegrationTest {
 
@@ -25,7 +19,7 @@ public class ProcessExecutionIntegrationTest {
     RepositoryService repositoryService = processEngine.getRepositoryService();
     repositoryService
         .createDeployment()
-        .addClasspathResource("org/activiti/test/vacationRequest.bpmn20.xml")
+        .addClasspathResource("vacationRequest.bpmn20.xml")
         .deploy();
     Long count = repositoryService.createProcessDefinitionQuery().count();
     assertTrue(count >= 1);
@@ -37,7 +31,7 @@ public class ProcessExecutionIntegrationTest {
     RepositoryService repositoryService = processEngine.getRepositoryService();
     repositoryService
         .createDeployment()
-        .addClasspathResource("org/activiti/test/vacationRequest.bpmn20.xml")
+        .addClasspathResource("vacationRequest.bpmn20.xml")
         .deploy();
 
     Map<String, Object> variables = new HashMap<String, Object>();
@@ -59,7 +53,7 @@ public class ProcessExecutionIntegrationTest {
     RepositoryService repositoryService = processEngine.getRepositoryService();
     repositoryService
         .createDeployment()
-        .addClasspathResource("org/activiti/test/vacationRequest.bpmn20.xml")
+        .addClasspathResource("vacationRequest.bpmn20.xml")
         .deploy();
 
     Map<String, Object> variables = new HashMap<String, Object>();
@@ -86,17 +80,18 @@ public class ProcessExecutionIntegrationTest {
     assertNotNull(currentTask);
   }
 
-  @Test(expected = ActivitiException.class)
+  @Test
   public void givenProcessDefinition_whenSuspend_thenNoProcessInstanceCreated() {
     ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
     RepositoryService repositoryService = processEngine.getRepositoryService();
     repositoryService
         .createDeployment()
-        .addClasspathResource("org/activiti/test/vacationRequest.bpmn20.xml")
+        .addClasspathResource("vacationRequest.bpmn20.xml")
         .deploy();
 
     RuntimeService runtimeService = processEngine.getRuntimeService();
     repositoryService.suspendProcessDefinitionByKey("vacationRequest");
-    runtimeService.startProcessInstanceByKey("vacationRequest");
+    assertThrows(
+        ActivitiException.class, () -> runtimeService.startProcessInstanceByKey("vacationRequest"));
   }
 }
