@@ -1,10 +1,11 @@
-package com.ymmihw.libraries;
+package com.ymmihw.libraries.jsonformat;
 
 import java.util.Date;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ymmihw.libraries.jsonformat.User;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.path.json.JsonPath.from;
