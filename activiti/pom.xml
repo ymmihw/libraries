@@ -44,6 +44,7 @@
     <modules>
         <module>activiti-intro</module>
         <module>activiti-boot</module>
+        <module>activiti-process-engine-config</module>
     </modules>
     <repositories>
         <repository>
