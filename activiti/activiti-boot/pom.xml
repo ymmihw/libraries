@@ -7,10 +7,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>activiti-intro</artifactId>
+    <artifactId>activiti-boot</artifactId>
     <packaging>jar</packaging>
 
-    <name>activiti-intro</name>
+    <name>activiti-boot</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -21,6 +21,14 @@
         <dependency>
             <groupId>org.activiti</groupId>
             <artifactId>activiti-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
