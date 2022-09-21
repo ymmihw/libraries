@@ -20,7 +20,7 @@
     <dependencies>
         <dependency>
             <groupId>org.activiti</groupId>
-            <artifactId>activiti-spring-boot-starter</artifactId>
+            <artifactId>activiti-engine</artifactId>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
