@@ -285,3 +285,10 @@ Module | Article
 --|--
 jackson-annotations | [Guide to @JsonFormat in Jackson](https://www.baeldung.com/jackson-jsonformat)
                     | [Deduction-Based Polymorphism in Jackson 2.12](https://www.baeldung.com/jackson-deduction-based-polymorphism)
+|
+
+### blaze-persistence
+
+Module | Article
+--|--
+blaze-persistence-intro | [Getting Started with Blaze Persistence](https://www.baeldung.com/blaze-persistence-tutorial)
