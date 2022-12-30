@@ -48,7 +48,7 @@
         </dependency>
         <dependency>
             <groupId>com.blazebit</groupId>
-            <artifactId>blaze-persistence-integration-spring-data-2.6</artifactId>
+            <artifactId>blaze-persistence-integration-spring-data-2.5</artifactId>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
         <dependency>
