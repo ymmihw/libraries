@@ -137,5 +137,6 @@
         <module>jackson</module>
         <module>activiti</module>
         <module>blaze-persistence</module>
+        <module>p6spy</module>
     </modules>
 </project>
