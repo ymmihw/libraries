@@ -140,5 +140,6 @@
         <module>p6spy</module>
         <module>llm</module>
         <module>calcite</module>
+        <module>brave</module>
     </modules>
 </project>
