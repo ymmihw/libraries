@@ -29,6 +29,7 @@ cglib | [Introduction to cglib](https://www.baeldung.com/cglib)
 debezium | [Introduction to Debezium](https://www.baeldung.com/debezium-intro)
 quartz-intro | [Introduction to Quartz](https://www.baeldung.com/quartz)
 p6spy | [Intercept SQL Logging with P6Spy](https://www.baeldung.com/java-p6spy-intercept-sql-logging)
+brave | [Introduction to Brave](https://www.baeldung.com/java-brave)
 
 ### OkHttp
 Module | Article
