@@ -141,5 +141,6 @@
         <module>llm</module>
         <module>calcite</module>
         <module>brave</module>
+        <module>javaparser</module>
     </modules>
 </project>
